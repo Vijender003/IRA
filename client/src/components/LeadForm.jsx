@@ -88,6 +88,13 @@ export default function LeadForm({ sticky }) {
           )}
           {submitting ? "Submitting..." : "Check Your Eligibility"}
         </button>
+        <div className="flex items-center justify-center gap-3 mt-4 text-[10px] text-white/25">
+          <span>10,000+ students guided</span>
+          <span className="w-px h-3 bg-white/10" />
+          <span>98% visa success rate</span>
+          <span className="w-px h-3 bg-white/10" />
+          <span>500+ universities</span>
+        </div>
       </form>
     </motion.div>
   );

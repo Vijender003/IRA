@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Toaster } from "react-hot-toast";
 import { AuthProvider } from "./context/AuthContext";
 import Navbar from "./components/Navbar";
@@ -12,6 +12,7 @@ import Services from "./components/Services";
 import Destinations from "./components/Destinations";
 import SocialProof from "./components/SocialProof";
 import Testimonials from "./components/Testimonials";
+import LeadMagnet from "./components/LeadMagnet";
 import OfferSection from "./components/OfferSection";
 import LeadForm from "./components/LeadForm";
 import CTA from "./components/CTA";
@@ -19,6 +20,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WhatsApp from "./components/WhatsApp";
 import ExitPopup from "./components/ExitPopup";
+import LeadFunnel from "./components/LeadFunnel";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
@@ -45,6 +47,7 @@ function HomePage() {
       <Destinations />
       <SocialProof />
       <Testimonials />
+      <LeadMagnet />
       <OfferSection />
       <LeadForm />
       <CTA />
@@ -54,6 +57,8 @@ function HomePage() {
 }
 
 function App() {
+  const [showFunnel, setShowFunnel] = useState(false);
+
   return (
     <Router>
       <AuthProvider>
@@ -81,23 +86,37 @@ function App() {
           <Footer />
           <WhatsApp />
           <ExitPopup />
+          <LeadFunnel open={showFunnel} onClose={() => setShowFunnel(false)} source="sticky" />
+
+          {/* Sticky lead button - desktop */}
+          <button
+            onClick={() => setShowFunnel(true)}
+            className="fixed right-0 top-1/2 -translate-y-1/2 z-40 hidden lg:flex items-center gap-2 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white text-sm font-semibold py-3 px-4 rounded-l-xl shadow-2xl shadow-primary-500/30 hover:shadow-primary-500/50 transition-all hover:pr-6 group"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span className="max-w-0 overflow-hidden group-hover:max-w-[120px] transition-all duration-300 whitespace-nowrap">
+              Check Eligibility
+            </span>
+          </button>
 
           {/* Mobile sticky CTA */}
           <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-surface-950/95 backdrop-blur-xl border-t border-white/10 px-4 py-3">
             <div className="flex items-center gap-3">
               <div className="flex-1 min-w-0">
-                <p className="text-xs text-white/50">Free Consultation</p>
-                <p className="text-sm font-bold text-white truncate">Worth ₹1,999 — Limited Time</p>
+                <p className="text-[10px] text-white/40 uppercase tracking-wider">Free Assessment</p>
+                <p className="text-sm font-bold text-white truncate">Get Your FREE Study Abroad Plan</p>
               </div>
-              <a
-                href="/apply"
-                className="btn-primary-glow text-sm px-6 py-3 whitespace-nowrap inline-flex items-center gap-2"
+              <button
+                onClick={() => setShowFunnel(true)}
+                className="btn-primary-glow text-sm px-5 py-3 whitespace-nowrap inline-flex items-center gap-2"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                Book Free Call
-              </a>
+                Start Free Assessment
+              </button>
             </div>
           </div>
         </div>

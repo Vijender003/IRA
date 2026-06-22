@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import LeadFunnel from "./LeadFunnel";
 
 export default function Hero() {
+  const [showFunnel, setShowFunnel] = useState(false);
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       <style>{`
@@ -91,7 +94,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-white/50 max-w-3xl mx-auto mb-12 leading-relaxed"
           >
-            We guide you from university selection to visa approval — step by step.
+            Find the best country, course & visa path in 60 seconds.
           </motion.p>
 
           {/* CTAs */}
@@ -101,12 +104,12 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <Link to="/apply" className="btn-primary-glow text-base px-10 py-5 inline-flex items-center gap-2">
+            <button onClick={() => setShowFunnel(true)} className="btn-primary-glow text-base px-10 py-5 inline-flex items-center gap-2">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              Get Free Profile Evaluation
-            </Link>
+              Get Your FREE Study Abroad Plan
+            </button>
             <Link to="/destinations" className="btn-secondary text-base px-10 py-5 inline-flex items-center gap-2">
               Explore Destinations
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -167,6 +170,8 @@ export default function Hero() {
           </svg>
         </motion.div>
       </motion.div>
+
+      <LeadFunnel open={showFunnel} onClose={() => setShowFunnel(false)} source="hero" />
     </section>
   );
 }

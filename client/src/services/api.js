@@ -60,4 +60,20 @@ export const contactAPI = {
   send: (data) => API.post("/contact", data),
 };
 
+export const leadAPI = {
+  submit: (data) => API.post("/leads", data),
+};
+
+export const submitLead = async (data) => {
+  try {
+    return await leadAPI.submit(data);
+  } catch {
+    // Store locally as fallback
+    const existing = JSON.parse(localStorage.getItem("ira_leads") || "[]");
+    existing.push({ ...data, timestamp: new Date().toISOString() });
+    localStorage.setItem("ira_leads", JSON.stringify(existing));
+    return { success: true };
+  }
+};
+
 export default API;
