@@ -66,7 +66,7 @@ export default function UrgencyBubbles() {
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setShowFunnel(true)}
-          className={`absolute z-20 hidden lg:flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-xl border ${b.color} shadow-lg cursor-pointer select-none`}
+          className={`absolute z-20 hidden lg:flex items-center gap-2.5 px-4 py-2.5 rounded-full backdrop-blur-xl border ${b.color} shadow-lg cursor-pointer select-none ${b.position}`}
         >
           <span className={`w-2 h-2 rounded-full ${b.dot} animate-pulse`} />
           <span className="text-xs font-semibold whitespace-nowrap">{b.text}</span>
@@ -74,7 +74,7 @@ export default function UrgencyBubbles() {
       ))}
 
       {/* Mobile: just 1-2 simpler badges */}
-      {bubbles.slice(0, 2).map((b, i) => (
+      {[bubbles[0], bubbles[2]].map((b, i) => (
         <motion.button
           key={`mobile-${i}`}
           initial={{ opacity: 0, scale: 0.8 }}
@@ -95,11 +95,7 @@ export default function UrgencyBubbles() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setShowFunnel(true)}
-          className={`absolute z-20 lg:hidden flex items-center gap-1.5 px-3 py-1.5 rounded-full backdrop-blur-xl border ${b.color} shadow-lg cursor-pointer select-none ${
-            i === 0
-              ? "top-[44%] left-[3%]"
-              : "top-[54%] left-[3%]"
-          }`}
+          className={`absolute z-20 lg:hidden flex items-center gap-1.5 px-3 py-1.5 rounded-full backdrop-blur-xl border ${b.color} shadow-lg cursor-pointer select-none ${b.position}`}
         >
           <span className={`w-1.5 h-1.5 rounded-full ${b.dot} animate-pulse`} />
           <span className="text-[10px] font-semibold whitespace-nowrap">{b.text}</span>
