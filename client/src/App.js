@@ -4,7 +4,6 @@ import { Toaster } from "react-hot-toast";
 import { AuthProvider } from "./context/AuthContext";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import UrgencyBar from "./components/UrgencyBar";
 import TrustLogos from "./components/TrustLogos";
 import TrustStats from "./components/TrustStats";
 import HowItWorks from "./components/HowItWorks";
@@ -38,7 +37,6 @@ function ScrollToTop() {
 function HomePage() {
   return (
     <>
-      <UrgencyBar />
       <Hero />
       <TrustLogos />
       <TrustStats />

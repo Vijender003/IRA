@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import LeadFunnel from "./LeadFunnel";
+import UrgencyBubbles from "./UrgencyBubbles";
 
 export default function Hero() {
   const [showFunnel, setShowFunnel] = useState(false);
@@ -58,6 +59,9 @@ export default function Hero() {
           );
         })}
       </div>
+
+      {/* Floating urgency bubbles */}
+      <UrgencyBubbles />
 
       {/* Content */}
       <div className="relative z-10 container-custom px-4 md:px-8 py-32 flex flex-col items-center justify-center min-h-screen">

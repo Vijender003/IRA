@@ -48,27 +48,47 @@ export default function Navbar() {
           </div>
         </Link>
 
+        {/* Desktop nav links */}
         <div className="hidden lg:flex items-center gap-1">
-          {navLinks.map((link) => (
-            <Link key={link.name} to={link.href} className="px-4 py-2 text-sm font-medium text-white/60 hover:text-white transition-colors rounded-lg hover:bg-white/5">
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = location.pathname === link.href || (link.href !== "/" && location.pathname.startsWith(link.href));
+            return (
+              <Link
+                key={link.name}
+                to={link.href}
+                className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+                  isActive
+                    ? "text-white"
+                    : "text-white/50 hover:text-white"
+                }`}
+              >
+                {link.name}
+                {isActive && (
+                  <motion.div
+                    layoutId="nav-indicator"
+                    className="absolute -bottom-0.5 left-3 right-3 h-0.5 bg-gradient-to-r from-primary-400 to-accent-400 rounded-full"
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  />
+                )}
+              </Link>
+            );
+          })}
         </div>
 
+        {/* Desktop auth/CTA */}
         <div className="hidden lg:flex items-center gap-3">
           {isAuthenticated ? (
             <>
-              <Link to="/dashboard" className="px-4 py-2 text-sm font-medium text-white/60 hover:text-white transition-colors rounded-lg hover:bg-white/5">
+              <Link to="/dashboard" className="px-4 py-2 text-sm font-medium text-white/50 hover:text-white transition-colors rounded-lg hover:bg-white/5">
                 Dashboard
               </Link>
-              <button onClick={logout} className="px-4 py-2 text-sm font-medium text-white/40 hover:text-white transition-colors rounded-lg hover:bg-white/5">
+              <button onClick={logout} className="px-4 py-2 text-sm font-medium text-white/30 hover:text-white/60 transition-colors rounded-lg hover:bg-white/5">
                 Sign Out
               </button>
             </>
           ) : (
             <>
-              <Link to="/login" className="px-4 py-2 text-sm font-medium text-white/60 hover:text-white transition-colors rounded-lg hover:bg-white/5">
+              <Link to="/login" className="px-4 py-2 text-sm font-medium text-white/50 hover:text-white transition-colors rounded-lg hover:bg-white/5">
                 Sign In
               </Link>
               <Link to="/register" className="btn-primary text-sm px-6 py-2.5">
@@ -78,6 +98,7 @@ export default function Navbar() {
           )}
         </div>
 
+        {/* Mobile hamburger */}
         <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden p-2 rounded-xl text-white/70 hover:text-white hover:bg-white/5 transition-all">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {mobileOpen ? (
