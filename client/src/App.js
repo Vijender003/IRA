@@ -18,6 +18,7 @@ import CTA from "./components/CTA";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WhatsApp from "./components/WhatsApp";
+import ExitPopup from "./components/ExitPopup";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
@@ -79,6 +80,7 @@ function App() {
           </Routes>
           <Footer />
           <WhatsApp />
+          <ExitPopup />
 
           {/* Mobile sticky CTA */}
           <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-surface-950/95 backdrop-blur-xl border-t border-white/10 px-4 py-3">

@@ -178,6 +178,32 @@ export default function CountryPage() {
                 </div>
               </div>
 
+              {/* STUDY OPTIONS */}
+              {country.courses?.length > 0 && (
+                <div>
+                  <SectionHeading>Study Options</SectionHeading>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    {country.courses.map((course, i) => (
+                      <motion.div
+                        key={course}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.04 }}
+                        className="glass-card rounded-xl p-4 text-center group cursor-default"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500/20 to-accent-500/20 border border-primary-500/10 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                          <svg className="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5zm0 7l-9-5 9-5 9 5-9 5z" />
+                          </svg>
+                        </div>
+                        <p className="text-sm font-medium text-white/80">{course}</p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* COST BREAKDOWN */}
               <div>
                 <SectionHeading>Cost Breakdown</SectionHeading>
@@ -316,27 +342,6 @@ export default function CountryPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {country.universities.map((uni, i) => (
                       <UniversityCard key={uni.name} university={uni} index={i} />
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* POPULAR COURSES */}
-              {country.courses?.length > 0 && (
-                <div>
-                  <SectionHeading>Popular Courses</SectionHeading>
-                  <div className="flex flex-wrap gap-2">
-                    {country.courses.map((course, i) => (
-                      <motion.span
-                        key={course}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: i * 0.03 }}
-                        className="text-sm bg-white/5 border border-white/10 text-white/60 px-4 py-2 rounded-xl hover:bg-primary-500/10 hover:border-primary-500/20 hover:text-primary-300 transition-all"
-                      >
-                        {course}
-                      </motion.span>
                     ))}
                   </div>
                 </div>

@@ -1,5 +1,21 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+
+function SlotCounter() {
+  const [slots, setSlots] = useState(27);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSlots((prev) => (prev > 0 ? prev - 1 : 0));
+    }, 60000);
+    return () => clearInterval(timer);
+  }, []);
+  return slots > 0 ? (
+    <span className="text-accent-400 font-bold">{slots} slots left</span>
+  ) : (
+    <span className="text-red-400 font-bold">Fully booked this month</span>
+  );
+}
 
 export default function OfferSection() {
   return (
@@ -30,6 +46,14 @@ export default function OfferSection() {
               <span className="text-sm text-accent-400 font-semibold">Limited Time Offer</span>
             </motion.div>
 
+            {/* Urgency badge */}
+            <div className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 rounded-full px-4 py-1.5 mb-6">
+              <span className="w-1.5 h-1.5 bg-red-400 rounded-full animate-ping" />
+              <span className="text-xs text-red-400 font-medium">
+                <SlotCounter />
+              </span>
+            </div>
+
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
               Free Consultation <span className="text-white/30 line-through decoration-2 decoration-red-500/50">Worth ₹1,999</span>
             </h2>
@@ -43,7 +67,7 @@ export default function OfferSection() {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                Book Your Free Call
+                Book Free Call Now
               </Link>
               <a href="tel:+919220552177" className="btn-secondary text-base px-10 py-5 inline-flex items-center gap-2">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

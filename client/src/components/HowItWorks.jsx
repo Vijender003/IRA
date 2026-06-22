@@ -3,36 +3,36 @@ import { motion } from "framer-motion";
 const steps = [
   {
     step: 1,
-    title: "Profile Evaluation",
-    description: "Tell us about your academic background, work experience, and career goals. We assess your profile against global opportunities.",
-    icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4",
+    title: "Free Consultation",
+    description: "Tell us about your goals, budget, and preferences. We listen carefully to understand your unique aspirations and map out possibilities.",
+    icon: "M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z",
     color: "from-primary-500 to-blue-600",
   },
   {
     step: 2,
-    title: "University Selection",
-    description: "We shortlist the best universities and courses that match your profile, budget, and long-term aspirations.",
-    icon: "M12 14l9-5-9-5-9 5 9 5zm0 7l-9-5 9-5 9 5-9 5z",
+    title: "Profile Evaluation",
+    description: "We assess your academic background, work experience, and preferences to find the best-fit universities and courses for you.",
+    icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4",
     color: "from-accent-500 to-emerald-600",
   },
   {
     step: 3,
-    title: "Application Submission",
-    description: "Our experts handle every application, from SOP writing to document submission, ensuring nothing is missed.",
-    icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+    title: "University Selection",
+    description: "We shortlist the best universities and courses that match your profile, budget, and long-term career aspirations.",
+    icon: "M12 14l9-5-9-5-9 5 9 5zm0 7l-9-5 9-5 9 5-9 5z",
     color: "from-violet-500 to-purple-600",
   },
   {
     step: 4,
-    title: "Visa Processing",
-    description: "End-to-end visa assistance — documentation, interview prep, and follow-up for a smooth approval process.",
+    title: "Application & Visa",
+    description: "End-to-end handling of applications, SOP writing, documentation, and visa processing — we manage everything for you.",
     icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
     color: "from-amber-500 to-orange-600",
   },
   {
     step: 5,
     title: "Fly Abroad ✈️",
-    description: "From pre-departure briefing to airport pickup and accommodation, we ensure a smooth transition to your new home.",
+    description: "From pre-departure briefing to airport pickup and accommodation, we ensure a smooth transition to your new home abroad.",
     icon: "M12 19l9 2-9-18-9 18 9-2zm0 0v-8",
     color: "from-rose-500 to-pink-600",
   },
@@ -67,7 +67,7 @@ export default function HowItWorks() {
             The Process
           </span>
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
-            Your Journey in <span className="text-gradient">5 Simple Steps</span>
+            Your Journey — <span className="text-gradient">Simplified</span>
           </h2>
           <p className="text-white/40 max-w-2xl mx-auto text-lg leading-relaxed">
             From profile evaluation to flying abroad — we handle everything so you don't have to.

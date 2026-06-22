@@ -78,7 +78,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-white leading-[0.92] mb-8 tracking-tight"
           >
-            Study, Work & Settle<br />
+            Build Your Future<br />
             <span className="relative">
               <span className="text-gradient-blue">Abroad — Without Confusion</span>
             </span>
