@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const partners = [
-  { name: "University of Oxford", slug: "oxford", location: "Oxford, UK", image: "https://images.unsplash.com/photo-1506003094589-5c5a5a12e8d3?w=600&q=80", tag: "#1 Worldwide" },
-  { name: "MIT", slug: "mit", location: "Cambridge, USA", image: "https://images.unsplash.com/photo-1569488540394-4c53a1c0a0f9?w=600&q=80", tag: "#2 Worldwide" },
-  { name: "Stanford University", slug: "stanford", location: "Stanford, USA", image: "https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=600&q=80", tag: "#3 Worldwide" },
+  { name: "University of Oxford", slug: "oxford", location: "Oxford, UK", image: "https://images.unsplash.com/photo-1763365696356-cde504c482b6?w=600&q=80", tag: "#1 Worldwide" },
+  { name: "MIT", slug: "mit", location: "Cambridge, USA", image: "https://images.unsplash.com/photo-LvvIma6We8U?w=600&q=80", tag: "#2 Worldwide" },
+  { name: "Stanford University", slug: "stanford", location: "Stanford, USA", image: "https://images.unsplash.com/photo-1681782421891-5088f13466ec?w=600&q=80", tag: "#3 Worldwide" },
   { name: "University of Toronto", slug: "toronto", location: "Toronto, Canada", image: "https://images.unsplash.com/photo-1569519266191-9d3c3ea6b7d0?w=600&q=80", tag: "#18 Worldwide" },
   { name: "National University of Singapore", slug: "nus", location: "Singapore", image: "https://images.unsplash.com/photo-1568608471701-8f6e3bb1d460?w=600&q=80", tag: "#8 Worldwide" },
   { name: "Technical University of Munich", slug: "tum", location: "Munich, Germany", image: "https://images.unsplash.com/photo-1564981797816-1043664bf78d?w=600&q=80", tag: "#37 Worldwide" },

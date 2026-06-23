@@ -19,7 +19,7 @@ const universityData = [
     about: "Oxford University, founded in 1096, is one of the world's leading academic institutions. With over 25,000 students and 4,000 faculty members from around the globe, Oxford combines ancient academic traditions with cutting-edge research and teaching. Known for its tutorial system, Oxford provides personalized, world-class education that has shaped leaders and innovators across centuries, producing 28 Nobel laureates and numerous world leaders.",
     mission: "To promote excellence in research, scholarship, and education by pursuing and sharing knowledge at the highest levels, and to contribute to society through the advancement of learning.",
     vision: "To be the pre-eminent center of learning in the world, fostering an environment where the brightest minds can flourish and make transformative contributions to humanity.",
-    image: "https://images.unsplash.com/photo-1506003094589-5c5a5a12e8d3?w=1400&q=80",
+    image: "https://images.unsplash.com/photo-1763365696356-cde504c482b6?w=1400&q=80",
     logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Oxford_University_Coat_of_Arms.svg/1200px-Oxford_University_Coat_of_Arms.svg.png",
     programs: [
       {
@@ -134,7 +134,7 @@ const universityData = [
     about: "The Massachusetts Institute of Technology (MIT), founded in 1861, is a world-renowned private research university committed to advancing knowledge and educating students in science, technology, and other areas of scholarship. Known for its rigorous academic programs, cutting-edge research, and entrepreneurial culture, MIT has produced 97 Nobel laureates and countless innovators who have shaped the modern world.",
     mission: "To advance knowledge and educate students in science, technology, and other areas of scholarship that will best serve the nation and the world in the 21st century.",
     vision: "To make a better world through education, research, and innovation — tackling the most pressing challenges facing humanity.",
-    image: "https://images.unsplash.com/photo-1569488540394-4c53a1c0a0f9?w=1400&q=80",
+    image: "https://images.unsplash.com/photo-LvvIma6We8U?w=1400&q=80",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/1200px-MIT_logo.svg.png",
     programs: [
       {
@@ -238,7 +238,7 @@ const universityData = [
     motto: "Die Luft der Freiheit weht — The wind of freedom blows",
     about: "Stanford University, founded in 1885 by Leland and Jane Stanford, is one of the world's leading research universities. Located in the heart of Silicon Valley, Stanford has been the birthplace of countless innovations and startups. Its entrepreneurial culture, interdisciplinary approach, and stunning 8,180-acre campus make it a unique environment for learning, research, and innovation.",
     mission: "To promote the public welfare by exercising an influence on behalf of humanity and civilization, teaching the blessings of liberty regulated by law, and inculcating love and reverence for the great principles of government as derived from the inalienable rights of man to life, liberty, and the pursuit of happiness.",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=1400&q=80",
+    image: "https://images.unsplash.com/photo-1681782421891-5088f13466ec?w=1400&q=80",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Stanford_Cardinal_logo.svg/1200px-Stanford_Cardinal_logo.svg.png",
     programs: [
       {
