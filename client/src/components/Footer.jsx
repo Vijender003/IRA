@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const footerLinks = {
   Services: [{ name: "Study Abroad", href: "/services" }, { name: "Immigration", href: "/services" }, { name: "Visa Services", href: "/services" }, { name: "Business Setup", href: "/services" }],
   Destinations: [{ name: "Georgia", href: "/country/georgia" }, { name: "Singapore", href: "/country/singapore" }, { name: "Russia", href: "/country/russia" }, { name: "Malta", href: "/country/malta" }],
-  Company: [{ name: "About Us", href: "/" }, { name: "Contact", href: "/#contact" }],
+  Company: [{ name: "About Us", href: "/" }, { name: "Contact", href: "/contact" }],
   Legal: [{ name: "Privacy Policy", href: "/" }, { name: "Terms of Service", href: "/" }],
 };
 
