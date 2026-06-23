@@ -27,6 +27,7 @@ import ApplicationForm from "./pages/ApplicationForm";
 import DestinationsPage from "./pages/DestinationsPage";
 import ServicesPage from "./pages/ServicesPage";
 import CountryPage from "./components/CountryPage";
+import UniversityDetailPage from "./pages/UniversityDetailPage";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -80,6 +81,7 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/destinations" element={<DestinationsPage />} />
             <Route path="/country/:slug" element={<CountryPage />} />
+            <Route path="/universities/:slug" element={<UniversityDetailPage />} />
           </Routes>
           <Footer />
           <WhatsApp />
