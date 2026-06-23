@@ -608,7 +608,7 @@ export default function ContactPage() {
                 </span>
               </motion.button>
 
-              <p className="text-white/20 text-xs mt-4">Limited slots available. Free for first-time applicants.</p>
+              <p className="text-white/20 text-xs mt-4">Free for first-time applicants.</p>
             </div>
           </motion.div>
         </div>
@@ -673,9 +673,7 @@ export default function ContactPage() {
         />
         <div className="relative z-10 container-custom px-4 md:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <span className="inline-block text-white/30 text-sm font-semibold tracking-[0.2em] uppercase mb-6 bg-white/5 border border-white/10 rounded-full px-5 py-2">
-              Limited Slots Available
-            </span>
+
             <h2 className="text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-[1.1] title-glow">
               Your Dream University
               <br />
