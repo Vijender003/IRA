@@ -44,8 +44,8 @@ export default function Navbar() {
             </svg>
           </div>
           <div>
-            <span className="text-lg font-display font-bold text-white">IRA</span>
-            <span className="text-lg font-display font-light text-white/60 ml-1">International</span>
+            <span className="text-lg font-display font-bold text-white">THE PARASHARS</span>
+            <span className="text-lg font-display font-light text-white/60 ml-1">consulting & services</span>
           </div>
         </Link>
 

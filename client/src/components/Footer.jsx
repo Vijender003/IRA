@@ -18,7 +18,7 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               </div>
-              <div><span className="text-lg font-display font-bold text-white">IRA</span><span className="text-lg font-display font-light text-white/50 ml-1">International</span></div>
+              <div><span className="text-lg font-display font-bold text-white">THE PARASHARS</span><span className="text-lg font-display font-light text-white/50 ml-1">consulting & services</span></div>
             </Link>
             <p className="text-white/30 text-sm leading-relaxed max-w-xs mb-6">Building global futures through education, immigration, and business opportunities.</p>
           </div>
@@ -34,7 +34,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/20 text-sm">&copy; {new Date().getFullYear()} IRA International. All rights reserved.</p>
+          <p className="text-white/20 text-sm">&copy; {new Date().getFullYear()} THE PARASHARS consulting and services. All rights reserved.</p>
           <p className="text-white/20 text-sm">Future Without Borders</p>
         </div>
       </div>

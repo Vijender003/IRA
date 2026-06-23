@@ -18,7 +18,7 @@ const trustFeatures = [
 ];
 
 const testimonials = [
-  { name: "Ananya Gupta", role: "MS Computer Science, MIT", rating: 5, text: "IRA made my dream of studying at MIT a reality. Their counselors guided me through every step — from SOP to visa interview." },
+  { name: "Ananya Gupta", role: "MS Computer Science, MIT", rating: 5, text: "The Parashars made my dream of studying at MIT a reality. Their counselors guided me through every step — from SOP to visa interview." },
   { name: "Rahul Verma", role: "MBA, University of Toronto", rating: 5, text: "I was confused about which country to choose. They helped me find the perfect program that fit my profile and budget." },
   { name: "Priya Sharma", role: "BSc Nursing, University of Malta", rating: 5, text: "The visa process was so smooth. My counselor held my hand through the entire application. Grateful forever!" },
 ];
@@ -443,7 +443,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-surface-950" />
         <div className="relative z-10 container-custom px-4 md:px-8">
           <motion.div className="text-center mb-16" {...fadeUp}>
-            <span className="inline-block text-primary-400 text-sm font-semibold tracking-widest uppercase mb-4">Why Choose IRA</span>
+            <span className="inline-block text-primary-400 text-sm font-semibold tracking-widest uppercase mb-4">Why Choose Us</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
               Your Success Is Our <span className="text-gradient">Mission</span>
             </h2>
@@ -527,7 +527,7 @@ export default function ContactPage() {
 
       {/* ===== 5. WHATSAPP FLOATING BUTTON ===== */}
       <motion.a
-        href="https://wa.me/919220552177?text=Hi%20IRA%20International!%20I'd%20like%20to%20know%20more%20about%20studying%20abroad."
+        href="https://wa.me/919220552177?text=Hi%20THE%20PARASHARS!%20I'd%20like%20to%20know%20more%20about%20studying%20abroad."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 z-50 flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold px-6 py-4 rounded-2xl shadow-2xl shadow-green-500/30 hover:shadow-green-500/50 transition-all"
@@ -682,7 +682,7 @@ export default function ContactPage() {
               </span>
             </h2>
             <p className="text-lg text-white/40 max-w-xl mx-auto mb-10">
-              Join 10,000+ successful students who achieved their study abroad dreams with IRA International.
+              Join 10,000+ successful students who achieved their study abroad dreams with THE PARASHARS.
             </p>
             <motion.a
               href="#form"

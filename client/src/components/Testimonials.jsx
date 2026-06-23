@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
 const testimonials = [
-  { name: "Priya Sharma", role: "Studying in Singapore", text: "IRA International made my dream of studying in NUS a reality. Their step-by-step guidance was incredible.", rating: 5, destination: "Singapore" },
+  { name: "Priya Sharma", role: "Studying in Singapore", text: "THE PARASHARS made my dream of studying in NUS a reality. Their step-by-step guidance was incredible.", rating: 5, destination: "Singapore" },
   { name: "Arjun Mehta", role: "Medical Student in Russia", text: "From university selection to accommodation, everything was handled professionally. I'm now pursuing MBBS in Moscow.", rating: 5, destination: "Russia" },
-  { name: "Sneha & Rahul Patel", role: "Family Immigration to Malta", text: "We wanted to relocate as a family. IRA made the entire process smooth and stress-free.", rating: 5, destination: "Malta" },
+  { name: "Sneha & Rahul Patel", role: "Family Immigration to Malta", text: "We wanted to relocate as a family. THE PARASHARS made the entire process smooth and stress-free.", rating: 5, destination: "Malta" },
   { name: "Vikram Singh", role: "Business Setup in Singapore", text: "Their business migration service helped me set up my tech startup. The investment guidance was invaluable.", rating: 5, destination: "Singapore" },
 ];
 
