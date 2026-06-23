@@ -15,30 +15,47 @@ export default function Hero() {
           90% { opacity: 1; }
           100% { transform: translateY(-110vh) scale(1); opacity: 0; }
         }
-        @keyframes morphGradient {
-          0% { transform: translate(0,0) scale(1); opacity: 0.4; }
-          25% { transform: translate(40px,-60px) scale(1.2); opacity: 0.5; }
-          50% { transform: translate(-30px,20px) scale(0.9); opacity: 0.3; }
-          75% { transform: translate(20px,40px) scale(1.1); opacity: 0.45; }
-          100% { transform: translate(0,0) scale(1); opacity: 0.4; }
+        @keyframes driftOrb1 {
+          0% { transform: translate(0, 0) scale(1); }
+          25% { transform: translate(80px, -60px) scale(1.15); }
+          50% { transform: translate(-40px, 40px) scale(0.95); }
+          75% { transform: translate(60px, 30px) scale(1.1); }
+          100% { transform: translate(0, 0) scale(1); }
         }
-        @keyframes shimmer {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
+        @keyframes driftOrb2 {
+          0% { transform: translate(0, 0) scale(1); }
+          25% { transform: translate(-70px, 50px) scale(1.1); }
+          50% { transform: translate(50px, -30px) scale(0.9); }
+          75% { transform: translate(-30px, -50px) scale(1.05); }
+          100% { transform: translate(0, 0) scale(1); }
+        }
+        @keyframes driftOrb3 {
+          0% { transform: translate(0, 0) scale(1); }
+          25% { transform: translate(40px, 50px) scale(1.1); }
+          50% { transform: translate(-60px, -20px) scale(0.95); }
+          75% { transform: translate(20px, -60px) scale(1.05); }
+          100% { transform: translate(0, 0) scale(1); }
+        }
+        @keyframes headlineGlow {
+          0%, 100% { filter: drop-shadow(0 0 30px rgba(37,99,235,0.15)) drop-shadow(0 0 60px rgba(99,102,241,0.1)); }
+          50% { filter: drop-shadow(0 0 50px rgba(37,99,235,0.25)) drop-shadow(0 0 80px rgba(99,102,241,0.15)); }
         }
       `}</style>
 
-      {/* Premium gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-surface-950 via-primary-950/30 via-surface-900 to-surface-950" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(37,99,235,0.15),transparent_70%)]" />
+      {/* Base dark background */}
+      <div className="absolute inset-0 bg-surface-950" />
 
-      {/* Animated gradient orbs */}
-      <div className="absolute top-10 left-1/5 w-[600px] h-[600px] bg-primary-500/15 rounded-full blur-[150px] animate-[morphGradient_14s_ease-in-out_infinite]" />
-      <div className="absolute top-1/4 right-1/5 w-[500px] h-[500px] bg-accent-500/10 rounded-full blur-[120px] animate-[morphGradient_18s_ease-in-out_infinite_3s]" />
-      <div className="absolute -bottom-40 left-1/3 w-[700px] h-[700px] bg-primary-600/8 rounded-full blur-[180px] animate-[morphGradient_20s_ease-in-out_infinite_6s]" />
+      {/* Animated gradient orbs - blue/indigo/purple palette */}
+      <div className="absolute top-5 left-[10%] w-[650px] h-[650px] rounded-full opacity-[0.12] blur-[180px] animate-[driftOrb1_20s_ease-in-out_infinite] bg-blue-500" />
+      <div className="absolute top-[20%] right-[5%] w-[550px] h-[550px] rounded-full opacity-[0.1] blur-[160px] animate-[driftOrb2_25s_ease-in-out_infinite_2s] bg-indigo-500" />
+      <div className="absolute bottom-[10%] left-[30%] w-[700px] h-[700px] rounded-full opacity-[0.08] blur-[200px] animate-[driftOrb3_22s_ease-in-out_infinite_4s] bg-purple-600" />
+
+      {/* Gradient overlay - top lighter, bottom darker for readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-surface-950/30 via-surface-950/10 to-surface-950/80" />
+      <div className="absolute inset-0 bg-gradient-to-t from-surface-950 via-surface-950/40 to-transparent" />
 
       {/* Grid pattern */}
-      <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} />
+      <div className="absolute inset-0 opacity-[0.012]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} />
 
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -83,7 +100,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-white leading-[0.92] mb-8 tracking-tight"
+            className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-white leading-[0.92] mb-8 tracking-tight animate-[headlineGlow_4s_ease-in-out_infinite] will-change-[filter]"
           >
             Build Your Future<br />
             <span className="relative">
