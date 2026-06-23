@@ -8,6 +8,7 @@ const navLinks = [
   { name: "Services", href: "/services" },
   { name: "Destinations", href: "/destinations" },
   { name: "Contact", href: "/#contact" },
+  { name: "Live", href: "/live", badge: true },
 ];
 
 export default function Navbar() {
@@ -56,13 +57,18 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 to={link.href}
-                className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+                className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-lg inline-flex items-center gap-1.5 ${
                   isActive
                     ? "text-white"
                     : "text-white/50 hover:text-white"
                 }`}
               >
                 {link.name}
+                {link.badge && (
+                  <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 text-white font-bold animate-pulse tracking-wider">
+                    LIVE
+                  </span>
+                )}
                 {isActive && (
                   <motion.div
                     layoutId="nav-indicator"
