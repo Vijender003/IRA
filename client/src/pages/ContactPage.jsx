@@ -10,27 +10,20 @@ const fadeUp = {
   transition: { duration: 0.6 },
 };
 
-const stagger = {
-  initial: { opacity: 0 },
-  whileInView: { opacity: 1 },
-  viewport: { once: true },
-  transition: { staggerChildren: 0.1 },
-};
-
 const trustFeatures = [
-  { icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>, title: "Fast Delivery", desc: "Most projects delivered within 2-3 weeks. We move at startup speed with enterprise quality." },
-  { icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>, title: "Premium Design", desc: "Pixel-perfect interfaces inspired by Apple and Stripe. Your brand deserves world-class design." },
-  { icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>, title: "Conversion Focus", desc: "Built with CRO principles. Every pixel optimized to turn visitors into high-quality leads." },
-  { icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>, title: "Dedicated Support", desc: "24/7 priority support with your dedicated project manager. We don't just build — we partner." },
+  { icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>, title: "Expert Guidance", desc: "10+ years helping students get into top universities worldwide with personalized counseling." },
+  { icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>, title: "98% Visa Success", desc: "Our visa documentation and interview prep gives you the highest chance of approval." },
+  { icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>, title: "500+ University Partners", desc: "Direct partnerships with universities across 12 countries for seamless admissions." },
+  { icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>, title: "End-to-End Support", desc: "From university selection to visa and accommodation — we handle everything." },
 ];
 
 const testimonials = [
-  { name: "Sarah Chen", role: "Founder, TechFlow", rating: 5, text: "The team transformed our outdated site into a conversion machine. Our leads increased 3x in the first month." },
-  { name: "Marcus Williams", role: "CEO, Elevate Studios", rating: 5, text: "Working with IRA was like having a world-class design agency in-house. The attention to detail is unmatched." },
-  { name: "Priya Sharma", role: "Director, Nexus Global", rating: 5, text: "From concept to launch, every step was seamless. The multi-step funnel alone increased our conversion rate by 40%." },
+  { name: "Ananya Gupta", role: "MS Computer Science, MIT", rating: 5, text: "IRA made my dream of studying at MIT a reality. Their counselors guided me through every step — from SOP to visa interview." },
+  { name: "Rahul Verma", role: "MBA, University of Toronto", rating: 5, text: "I was confused about which country to choose. They helped me find the perfect program that fit my profile and budget." },
+  { name: "Priya Sharma", role: "BSc Nursing, University of Malta", rating: 5, text: "The visa process was so smooth. My counselor held my hand through the entire application. Grateful forever!" },
 ];
 
-const stepLabels = ["Your Info", "Project Scope", "Details"];
+const stepLabels = ["Personal Info", "Study Preferences", "Additional Details"];
 
 export default function ContactPage() {
   const [step, setStep] = useState(0);
@@ -38,8 +31,9 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
-    name: "", email: "", businessType: "", budget: "",
-    description: "", timeline: "",
+    name: "", email: "", phone: "",
+    country: "", program: "", level: "",
+    budget: "", intake: "", message: "",
   });
   const heroRef = useRef(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -66,10 +60,10 @@ export default function ContactPage() {
     setLoading(true);
     try {
       await contactAPI.send(form);
-      toast.success("Strategy request received! We'll reach out within 24 hours.");
+      toast.success("Application received! Our team will reach out within 24 hours.");
       setSubmitted(true);
     } catch {
-      toast.success("Strategy request received! We'll reach out within 24 hours.");
+      toast.success("Application received! Our team will reach out within 24 hours.");
       setSubmitted(true);
     } finally {
       setLoading(false);
@@ -77,8 +71,8 @@ export default function ContactPage() {
   };
 
   const canProceed = () => {
-    if (step === 0) return form.name.trim() && form.email.trim();
-    if (step === 1) return form.businessType && form.budget;
+    if (step === 0) return form.name.trim() && form.email.trim() && form.phone.trim();
+    if (step === 1) return form.country && form.level;
     return true;
   };
 
@@ -92,9 +86,9 @@ export default function ContactPage() {
     <div className="min-h-screen bg-surface-950 pt-20">
       <style>{`
         .hero-gradient-bg {
-          background: radial-gradient(ellipse at 20% 50%, rgba(88, 28, 135, 0.3) 0%, transparent 50%),
-                      radial-gradient(ellipse at 80% 20%, rgba(37, 99, 235, 0.25) 0%, transparent 50%),
-                      radial-gradient(ellipse at 50% 80%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
+          background: radial-gradient(ellipse at 20% 50%, rgba(37,99,235,0.2) 0%, transparent 50%),
+                      radial-gradient(ellipse at 80% 20%, rgba(16,185,129,0.15) 0%, transparent 50%),
+                      radial-gradient(ellipse at 50% 80%, rgba(139,92,246,0.15) 0%, transparent 50%),
                       linear-gradient(180deg, #020617 0%, #0f172a 50%, #020617 100%);
         }
         @keyframes blob1 { 0%,100% { transform: translate(0,0) scale(1); } 25% { transform: translate(80px,-60px) scale(1.1); } 50% { transform: translate(-40px,40px) scale(0.9); } 75% { transform: translate(60px,80px) scale(1.05); } }
@@ -102,10 +96,8 @@ export default function ContactPage() {
         @keyframes blob3 { 0%,100% { transform: translate(0,0) scale(1); } 33% { transform: translate(50px,50px) scale(1.1); } 66% { transform: translate(-70px,-30px) scale(0.9); } }
         @keyframes glowPulse { 0%,100% { box-shadow: 0 0 20px rgba(37,99,235,0.3), 0 0 60px rgba(37,99,235,0.1); } 50% { box-shadow: 0 0 30px rgba(37,99,235,0.5), 0 0 80px rgba(37,99,235,0.2); } }
         @keyframes titleGlow { 0%,100% { filter: drop-shadow(0 0 8px rgba(37,99,235,0.2)) drop-shadow(0 0 20px rgba(99,102,241,0.1)); } 50% { filter: drop-shadow(0 0 16px rgba(37,99,235,0.4)) drop-shadow(0 0 40px rgba(99,102,241,0.2)); } }
-        @keyframes float { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
         @keyframes pulseRing { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(1.4); opacity: 0; } }
         @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-        .whatsapp-btn { animation: pulseRing 2s ease-out infinite; }
         .glow-btn:hover { animation: glowPulse 1.5s ease-in-out infinite; }
         .title-glow { animation: titleGlow 4s ease-in-out infinite; }
         .gradient-shift { background-size: 200% 200%; animation: gradientShift 6s ease infinite; }
@@ -116,28 +108,19 @@ export default function ContactPage() {
         <div className="absolute inset-0 hero-gradient-bg" />
         <motion.div
           className="absolute w-[500px] h-[500px] rounded-full bg-primary-500/10 blur-[120px] pointer-events-none"
-          animate={{
-            x: [0, 80, -40, 60, 0],
-            y: [0, -60, 40, 80, 0],
-          }}
+          animate={{ x: [0, 80, -40, 60, 0], y: [0, -60, 40, 80, 0] }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           style={{ left: "15%", top: "20%" }}
         />
         <motion.div
-          className="absolute w-[400px] h-[400px] rounded-full bg-purple-500/10 blur-[120px] pointer-events-none"
-          animate={{
-            x: [0, -60, 80, -40, 0],
-            y: [0, 80, -60, 40, 0],
-          }}
+          className="absolute w-[400px] h-[400px] rounded-full bg-accent-500/10 blur-[120px] pointer-events-none"
+          animate={{ x: [0, -60, 80, -40, 0], y: [0, 80, -60, 40, 0] }}
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
           style={{ right: "20%", bottom: "30%" }}
         />
         <motion.div
           className="absolute w-[300px] h-[300px] rounded-full bg-violet-500/10 blur-[100px] pointer-events-none"
-          animate={{
-            x: [0, 50, -30, 70, 0],
-            y: [0, -40, 60, -20, 0],
-          }}
+          animate={{ x: [0, 50, -30, 70, 0], y: [0, -40, 60, -20, 0] }}
           transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
           style={{ left: "50%", top: "60%" }}
         />
@@ -157,19 +140,19 @@ export default function ContactPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
               >
-                Premium Client Onboarding
+                Your Global Education Starts Here
               </motion.span>
 
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-8 leading-[1.1] title-glow">
-                Let&apos;s Build Something
+                Ready to Study at a
                 <br />
-                <span className="bg-gradient-to-r from-primary-400 via-purple-400 to-violet-400 bg-clip-text text-transparent">
-                  Extraordinary
+                <span className="bg-gradient-to-r from-primary-400 via-accent-400 to-violet-400 bg-clip-text text-transparent">
+                  World-Class University?
                 </span>
               </h1>
 
               <p className="text-lg md:text-xl text-white/50 max-w-2xl mx-auto mb-10 leading-relaxed">
-                Tell us your vision. We&apos;ll turn it into a high-converting digital experience that sets you apart from the competition.
+                Get free expert counseling on university selection, applications, visas, and scholarships. We&apos;ve helped 10,000+ students achieve their study abroad dreams.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -181,7 +164,7 @@ export default function ContactPage() {
                 >
                   <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
-                  Start Your Project
+                  Get Free Counseling
                 </motion.a>
                 <motion.a
                   href="#booking"
@@ -190,20 +173,21 @@ export default function ContactPage() {
                   whileTap={{ scale: 0.97 }}
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                  Book Free Call
+                  Book Free Consultation
                 </motion.a>
               </div>
             </motion.div>
 
             <motion.div
-              className="flex items-center justify-center gap-8 mt-16 text-white/30 text-sm"
+              className="flex items-center justify-center gap-8 mt-16 text-white/30 text-sm flex-wrap"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2 }}
             >
-              <span className="flex items-center gap-2"><svg className="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>No commitment required</span>
-              <span className="flex items-center gap-2"><svg className="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>Free strategy session</span>
-              <span className="flex items-center gap-2"><svg className="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>Premium clients only</span>
+              <span className="flex items-center gap-2"><svg className="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>10,000+ Students Guided</span>
+              <span className="flex items-center gap-2"><svg className="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>98% Visa Success Rate</span>
+              <span className="flex items-center gap-2"><svg className="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>500+ University Partners</span>
+              <span className="flex items-center gap-2"><svg className="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>Free Expert Guidance</span>
             </motion.div>
           </div>
         </div>
@@ -224,11 +208,11 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-surface-950 via-surface-900/30 to-surface-950" />
         <div className="relative z-10 container-custom px-4 md:px-8">
           <motion.div className="text-center mb-16" {...fadeUp}>
-            <span className="inline-block text-primary-400 text-sm font-semibold tracking-widest uppercase mb-4">Get Started</span>
+            <span className="inline-block text-primary-400 text-sm font-semibold tracking-widest uppercase mb-4">Start Your Journey</span>
             <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-4">
-              Start Your <span className="text-gradient">Project</span>
+              Get Your Free <span className="text-gradient">Study Plan</span>
             </h2>
-            <p className="text-white/40 max-w-xl mx-auto">Fill out the form below and we&apos;ll create a custom strategy plan for your business — completely free.</p>
+            <p className="text-white/40 max-w-xl mx-auto">Tell us about yourself and we&apos;ll create a personalized study abroad plan — completely free.</p>
           </motion.div>
 
           <motion.div
@@ -248,7 +232,6 @@ export default function ContactPage() {
                 boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06), 0 0 60px rgba(37,99,235,0.06)",
               }}
             >
-              {/* Progress bar */}
               {!submitted && (
                 <div className="mb-10">
                   <div className="flex justify-between mb-3">
@@ -265,11 +248,6 @@ export default function ContactPage() {
                       animate={{ width: `${((step + 1) / 3) * 100}%` }}
                       transition={{ duration: 0.4, ease: "easeOut" }}
                     />
-                  </div>
-                  <div className="flex justify-between mt-1.5">
-                    {stepLabels.map((_, i) => (
-                      <div key={i} className={`w-2 h-2 rounded-full transition-colors ${i <= step ? "bg-primary-500" : "bg-white/10"}`} />
-                    ))}
                   </div>
                 </div>
               )}
@@ -288,20 +266,20 @@ export default function ContactPage() {
                   >
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
                   </motion.div>
-                  <h3 className="text-3xl font-display font-bold text-white mb-3">Strategy Request Received!</h3>
+                  <h3 className="text-3xl font-display font-bold text-white mb-3">We&apos;ve Received Your Inquiry!</h3>
                   <p className="text-white/50 text-lg mb-2">Thank you for reaching out.</p>
-                  <p className="text-white/30">Our team will review your project and send a custom strategy plan within 24 hours.</p>
+                  <p className="text-white/30">Our expert counselors will review your profile and contact you within 24 hours with a personalized study plan.</p>
                   <motion.button
-                    onClick={() => { setSubmitted(false); setStep(0); setForm({ name: "", email: "", businessType: "", budget: "", description: "", timeline: "" }); }}
+                    onClick={() => { setSubmitted(false); setStep(0); setForm({ name: "", email: "", phone: "", country: "", program: "", level: "", budget: "", intake: "", message: "" }); }}
                     className="mt-8 text-sm text-primary-400 hover:text-primary-300 transition-colors underline underline-offset-4"
                     whileHover={{ scale: 1.02 }}
                   >
-                    Submit Another Request
+                    Submit Another Inquiry
                   </motion.button>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit}>
-                  <div className="overflow-hidden" style={{ minHeight: step === 0 ? "220px" : step === 1 ? "220px" : "280px" }}>
+                  <div className="overflow-hidden" style={{ minHeight: step === 0 ? "280px" : step === 1 ? "260px" : "260px" }}>
                     <AnimatePresence mode="wait" custom={direction}>
                       <motion.div
                         key={step}
@@ -312,68 +290,102 @@ export default function ContactPage() {
                         exit="exit"
                         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                       >
-                        {/* Step 1: Name & Email */}
                         {step === 0 && (
                           <div className="space-y-6">
                             <div>
-                              <label className="block text-sm font-medium text-white/60 mb-2">Your Name</label>
+                              <label className="block text-sm font-medium text-white/60 mb-2">Full Name</label>
                               <input type="text" name="name" value={form.name} onChange={update} required placeholder="John Doe" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-white/20 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500/40 transition-all" />
                             </div>
                             <div>
                               <label className="block text-sm font-medium text-white/60 mb-2">Email Address</label>
-                              <input type="email" name="email" value={form.email} onChange={update} required placeholder="john@company.com" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-white/20 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500/40 transition-all" />
+                              <input type="email" name="email" value={form.email} onChange={update} required placeholder="john@email.com" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-white/20 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500/40 transition-all" />
+                            </div>
+                            <div>
+                              <label className="block text-sm font-medium text-white/60 mb-2">Phone Number</label>
+                              <input type="tel" name="phone" value={form.phone} onChange={update} required placeholder="+91 98765 43210" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-white/20 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500/40 transition-all" />
                             </div>
                           </div>
                         )}
 
-                        {/* Step 2: Business Type & Budget */}
                         {step === 1 && (
                           <div className="space-y-6">
                             <div>
-                              <label className="block text-sm font-medium text-white/60 mb-2">Business Type</label>
-                              <select name="businessType" value={form.businessType} onChange={update} required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500/40 transition-all appearance-none cursor-pointer">
-                                <option value="" disabled className="bg-surface-900">Select your business type</option>
-                                <option value="startup" className="bg-surface-900">Startup / SaaS</option>
-                                <option value="agency" className="bg-surface-900">Digital Agency</option>
-                                <option value="ecommerce" className="bg-surface-900">E-Commerce</option>
-                                <option value="education" className="bg-surface-900">Education / EdTech</option>
-                                <option value="healthcare" className="bg-surface-900">Healthcare</option>
-                                <option value="finance" className="bg-surface-900">Finance / FinTech</option>
-                                <option value="realestate" className="bg-surface-900">Real Estate</option>
+                              <label className="block text-sm font-medium text-white/60 mb-2">Preferred Country</label>
+                              <select name="country" value={form.country} onChange={update} required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500/40 transition-all appearance-none cursor-pointer">
+                                <option value="" disabled className="bg-surface-900">Select country</option>
+                                <option value="usa" className="bg-surface-900">USA</option>
+                                <option value="uk" className="bg-surface-900">UK</option>
+                                <option value="canada" className="bg-surface-900">Canada</option>
+                                <option value="australia" className="bg-surface-900">Australia</option>
+                                <option value="germany" className="bg-surface-900">Germany</option>
+                                <option value="france" className="bg-surface-900">France</option>
+                                <option value="singapore" className="bg-surface-900">Singapore</option>
+                                <option value="malta" className="bg-surface-900">Malta</option>
+                                <option value="ireland" className="bg-surface-900">Ireland</option>
+                                <option value="new-zealand" className="bg-surface-900">New Zealand</option>
+                                <option value="russia" className="bg-surface-900">Russia</option>
+                                <option value="georgia" className="bg-surface-900">Georgia</option>
+                                <option value="not-sure" className="bg-surface-900">Not Sure Yet</option>
+                              </select>
+                            </div>
+                            <div>
+                              <label className="block text-sm font-medium text-white/60 mb-2">Interested Program</label>
+                              <select name="program" value={form.program} onChange={update} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500/40 transition-all appearance-none cursor-pointer">
+                                <option value="" className="bg-surface-900">Select program (optional)</option>
+                                <option value="engineering" className="bg-surface-900">Engineering / Technology</option>
+                                <option value="business" className="bg-surface-900">Business / Management</option>
+                                <option value="medicine" className="bg-surface-900">Medicine / Healthcare</option>
+                                <option value="arts" className="bg-surface-900">Arts / Humanities</option>
+                                <option value="science" className="bg-surface-900">Science / Research</option>
+                                <option value="law" className="bg-surface-900">Law</option>
+                                <option value="nursing" className="bg-surface-900">Nursing</option>
                                 <option value="other" className="bg-surface-900">Other</option>
                               </select>
                             </div>
                             <div>
-                              <label className="block text-sm font-medium text-white/60 mb-2">Budget Range</label>
-                              <select name="budget" value={form.budget} onChange={update} required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500/40 transition-all appearance-none cursor-pointer">
-                                <option value="" disabled className="bg-surface-900">Select your budget range</option>
-                                <option value="5-10k" className="bg-surface-900">$5,000 - $10,000</option>
-                                <option value="10-25k" className="bg-surface-900">$10,000 - $25,000</option>
-                                <option value="25-50k" className="bg-surface-900">$25,000 - $50,000</option>
-                                <option value="50k+" className="bg-surface-900">$50,000+</option>
-                                <option value="not-sure" className="bg-surface-900">Not Sure Yet</option>
+                              <label className="block text-sm font-medium text-white/60 mb-2">Study Level</label>
+                              <select name="level" value={form.level} onChange={update} required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500/40 transition-all appearance-none cursor-pointer">
+                                <option value="" disabled className="bg-surface-900">Select study level</option>
+                                <option value="bachelor" className="bg-surface-900">Bachelor&apos;s (Undergraduate)</option>
+                                <option value="master" className="bg-surface-900">Master&apos;s (Postgraduate)</option>
+                                <option value="phd" className="bg-surface-900">PhD / Doctorate</option>
+                                <option value="diploma" className="bg-surface-900">Diploma / Certificate</option>
+                                <option value="language" className="bg-surface-900">Language Course</option>
+                                <option value="foundation" className="bg-surface-900">Foundation Program</option>
                               </select>
                             </div>
                           </div>
                         )}
 
-                        {/* Step 3: Description & Timeline */}
                         {step === 2 && (
                           <div className="space-y-6">
                             <div>
-                              <label className="block text-sm font-medium text-white/60 mb-2">Project Description</label>
-                              <textarea name="description" value={form.description} onChange={update} rows={5} required placeholder="Tell us about your project, goals, and what success looks like..." className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-white/20 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500/40 transition-all resize-none" />
+                              <label className="block text-sm font-medium text-white/60 mb-2">Annual Budget (Tuition + Living)</label>
+                              <select name="budget" value={form.budget} onChange={update} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500/40 transition-all appearance-none cursor-pointer">
+                                <option value="" className="bg-surface-900">Select budget (optional)</option>
+                                <option value="under-10k" className="bg-surface-900">Under $10,000</option>
+                                <option value="10-20k" className="bg-surface-900">$10,000 - $20,000</option>
+                                <option value="20-35k" className="bg-surface-900">$20,000 - $35,000</option>
+                                <option value="35-50k" className="bg-surface-900">$35,000 - $50,000</option>
+                                <option value="50k+" className="bg-surface-900">$50,000+</option>
+                                <option value="not-sure" className="bg-surface-900">Not Sure</option>
+                              </select>
                             </div>
                             <div>
-                              <label className="block text-sm font-medium text-white/60 mb-2">Desired Timeline</label>
-                              <select name="timeline" value={form.timeline} onChange={update} required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500/40 transition-all appearance-none cursor-pointer">
-                                <option value="" disabled className="bg-surface-900">Select your timeline</option>
-                                <option value="urgent" className="bg-surface-900">ASAP (1-2 weeks)</option>
-                                <option value="soon" className="bg-surface-900">Soon (2-4 weeks)</option>
-                                <option value="moderate" className="bg-surface-900">Moderate (1-2 months)</option>
-                                <option value="relaxed" className="bg-surface-900">Relaxed (2-3 months)</option>
-                                <option value="exploring" className="bg-surface-900">Just Exploring</option>
+                              <label className="block text-sm font-medium text-white/60 mb-2">Preferred Intake</label>
+                              <select name="intake" value={form.intake} onChange={update} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500/40 transition-all appearance-none cursor-pointer">
+                                <option value="" className="bg-surface-900">Select intake (optional)</option>
+                                <option value="2026-fall" className="bg-surface-900">Fall 2026 (Sep/Oct)</option>
+                                <option value="2027-spring" className="bg-surface-900">Spring 2027 (Jan/Feb)</option>
+                                <option value="2027-summer" className="bg-surface-900">Summer 2027 (May/Jun)</option>
+                                <option value="2027-fall" className="bg-surface-900">Fall 2027 (Sep/Oct)</option>
+                                <option value="2028" className="bg-surface-900">2028 or later</option>
+                                <option value="flexible" className="bg-surface-900">Flexible / Not Sure</option>
                               </select>
+                            </div>
+                            <div>
+                              <label className="block text-sm font-medium text-white/60 mb-2">Additional Message</label>
+                              <textarea name="message" value={form.message} onChange={update} rows={3} placeholder="Any specific questions or requirements..." className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-white/20 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500/40 transition-all resize-none" />
                             </div>
                           </div>
                         )}
@@ -381,7 +393,6 @@ export default function ContactPage() {
                     </AnimatePresence>
                   </div>
 
-                  {/* Navigation buttons */}
                   <div className="flex items-center justify-between mt-8 pt-6 border-t border-white/5">
                     <div>
                       {step > 0 ? (
@@ -389,9 +400,7 @@ export default function ContactPage() {
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
                           Back
                         </motion.button>
-                      ) : (
-                        <div />
-                      )}
+                      ) : <div />}
                     </div>
                     <div>
                       {step < 2 ? (
@@ -414,9 +423,9 @@ export default function ContactPage() {
                           whileTap={canProceed() ? { scale: 0.98 } : {}}
                         >
                           {loading ? (
-                            <><svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg>Processing...</>
+                            <><svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg>Submitting...</>
                           ) : (
-                            <><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Get My Free Strategy Plan</>
+                            <><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Get My Free Study Plan</>
                           )}
                         </motion.button>
                       )}
@@ -434,13 +443,13 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-surface-950" />
         <div className="relative z-10 container-custom px-4 md:px-8">
           <motion.div className="text-center mb-16" {...fadeUp}>
-            <span className="inline-block text-primary-400 text-sm font-semibold tracking-widest uppercase mb-4">Why Work With Us</span>
+            <span className="inline-block text-primary-400 text-sm font-semibold tracking-widest uppercase mb-4">Why Choose IRA</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
-              Built for <span className="text-gradient">Excellence</span>
+              Your Success Is Our <span className="text-gradient">Mission</span>
             </h2>
           </motion.div>
 
-          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" {...stagger}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {trustFeatures.map((f, i) => (
               <motion.div
                 key={f.title}
@@ -456,7 +465,7 @@ export default function ContactPage() {
                   backdropFilter: "blur(12px)",
                 }}
               >
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-500/20 to-purple-500/20 border border-primary-500/10 flex items-center justify-center text-primary-400 mb-5 group-hover:shadow-lg group-hover:shadow-primary-500/10 transition-all duration-500">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-500/20 to-accent-500/20 border border-primary-500/10 flex items-center justify-center text-primary-400 mb-5 group-hover:shadow-lg group-hover:shadow-primary-500/10 transition-all duration-500">
                   {f.icon}
                 </div>
                 <h3 className="text-lg font-display font-bold text-white mb-2">{f.title}</h3>
@@ -466,7 +475,7 @@ export default function ContactPage() {
                 }} />
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -481,11 +490,11 @@ export default function ContactPage() {
             </h2>
           </motion.div>
 
-          <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6" {...stagger}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>, label: "Phone", value: "+91 9220552177", action: "tel:+919220552177", color: "accent" },
-              { icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>, label: "Email", value: "admin@irainternationals.com", action: "mailto:admin@irainternationals.com", color: "primary" },
-              { icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>, label: "Location", value: "Gurugram, Haryana, India", action: "#", color: "violet" },
+              { icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>, label: "Phone", value: "+91 9220552177", action: "tel:+919220552177" },
+              { icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>, label: "Email", value: "admin@irainternationals.com", action: "mailto:admin@irainternationals.com" },
+              { icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>, label: "Location", value: "Gurugram, Haryana, India", action: "#" },
             ].map((item, i) => (
               <motion.a
                 key={item.label}
@@ -502,7 +511,7 @@ export default function ContactPage() {
                   backdropFilter: "blur(12px)",
                 }}
               >
-                <div className={`w-16 h-16 rounded-2xl bg-${item.color}-500/10 border border-${item.color}-500/20 flex items-center justify-center text-${item.color}-400 mb-5 group-hover:shadow-lg transition-all duration-500`}>
+                <div className="w-16 h-16 rounded-2xl bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-primary-400 mb-5 group-hover:shadow-lg transition-all duration-500">
                   {item.icon}
                 </div>
                 <p className="text-white/40 text-xs font-medium uppercase tracking-wider mb-2">{item.label}</p>
@@ -512,13 +521,13 @@ export default function ContactPage() {
                 }} />
               </motion.a>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* ===== 5. WHATSAPP FLOATING BUTTON ===== */}
       <motion.a
-        href="https://wa.me/919220552177?text=Hi%20IRA%20International!%20I'd%20like%20to%20chat%20about%20my%20project."
+        href="https://wa.me/919220552177?text=Hi%20IRA%20International!%20I'd%20like%20to%20know%20more%20about%20studying%20abroad."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 z-50 flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold px-6 py-4 rounded-2xl shadow-2xl shadow-green-500/30 hover:shadow-green-500/50 transition-all"
@@ -542,9 +551,9 @@ export default function ContactPage() {
           <motion.div className="text-center mb-16" {...fadeUp}>
             <span className="inline-block text-primary-400 text-sm font-semibold tracking-widest uppercase mb-4">Book a Call</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
-              Schedule a Free <span className="text-gradient">Consultation</span>
+              Schedule Free <span className="text-gradient">Counseling</span>
             </h2>
-            <p className="text-white/40 max-w-xl mx-auto">Book a free 15-minute strategy session with our team. No strings attached.</p>
+            <p className="text-white/40 max-w-xl mx-auto">Book a free 15-minute strategy session with our expert counselors. No strings attached.</p>
           </motion.div>
 
           <motion.div
@@ -562,7 +571,6 @@ export default function ContactPage() {
                 backdropFilter: "blur(16px)",
               }}
             >
-              {/* Premium calendar embed UI */}
               <motion.div
                 className="mb-8"
                 animate={{ y: [0, -3, 0] }}
@@ -573,8 +581,8 @@ export default function ContactPage() {
                 </div>
               </motion.div>
 
-              <h3 className="text-2xl font-display font-bold text-white mb-3">Free 15-Min Strategy Session</h3>
-              <p className="text-white/40 text-sm mb-8 leading-relaxed">Select a time that works for you. We&apos;ll discuss your project goals and create a roadmap to success.</p>
+              <h3 className="text-2xl font-display font-bold text-white mb-3">Free 15-Min Counseling Session</h3>
+              <p className="text-white/40 text-sm mb-8 leading-relaxed">Select a time slot and our counselor will discuss your study abroad goals, recommend universities, and create a roadmap.</p>
 
               <div className="grid grid-cols-3 gap-3 mb-6">
                 {["Mon 10", "Mon 11", "Mon 2", "Tue 10", "Tue 11", "Tue 2", "Wed 10", "Wed 11", "Wed 2"].map((slot) => (
@@ -600,7 +608,7 @@ export default function ContactPage() {
                 </span>
               </motion.button>
 
-              <p className="text-white/20 text-xs mt-4">Limited slots available. Premium clients only.</p>
+              <p className="text-white/20 text-xs mt-4">Limited slots available. Free for first-time applicants.</p>
             </div>
           </motion.div>
         </div>
@@ -611,13 +619,13 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-surface-950 via-surface-900/20 to-surface-950" />
         <div className="relative z-10 container-custom px-4 md:px-8">
           <motion.div className="text-center mb-16" {...fadeUp}>
-            <span className="inline-block text-primary-400 text-sm font-semibold tracking-widest uppercase mb-4">Testimonials</span>
+            <span className="inline-block text-primary-400 text-sm font-semibold tracking-widest uppercase mb-4">Success Stories</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
-              Trusted by <span className="text-gradient">Industry Leaders</span>
+              What Our Students <span className="text-gradient">Say</span>
             </h2>
           </motion.div>
 
-          <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6" {...stagger}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
               <motion.div
                 key={t.name}
@@ -640,7 +648,7 @@ export default function ContactPage() {
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed mb-6">&ldquo;{t.text}&rdquo;</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-purple-500 flex items-center justify-center text-white text-sm font-bold">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white text-sm font-bold">
                     {t.name.split(" ").map((n) => n[0]).join("")}
                   </div>
                   <div>
@@ -650,7 +658,7 @@ export default function ContactPage() {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -669,14 +677,14 @@ export default function ContactPage() {
               Limited Slots Available
             </span>
             <h2 className="text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-[1.1] title-glow">
-              Your Next Big Move
+              Your Dream University
               <br />
-              <span className="bg-gradient-to-r from-primary-400 via-purple-400 to-violet-400 bg-clip-text text-transparent">
-                Starts Here.
+              <span className="bg-gradient-to-r from-primary-400 via-accent-400 to-violet-400 bg-clip-text text-transparent">
+                Awaits You.
               </span>
             </h2>
             <p className="text-lg text-white/40 max-w-xl mx-auto mb-10">
-              Join the world&apos;s most innovative brands. Let&apos;s build something extraordinary together.
+              Join 10,000+ successful students who achieved their study abroad dreams with IRA International.
             </p>
             <motion.a
               href="#form"
@@ -685,7 +693,7 @@ export default function ContactPage() {
               whileTap={{ scale: 0.97 }}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
-              Start Your Project Now
+              Start Your Journey Now
             </motion.a>
           </motion.div>
         </div>
