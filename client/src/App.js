@@ -49,7 +49,6 @@ function HomePage() {
       <SocialProof />
       <Testimonials />
       <OfferSection />
-      <LeadForm />
       <CTA />
       <Contact />
     </>
