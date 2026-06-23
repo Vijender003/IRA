@@ -48,7 +48,6 @@ function HomePage() {
       <Destinations />
       <SocialProof />
       <Testimonials />
-      <LeadMagnet />
       <OfferSection />
       <LeadForm />
       <CTA />
