@@ -560,7 +560,7 @@ function ScholarshipSection({ uni }) {
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-white font-semibold text-base md:text-lg">{s.name}</h3>
                 <span className="text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider font-medium"
-                  style={{ background: s.type === "Merit-Based" ? "rgba(66,135,245,0.15)" : "rgba(16,185,129,0.15)", color: s.type === "Merit-Based" ? "#5990ff" : "#4ade80" }}>
+                  style={{ background: s.type === "Merit-Based" ? "rgba(66,135,245,0.15)" : "rgba(139,92,246,0.15)", color: s.type === "Merit-Based" ? "#5990ff" : "#a78bfa" }}>
                   {s.type}
                 </span>
               </div>

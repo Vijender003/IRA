@@ -87,7 +87,7 @@ export default function ContactPage() {
       <style>{`
         .hero-gradient-bg {
           background: radial-gradient(ellipse at 20% 50%, rgba(37,99,235,0.2) 0%, transparent 50%),
-                      radial-gradient(ellipse at 80% 20%, rgba(16,185,129,0.15) 0%, transparent 50%),
+                      radial-gradient(ellipse at 80% 20%, rgba(59,130,246,0.15) 0%, transparent 50%),
                       radial-gradient(ellipse at 50% 80%, rgba(139,92,246,0.15) 0%, transparent 50%),
                       linear-gradient(180deg, #020617 0%, #0f172a 50%, #020617 100%);
         }

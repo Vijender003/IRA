@@ -109,7 +109,7 @@ function ServiceModal({ type, open, onClose }) {
               {s.fields.includes("time") && <select value={form.time} onChange={(e) => setForm({...form, time: e.target.value})} className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white/70 text-sm focus:outline-none focus:border-primary-500/30 transition-all appearance-none"><option value="">Preferred Time</option><option>9:00 AM - 11:00 AM</option><option>11:00 AM - 1:00 PM</option><option>1:00 PM - 3:00 PM</option><option>3:00 PM - 5:00 PM</option><option>5:00 PM - 7:00 PM</option></select>}
               {s.fields.includes("message") && <textarea placeholder="Questions or Notes (optional)" value={form.message} onChange={(e) => setForm({...form, message: e.target.value})} rows={3} className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white text-sm placeholder-white/30 focus:outline-none focus:border-primary-500/30 transition-all resize-none" />}
               <button onClick={handleSubmit} className="w-full py-3.5 rounded-xl font-semibold text-sm text-white transition-all"
-                style={{ background: type === "consultation" ? "linear-gradient(135deg, #8b5cf6, #7c3aed)" : type === "eligibility" ? "linear-gradient(135deg, #10b981, #059669)" : "linear-gradient(135deg, #4287f5, #2563eb)", boxShadow: "0 0 20px rgba(66,135,245,0.3)" }}>
+                style={{ background: type === "consultation" ? "linear-gradient(135deg, #8b5cf6, #7c3aed)" : type === "eligibility" ? "linear-gradient(135deg, #22c55e, #16a34a)" : "linear-gradient(135deg, #4287f5, #2563eb)", boxShadow: "0 0 20px rgba(66,135,245,0.3)" }}>
                 {s.submitLabel}
               </button>
               <p className="text-center text-white/30 text-[11px]">✓ No credit card required · ✓ Instant results · ✓ 10,000+ students served</p>
@@ -122,7 +122,7 @@ function ServiceModal({ type, open, onClose }) {
 }
 
 function ServiceCard({ type, data, index, onActivate }) {
-  const colors = { report: { from: "#4287f5", to: "#2563eb", glow: "rgba(66,135,245,0.3)", border: "linear-gradient(135deg, #4287f5, #06b6d4)" }, consultation: { from: "#8b5cf6", to: "#7c3aed", glow: "rgba(139,92,246,0.3)", border: "linear-gradient(135deg, #8b5cf6, #ec4899)" }, eligibility: { from: "#10b981", to: "#059669", glow: "rgba(16,185,129,0.3)", border: "linear-gradient(135deg, #10b981, #0d9488)" } };
+  const colors = { report: { from: "#4287f5", to: "#2563eb", glow: "rgba(66,135,245,0.3)", border: "linear-gradient(135deg, #4287f5, #06b6d4)" }, consultation: { from: "#8b5cf6", to: "#7c3aed", glow: "rgba(139,92,246,0.3)", border: "linear-gradient(135deg, #8b5cf6, #ec4899)" }, eligibility: { from: "#22c55e", to: "#16a34a", glow: "rgba(34,197,94,0.3)", border: "linear-gradient(135deg, #22c55e, #15803d)" } };
   const c = colors[type];
   return (
     <motion.div
@@ -189,7 +189,7 @@ export default function LivePage() {
       ],
       preview: [
         { label: "Best Country", value: "Canada", color: "#4287f5" },
-        { label: "Visa Chances", value: "92%", color: "#10b981" },
+        { label: "Visa Chances", value: "92%", color: "#22c55e" },
         { label: "Est. Cost (1 Year)", value: "$25,000 - $35,000", color: "#f59e0b" },
         { label: "Top University", value: "University of Toronto", color: "#8b5cf6" },
       ],
@@ -211,7 +211,7 @@ export default function LivePage() {
         { label: "Slots Left This Month", value: "26", color: "#ef4444" },
         { label: "Duration", value: "30-45 minutes", color: "#8b5cf6" },
         { label: "Format", value: "Video or Phone Call", color: "#8b5cf6" },
-        { label: "Students Booked Today", value: "5", color: "#10b981" },
+        { label: "Students Booked Today", value: "5", color: "#22c55e" },
       ],
       cta: "Book Free Call Now",
       footer: ["98% satisfaction", "Save $3,000 avg.", "98% first choice"],
@@ -228,9 +228,9 @@ export default function LivePage() {
         "Detailed eligibility report with next steps",
       ],
       preview: [
-        { label: "Eligibility Score", value: "85%", color: "#10b981" },
+        { label: "Eligibility Score", value: "85%", color: "#22c55e" },
         { label: "Matching Universities", value: "5", color: "#4287f5" },
-        { label: "Visa Probability", value: "High", color: "#10b981" },
+        { label: "Visa Probability", value: "High", color: "#22c55e" },
         { label: "Scholarship Matches", value: "3", color: "#f59e0b" },
       ],
       cta: "Check Your Eligibility",
@@ -461,7 +461,7 @@ export default function LivePage() {
                   ))}
                 </div>
                 <p className="text-white/60 text-sm italic mb-3 leading-relaxed">"{t.quote}"</p>
-                <span className="inline-block text-[10px] px-2.5 py-1 rounded-full font-medium" style={{ background: "rgba(16,185,129,0.15)", color: "#4ade80" }}>
+                <span className="inline-block text-[10px] px-2.5 py-1 rounded-full font-medium" style={{ background: "rgba(34,197,94,0.15)", color: "#22c55e" }}>
                   ✓ {t.achievement}
                 </span>
               </motion.div>
@@ -516,7 +516,7 @@ export default function LivePage() {
                 </span>
               </button>
               <button onClick={() => setActiveModal("eligibility")} className="px-8 py-4 rounded-xl font-semibold text-sm text-white transition-all duration-300 hover:scale-[1.03]"
-                style={{ background: "linear-gradient(135deg, #10b981, #059669)", boxShadow: "0 0 30px rgba(16,185,129,0.3)" }}>
+                style={{ background: "linear-gradient(135deg, #22c55e, #16a34a)", boxShadow: "0 0 30px rgba(34,197,94,0.3)" }}>
                 <span className="flex items-center gap-2">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   Check My Eligibility
