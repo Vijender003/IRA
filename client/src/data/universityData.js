@@ -134,7 +134,7 @@ const universityData = [
     about: "The Massachusetts Institute of Technology (MIT), founded in 1861, is a world-renowned private research university committed to advancing knowledge and educating students in science, technology, and other areas of scholarship. Known for its rigorous academic programs, cutting-edge research, and entrepreneurial culture, MIT has produced 97 Nobel laureates and countless innovators who have shaped the modern world.",
     mission: "To advance knowledge and educate students in science, technology, and other areas of scholarship that will best serve the nation and the world in the 21st century.",
     vision: "To make a better world through education, research, and innovation — tackling the most pressing challenges facing humanity.",
-    image: "https://images.unsplash.com/photo-LvvIma6We8U?w=1400&q=80",
+    image: "/images/mit.jpg",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/1200px-MIT_logo.svg.png",
     programs: [
       {
@@ -328,7 +328,7 @@ const universityData = [
     motto: "Velut arbor ævo — As a tree through the ages",
     about: "The University of Toronto, founded in 1827, is Canada's leading research university and one of the world's top public institutions. With over 66,000 students across three campuses, U of T combines historic architecture with cutting-edge research facilities. Known for its strengths in AI research, medicine, and business, U of T has produced 10 Nobel laureates and 5 Canadian prime ministers.",
     mission: "To be an international centre of research, teaching, and learning, committed to creating knowledge and developing innovative thinkers who will shape the future.",
-    image: "https://images.unsplash.com/photo-1569519266191-9d3c3ea6b7d0?w=1400&q=80",
+    image: "/images/universityoftoronto.webp",
     logo: "https://upload.wikimedia.org/wikipedia/en/thumb/9/95/University_of_Toronto_Logo.svg/1200px-University_of_Toronto_Logo.svg.png",
     programs: [
       {
@@ -393,7 +393,7 @@ const universityData = [
     tagline: "Asia's leading global university",
     motto: "Towards a Global Knowledge Enterprise",
     about: "The National University of Singapore (NUS), founded in 1905, is Singapore's flagship university and consistently ranked among the best in Asia and the world. With a strong focus on innovation, entrepreneurship, and interdisciplinary learning, NUS offers a transformative educational experience in one of the world's most dynamic cities.",
-    image: "https://images.unsplash.com/photo-1568608471701-8f6e3bb1d460?w=1400&q=80",
+    image: "/images/universityofsingapore.webp",
     logo: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/National_University_of_Singapore_logo.svg/1200px-National_University_of_Singapore_logo.svg.png",
     programs: [
       {
@@ -522,7 +522,7 @@ const universityData = [
     tagline: "Australia's leading research university",
     motto: "Postera Crescam Laude — We shall grow in the esteem of future generations",
     about: "The University of Melbourne, founded in 1853, is Australia's leading research university and consistently ranked among the top universities globally. With a strong focus on research excellence and innovative teaching, Melbourne offers students a world-class education in one of the world's most liveable cities.",
-    image: "https://images.unsplash.com/photo-1608958005033-8c1b04fd8b08?w=1400&q=80",
+    image: "/images/universityofmelbourne.webp",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/University_of_Melbourne_coat_of_arms.svg/1200px-University_of_Melbourne_coat_of_arms.svg.png",
     programs: [
       {
