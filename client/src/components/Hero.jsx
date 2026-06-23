@@ -1,13 +1,28 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import LeadFunnel from "./LeadFunnel";
 import UrgencyBubbles from "./UrgencyBubbles";
 
 export default function Hero() {
   const [showFunnel, setShowFunnel] = useState(false);
+  const heroRef = useRef(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      if (heroRef.current) {
+        const rect = heroRef.current.getBoundingClientRect();
+        setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+      }
+    };
+    const el = heroRef.current;
+    if (el) el.addEventListener("mousemove", handleMouseMove);
+    return () => { if (el) el.removeEventListener("mousemove", handleMouseMove); };
+  }, []);
+
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section ref={heroRef} id="home" className="relative min-h-screen flex items-center overflow-hidden">
       <style>{`
         @keyframes floatUp {
           0% { transform: translateY(0) scale(0); opacity: 0; }
@@ -40,17 +55,30 @@ export default function Hero() {
           0%, 100% { filter: drop-shadow(0 0 30px rgba(37,99,235,0.15)) drop-shadow(0 0 60px rgba(99,102,241,0.1)); }
           50% { filter: drop-shadow(0 0 50px rgba(37,99,235,0.25)) drop-shadow(0 0 80px rgba(99,102,241,0.15)); }
         }
+        @keyframes glowPulseBtn {
+          0%, 100% { box-shadow: 0 0 20px rgba(37,99,235,0.3), 0 0 60px rgba(37,99,235,0.1); }
+          50% { box-shadow: 0 0 30px rgba(37,99,235,0.5), 0 0 80px rgba(37,99,235,0.2); }
+        }
+        .glow-btn-hero:hover { animation: glowPulseBtn 1.5s ease-in-out infinite; }
       `}</style>
 
       {/* Base dark background */}
       <div className="absolute inset-0 bg-surface-950" />
 
-      {/* Animated gradient orbs - blue/indigo/purple palette */}
+      {/* Animated gradient orbs */}
       <div className="absolute top-5 left-[10%] w-[650px] h-[650px] rounded-full opacity-[0.12] blur-[180px] animate-[driftOrb1_20s_ease-in-out_infinite] bg-blue-500" />
       <div className="absolute top-[20%] right-[5%] w-[550px] h-[550px] rounded-full opacity-[0.1] blur-[160px] animate-[driftOrb2_25s_ease-in-out_infinite_2s] bg-indigo-500" />
       <div className="absolute bottom-[10%] left-[30%] w-[700px] h-[700px] rounded-full opacity-[0.08] blur-[200px] animate-[driftOrb3_22s_ease-in-out_infinite_4s] bg-purple-600" />
 
-      {/* Gradient overlay - top lighter, bottom darker for readability */}
+      {/* Mouse-follow glow */}
+      <div
+        className="absolute inset-0 pointer-events-none transition-opacity duration-300"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(37,99,235,0.08) 0%, transparent 60%)`,
+        }}
+      />
+
+      {/* Gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-b from-surface-950/30 via-surface-950/10 to-surface-950/80" />
       <div className="absolute inset-0 bg-gradient-to-t from-surface-950 via-surface-950/40 to-transparent" />
 
@@ -77,14 +105,12 @@ export default function Hero() {
         })}
       </div>
 
-      {/* Floating urgency bubbles */}
       <UrgencyBubbles />
 
       {/* Content */}
       <div className="relative z-10 container-custom px-4 md:px-8 py-32 flex flex-col items-center justify-center min-h-screen">
         <div className="max-w-6xl mx-auto text-center">
 
-          {/* Pill badge */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
@@ -95,27 +121,25 @@ export default function Hero() {
             <span className="text-sm text-white/70 font-medium">Trusted by 10,000+ Students Worldwide</span>
           </motion.div>
 
-          {/* Main headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-white leading-[0.92] mb-8 tracking-tight animate-[headlineGlow_4s_ease-in-out_infinite] will-change-[filter]"
           >
-            Build Your Future<br />
+            Your Dream University<br />
             <span className="relative">
-              <span className="text-gradient-blue">Abroad — Without Confusion</span>
+              <span className="text-gradient-blue">Awaits. We Make It Happen.</span>
             </span>
           </motion.h1>
 
-          {/* Subtext */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-white/50 max-w-3xl mx-auto mb-12 leading-relaxed"
           >
-            Find the best country, course & visa path in 60 seconds.
+            Get expert guidance on university selection, applications, visas & scholarships — personalized for your profile and budget.
           </motion.p>
 
           {/* CTAs */}
@@ -125,14 +149,17 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <button onClick={() => setShowFunnel(true)} className="btn-primary-glow text-base px-10 py-5 inline-flex items-center gap-2">
+            <button
+              onClick={() => setShowFunnel(true)}
+              className="glow-btn-hero bg-gradient-to-r from-primary-500 to-primary-600 text-white text-base font-semibold px-10 py-5 rounded-2xl inline-flex items-center gap-2 shadow-2xl shadow-primary-500/25 hover:shadow-primary-500/40 transition-all"
+            >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              Get Your FREE Study Abroad Plan
+              Get Free Strategy Call
             </button>
-            <Link to="/destinations" className="btn-secondary text-base px-10 py-5 inline-flex items-center gap-2">
-              Explore Destinations
+            <Link to="/universities/mit" className="inline-flex items-center gap-3 text-white/70 text-base font-semibold px-10 py-5 rounded-2xl border border-white/10 hover:border-primary-500/40 hover:text-white transition-all">
+              View Success Stories
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

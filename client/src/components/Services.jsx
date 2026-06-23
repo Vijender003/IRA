@@ -38,8 +38,9 @@ export default function Services() {
                       </div>
                     ))}
                   </div>
-                  <Link to="/apply" className="inline-flex items-center gap-2 text-sm font-semibold text-primary-400 group-hover:text-primary-300 transition-colors">
-                    Get Started
+                  <Link to="/apply" className="inline-flex items-center gap-2 text-sm font-semibold text-primary-400 bg-primary-500/10 border border-primary-500/20 rounded-xl px-5 py-2.5 group-hover:bg-primary-500/20 group-hover:text-primary-300 transition-all">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    Get This Service
                     <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                   </Link>
                 </div>

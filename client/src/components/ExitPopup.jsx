@@ -44,9 +44,9 @@ export default function ExitPopup() {
                 </svg>
               </div>
 
-              <h3 className="text-2xl font-display font-bold text-white mb-3">Wait! Get Free Consultation Worth ₹1,999</h3>
+              <h3 className="text-2xl font-display font-bold text-white mb-3">Get FREE Study Abroad Assessment (Worth ₹2,499)</h3>
               <p className="text-white/50 text-sm mb-6 leading-relaxed">
-                Find the best country, course & visa path for your profile — completely free.
+                Find the best country, course & visa path for your profile — completely free. Limited to first 50 applicants this month.
               </p>
 
               <button
