@@ -7,14 +7,14 @@ export default function CTA() {
     <section className="section-padding relative overflow-hidden">
       <style>{`
         @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-        @keyframes glowPulseCTA { 0%,100% { box-shadow: 0 0 20px rgba(37,99,235,0.3), 0 0 60px rgba(37,99,235,0.1); } 50% { box-shadow: 0 0 30px rgba(37,99,235,0.5), 0 0 80px rgba(37,99,235,0.2); } }
+        @keyframes glowPulseCTA { 0%,100% { box-shadow: 0 0 20px rgba(34,211,238,0.3), 0 0 60px rgba(34,211,238,0.1); } 50% { box-shadow: 0 0 30px rgba(34,211,238,0.5), 0 0 80px rgba(34,211,238,0.2); } }
         .cta-glow-bg { background-size: 200% 200%; animation: gradientShift 6s ease infinite; }
         .cta-glow-btn:hover { animation: glowPulseCTA 1.5s ease-in-out infinite; }
-        @keyframes titleGlowCTA { 0%,100% { filter: drop-shadow(0 0 8px rgba(37,99,235,0.2)); } 50% { filter: drop-shadow(0 0 20px rgba(37,99,235,0.4)); } }
+        @keyframes titleGlowCTA { 0%,100% { filter: drop-shadow(0 0 8px rgba(34,211,238,0.2)); } 50% { filter: drop-shadow(0 0 20px rgba(34,211,238,0.4)); } }
         .cta-title-glow { animation: titleGlowCTA 4s ease-in-out infinite; }
       `}</style>
-      <div className="absolute inset-0 cta-glow-bg bg-gradient-to-br from-primary-900 via-surface-950 to-accent-900/30" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.15),transparent_70%)]" />
+      <div className="absolute inset-0 cta-glow-bg bg-gradient-to-br from-primary-950/50 via-surface-950 to-accent-950/30" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,211,238,0.08),transparent_70%)]" />
       <motion.div
         className="absolute w-[400px] h-[400px] rounded-full bg-primary-500/10 blur-[100px]"
         animate={{ x: [0, 80, -40, 0], y: [0, -60, 40, 0] }}
@@ -47,18 +47,18 @@ export default function CTA() {
             Get your personalized study plan and eligibility check — free, no obligation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
-            <Link to="/apply" className="cta-glow-btn bg-gradient-to-r from-primary-500 to-primary-600 text-white text-base font-semibold px-10 py-5 rounded-2xl inline-flex items-center gap-2 shadow-2xl shadow-primary-500/25">
+            <Link to="/apply" className="bg-gradient-to-r from-primary-400 to-accent-500 text-white text-base font-semibold px-10 py-5 rounded-2xl inline-flex items-center gap-2 shadow-2xl shadow-primary-400/25 hover:shadow-[0_0_50px_rgba(34,211,238,0.35)] hover:scale-[1.02] transition-all duration-300">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               Start Your Journey
             </Link>
             <AIAdvisor />
-            <a href="tel:+919220552177" className="inline-flex items-center gap-3 text-white/70 text-base font-semibold px-10 py-5 rounded-2xl border border-white/10 hover:border-primary-500/40 hover:text-white transition-all">
+            <a href="tel:+15550000000" className="inline-flex items-center gap-3 text-white/60 text-base font-semibold px-10 py-5 rounded-2xl border border-white/10 hover:border-primary-400/30 hover:text-white hover:bg-white/[0.02] transition-all duration-300">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              Call +91 9220552177
+              Call +1 (555) 000-0000
             </a>
           </div>
         </motion.div>

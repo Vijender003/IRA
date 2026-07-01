@@ -46,7 +46,7 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="min-h-screen pt-28 pb-20 px-4">
+    <div className="min-h-screen pt-20 pb-20 px-4">
       <div className="container-custom max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

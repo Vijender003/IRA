@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import TiltCard from "./TiltCard";
 
 const services = [
-  { title: "Study Abroad", description: "Complete guidance from university selection to relocation.", icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /></svg>, features: ["University Selection", "Application Process", "Visa Support", "Relocation Help"], color: "from-primary-500 to-primary-600", glow: "shadow-primary-500/20" },
-  { title: "Immigration & Residency", description: "Permanent residency and relocation solutions.", icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>, features: ["Permanent Residency", "Long-term Relocation", "Family Migration", "Settlement Support"], color: "from-accent-500 to-accent-600", glow: "shadow-accent-500/20" },
-  { title: "Visa Services", description: "Expert visa assistance for all major destinations.", icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>, features: ["Student Visa", "Tourist Visa", "Business Visa", "Work Visa"], color: "from-violet-500 to-violet-600", glow: "shadow-violet-500/20" },
-  { title: "Business & Investment", description: "Launch your business globally with expert guidance.", icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>, features: ["Business Setup Abroad", "Investment Migration", "Expansion Strategies", "Legal Compliance"], color: "from-amber-500 to-amber-600", glow: "shadow-amber-500/20" },
+  { title: "Study Abroad", description: "Complete guidance from university selection to relocation.", icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /></svg>, features: ["University Selection", "Application Process", "Visa Support", "Relocation Help"], color: "from-primary-400 to-accent-500", glow: "shadow-primary-400/20" },
+  { title: "Immigration & Residency", description: "Permanent residency and relocation solutions.", icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>, features: ["Permanent Residency", "Long-term Relocation", "Family Migration", "Settlement Support"], color: "from-accent-500 to-secondary-500", glow: "shadow-accent-500/20" },
+  { title: "Visa Services", description: "Expert visa assistance for all major destinations.", icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>, features: ["Student Visa", "Tourist Visa", "Business Visa", "Work Visa"], color: "from-primary-400 to-cyan-500", glow: "shadow-primary-400/20" },
+  { title: "Business & Investment", description: "Launch your business globally with expert guidance.", icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>, features: ["Business Setup Abroad", "Investment Migration", "Expansion Strategies", "Legal Compliance"], color: "from-accent-500 to-primary-400", glow: "shadow-accent-500/20" },
 ];
 
 const containerVariants = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
@@ -24,7 +25,8 @@ export default function Services() {
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, i) => (
             <motion.div key={i} variants={cardVariants}>
-              <div className="glass-card rounded-3xl p-8 md:p-10 h-full group cursor-default relative overflow-hidden">
+              <TiltCard intensity={5} className="h-full">
+                <div className="glass-card rounded-3xl p-8 md:p-10 h-full group cursor-default relative overflow-hidden">
                 <div className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-br ${service.color} opacity-5 rounded-full blur-3xl group-hover:opacity-10 transition-opacity duration-500`} />
                 <div className="relative z-10">
                   <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-white mb-6 shadow-lg ${service.glow} group-hover:scale-110 transition-transform duration-300`}>{service.icon}</div>
@@ -38,13 +40,14 @@ export default function Services() {
                       </div>
                     ))}
                   </div>
-                  <Link to="/apply" className="inline-flex items-center gap-2 text-sm font-semibold text-primary-400 bg-primary-500/10 border border-primary-500/20 rounded-xl px-5 py-2.5 group-hover:bg-primary-500/20 group-hover:text-primary-300 transition-all">
+                  <Link to="/apply" className="inline-flex items-center gap-2 text-sm font-semibold text-primary-400 bg-primary-400/10 border border-primary-400/20 rounded-xl px-5 py-2.5 group-hover:bg-primary-400/20 group-hover:text-primary-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-all">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     Get This Service
                     <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                   </Link>
                 </div>
               </div>
+              </TiltCard>
             </motion.div>
           ))}
         </motion.div>

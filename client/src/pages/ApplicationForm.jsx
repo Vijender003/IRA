@@ -125,7 +125,7 @@ export default function ApplicationForm() {
 
           <div>
             <label className="block text-sm font-medium text-white/60 mb-2">Phone *</label>
-            <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="+91 9220552177" className={inputClasses("phone")} />
+            <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="+1 (555) 000-0000" className={inputClasses("phone")} />
             {errors.phone && <p className="text-red-400 text-xs mt-1">{errors.phone}</p>}
           </div>
 

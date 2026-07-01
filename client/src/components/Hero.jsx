@@ -1,111 +1,50 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import LeadFunnel from "./LeadFunnel";
-import UrgencyBubbles from "./UrgencyBubbles";
+
+const floatingTags = [
+  { text: "🎓 September Intake", className: "animate-float-bubble" },
+  { text: "⚡ Limited Seats", className: "animate-float-bubble-2" },
+  { text: "🌍 Study Abroad 2026", className: "animate-float-bubble-3" },
+];
 
 export default function Hero() {
   const [showFunnel, setShowFunnel] = useState(false);
-  const heroRef = useRef(null);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (heroRef.current) {
-        const rect = heroRef.current.getBoundingClientRect();
-        setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-      }
-    };
-    const el = heroRef.current;
-    if (el) el.addEventListener("mousemove", handleMouseMove);
-    return () => { if (el) el.removeEventListener("mousemove", handleMouseMove); };
-  }, []);
 
   return (
-    <section ref={heroRef} id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      <style>{`
-        @keyframes floatUp {
-          0% { transform: translateY(0) scale(0); opacity: 0; }
-          10% { opacity: 1; }
-          90% { opacity: 1; }
-          100% { transform: translateY(-110vh) scale(1); opacity: 0; }
-        }
-        @keyframes driftOrb1 {
-          0% { transform: translate(0, 0) scale(1); }
-          25% { transform: translate(80px, -60px) scale(1.15); }
-          50% { transform: translate(-40px, 40px) scale(0.95); }
-          75% { transform: translate(60px, 30px) scale(1.1); }
-          100% { transform: translate(0, 0) scale(1); }
-        }
-        @keyframes driftOrb2 {
-          0% { transform: translate(0, 0) scale(1); }
-          25% { transform: translate(-70px, 50px) scale(1.1); }
-          50% { transform: translate(50px, -30px) scale(0.9); }
-          75% { transform: translate(-30px, -50px) scale(1.05); }
-          100% { transform: translate(0, 0) scale(1); }
-        }
-        @keyframes driftOrb3 {
-          0% { transform: translate(0, 0) scale(1); }
-          25% { transform: translate(40px, 50px) scale(1.1); }
-          50% { transform: translate(-60px, -20px) scale(0.95); }
-          75% { transform: translate(20px, -60px) scale(1.05); }
-          100% { transform: translate(0, 0) scale(1); }
-        }
-        @keyframes headlineGlow {
-          0%, 100% { filter: drop-shadow(0 0 30px rgba(37,99,235,0.15)) drop-shadow(0 0 60px rgba(99,102,241,0.1)); }
-          50% { filter: drop-shadow(0 0 50px rgba(37,99,235,0.25)) drop-shadow(0 0 80px rgba(99,102,241,0.15)); }
-        }
-        @keyframes glowPulseBtn {
-          0%, 100% { box-shadow: 0 0 20px rgba(37,99,235,0.3), 0 0 60px rgba(37,99,235,0.1); }
-          50% { box-shadow: 0 0 30px rgba(37,99,235,0.5), 0 0 80px rgba(37,99,235,0.2); }
-        }
-        .glow-btn-hero:hover { animation: glowPulseBtn 1.5s ease-in-out infinite; }
-      `}</style>
-
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Base dark background */}
-      <div className="absolute inset-0 bg-surface-950" />
+      <div className="absolute inset-0" style={{ background: "radial-gradient(circle at 20% 20%, #0F172A, #0B0F19)" }} />
 
-      {/* Animated gradient orbs */}
-      <div className="absolute top-5 left-[10%] w-[650px] h-[650px] rounded-full opacity-[0.12] blur-[180px] animate-[driftOrb1_20s_ease-in-out_infinite] bg-blue-500" />
-      <div className="absolute top-[20%] right-[5%] w-[550px] h-[550px] rounded-full opacity-[0.1] blur-[160px] animate-[driftOrb2_25s_ease-in-out_infinite_2s] bg-indigo-500" />
-      <div className="absolute bottom-[10%] left-[30%] w-[700px] h-[700px] rounded-full opacity-[0.08] blur-[200px] animate-[driftOrb3_22s_ease-in-out_infinite_4s] bg-purple-600" />
+      {/* Animated cyan glow blob */}
+      <div className="absolute top-[5%] left-[15%] w-[700px] h-[700px] rounded-full opacity-20 blur-[200px] animate-cyan-pulse bg-primary-400" />
+      <div className="absolute top-[15%] right-[10%] w-[500px] h-[500px] rounded-full opacity-10 blur-[160px] animate-float-slow bg-accent-500" />
+      <div className="absolute bottom-[5%] left-[30%] w-[600px] h-[600px] rounded-full opacity-10 blur-[180px] animate-float-slower bg-secondary-500" />
 
-      {/* Mouse-follow glow */}
-      <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-300"
-        style={{
-          background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(37,99,235,0.08) 0%, transparent 60%)`,
-        }}
-      />
-
-      {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-surface-950/30 via-surface-950/10 to-surface-950/80" />
-      <div className="absolute inset-0 bg-gradient-to-t from-surface-950 via-surface-950/40 to-transparent" />
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-surface-950/30 via-transparent to-surface-950/80" />
+      <div className="absolute inset-0 bg-gradient-to-t from-surface-950 via-surface-950/30 to-transparent" />
 
       {/* Grid pattern */}
-      <div className="absolute inset-0 opacity-[0.012]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} />
+      <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2322D3EE' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} />
 
-      {/* Floating particles */}
+      {/* Floating animated bubbles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {Array.from({ length: 25 }).map((_, i) => {
-          const size = Math.random() * 6 + 2;
-          return (
-            <div key={i}
-              className="absolute rounded-full"
-              style={{
-                width: size, height: size,
-                left: `${Math.random() * 100}%`,
-                bottom: "-10px",
-                background: `rgba(37, 99, 235, ${Math.random() * 0.3 + 0.05})`,
-                animation: `floatUp ${Math.random() * 12 + 10}s ease-in-out ${Math.random() * 8}s infinite`,
-                opacity: 0,
-              }}
-            />
-          );
-        })}
+        {floatingTags.map((tag, i) => (
+          <div
+            key={i}
+            className={`absolute ${tag.className} floating-bubble text-white/70`}
+            style={{
+              top: `${15 + i * 30}%`,
+              left: `${i === 0 ? '5' : i === 1 ? 'auto' : '8'}%`,
+              right: i === 1 ? '5%' : 'auto',
+            }}
+          >
+            {tag.text}
+          </div>
+        ))}
       </div>
-
-      <UrgencyBubbles />
 
       {/* Content */}
       <div className="relative z-10 container-custom px-4 md:px-8 py-32 flex flex-col items-center justify-center min-h-screen">
@@ -115,9 +54,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-2 mb-8"
+            className="inline-flex items-center gap-2 bg-white/5 border border-primary-400/10 rounded-full px-5 py-2 mb-8 backdrop-blur-sm"
           >
-            <span className="w-2 h-2 bg-accent-400 rounded-full animate-pulse" />
+            <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,211,238,0.6)]" />
             <span className="text-sm text-white/70 font-medium">Trusted by 10,000+ Students Worldwide</span>
           </motion.div>
 
@@ -125,11 +64,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-white leading-[0.92] mb-8 tracking-tight animate-[headlineGlow_4s_ease-in-out_infinite] will-change-[filter]"
+            className="text-5xl md:text-7xl lg:text-8xl font-display font-black leading-[0.92] mb-8 tracking-tight"
           >
-            Your Dream University<br />
-            <span className="relative">
-              <span className="text-gradient-blue">Awaits. We Make It Happen.</span>
+            <span className="text-white">Your Dream University<br /></span>
+            <span className="bg-gradient-to-r from-primary-400 via-cyan-300 to-accent-400 bg-clip-text text-transparent" style={{ textShadow: "0 0 40px rgba(34, 211, 238, 0.5)" }}>
+              Awaits. We Make It Happen.
             </span>
           </motion.h1>
 
@@ -151,14 +90,14 @@ export default function Hero() {
           >
             <button
               onClick={() => setShowFunnel(true)}
-              className="glow-btn-hero bg-gradient-to-r from-primary-500 to-primary-600 text-white text-base font-semibold px-10 py-5 rounded-2xl inline-flex items-center gap-2 shadow-2xl shadow-primary-500/25 hover:shadow-primary-500/40 transition-all"
+              className="btn-primary-glow text-base px-10 py-5 rounded-2xl inline-flex items-center gap-2 shadow-2xl hover:shadow-[0_0_60px_rgba(34,211,238,0.4)]"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              Get Free Strategy Call
+              Start Your Journey
             </button>
-            <Link to="/universities/mit" className="inline-flex items-center gap-3 text-white/70 text-base font-semibold px-10 py-5 rounded-2xl border border-white/10 hover:border-primary-500/40 hover:text-white transition-all">
+            <Link to="/universities/mit" className="inline-flex items-center gap-3 text-white/60 text-base font-semibold px-10 py-5 rounded-2xl border border-white/10 hover:border-primary-400/30 hover:text-white hover:bg-white/[0.02] transition-all duration-300">
               View Success Stories
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -185,7 +124,7 @@ export default function Hero() {
                 transition={{ delay: 0.7 + i * 0.12 }}
                 className="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/[0.02] border border-white/[0.06] backdrop-blur-sm"
               >
-                <div className="w-10 h-10 rounded-lg bg-primary-500/10 border border-primary-500/20 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-primary-400/10 border border-primary-400/20 flex items-center justify-center flex-shrink-0">
                   <svg className="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={badge.icon} />
                   </svg>

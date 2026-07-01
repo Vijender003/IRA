@@ -78,7 +78,7 @@ export default function Login() {
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
             border: "1px solid rgba(255,255,255,0.08)",
-            boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06), 0 0 60px rgba(37,99,235,0.06)",
+            boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06), 0 0 60px rgba(34,211,238,0.06)",
           }}
         >
           <form onSubmit={handleSubmit} className="space-y-5">

@@ -20,6 +20,7 @@ import Footer from "./components/Footer";
 import WhatsApp from "./components/WhatsApp";
 import ExitPopup from "./components/ExitPopup";
 import LeadFunnel from "./components/LeadFunnel";
+import CursorGlow from "./components/CursorGlow";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
@@ -64,13 +65,14 @@ function App() {
         <Toaster
           position="top-right"
           toastOptions={{
-            style: { background: "#1e293b", color: "#fff", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "12px" },
-            success: { iconTheme: { primary: "#8b5cf6", secondary: "#fff" } },
-            error: { iconTheme: { primary: "#ef4444", secondary: "#fff" } },
+            style: { background: "#0F172A", color: "#E5E7EB", border: "1px solid rgba(34,211,238,0.15)", borderRadius: "12px" },
+            success: { iconTheme: { primary: "#22D3EE", secondary: "#0B0F19" } },
+            error: { iconTheme: { primary: "#ef4444", secondary: "#0B0F19" } },
           }}
         />
-        <div className="min-h-screen bg-surface-950">
+        <div className="min-h-screen" style={{ background: "radial-gradient(circle at 20% 20%, #0F172A, #0B0F19)" }}>
           <Navbar />
+          <div className="hidden lg:block"><CursorGlow /></div>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login />} />
@@ -93,7 +95,7 @@ function App() {
           {/* Sticky lead button - desktop */}
           <button
             onClick={() => setShowFunnel(true)}
-            className="fixed right-0 top-1/2 -translate-y-1/2 z-40 hidden lg:flex items-center gap-2 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white text-sm font-semibold py-3 px-4 rounded-l-xl shadow-2xl shadow-primary-500/30 hover:shadow-primary-500/50 transition-all hover:pr-6 group"
+            className="fixed right-0 top-1/2 -translate-y-1/2 z-40 hidden lg:flex items-center gap-2 bg-gradient-to-r from-primary-400 to-accent-500 hover:from-primary-500 hover:to-accent-600 text-white text-sm font-semibold py-3 px-4 rounded-l-xl shadow-2xl shadow-primary-400/30 hover:shadow-[0_0_40px_rgba(34,211,238,0.3)] transition-all hover:pr-6 group"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

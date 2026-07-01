@@ -132,7 +132,7 @@ export default function VisaPredictor() {
                           <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="8" />
                           <circle
                             cx="60" cy="60" r="52" fill="none"
-                            stroke={percentage >= 85 ? "#22c55e" : percentage >= 65 ? "#2563eb" : percentage >= 45 ? "#f59e0b" : "#ef4444"}
+                            stroke={percentage >= 85 ? "#22c55e" : percentage >= 65 ? "#22d3ee" : percentage >= 45 ? "#f59e0b" : "#ef4444"}
                             strokeWidth="8"
                             strokeLinecap="round"
                             strokeDasharray={`${2 * Math.PI * 52}`}

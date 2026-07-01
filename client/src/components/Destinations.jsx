@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import countriesData from "../data/countryData";
 import { countryImages } from "../data/countryImages";
+import TiltCard from "./TiltCard";
 
 const benefitLines = {
   canada: { line: "PR Friendly + High Salary", icon: "🍁" },
@@ -79,9 +80,10 @@ export default function Destinations() {
 
             return (
               <motion.div key={country.slug} variants={cardVariants}>
-                <Link
-                  to={`/country/${country.slug}`}
-                  className="block group h-full"
+                <TiltCard intensity={4} className="h-full">
+                  <Link
+                    to={`/country/${country.slug}`}
+                    className="block group h-full"
                 >
                   <div className="glass-card rounded-2xl overflow-hidden h-full flex flex-col relative">
                     {/* Image */}
@@ -135,7 +137,7 @@ export default function Destinations() {
                         {country.highlights?.slice(0, 3).map((h, j) => (
                           <span
                             key={j}
-                            className="text-[10px] font-medium bg-primary-500/10 border border-primary-500/20 text-primary-300 px-2 py-0.5 rounded-md"
+                            className="text-[10px] font-medium bg-primary-400/10 border border-primary-400/20 text-primary-300 px-2 py-0.5 rounded-md"
                           >
                             {h}
                           </span>
@@ -154,7 +156,8 @@ export default function Destinations() {
                       </div>
                     </div>
                   </div>
-                </Link>
+                  </Link>
+                </TiltCard>
               </motion.div>
             );
           })}

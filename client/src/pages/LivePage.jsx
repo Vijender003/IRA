@@ -109,7 +109,7 @@ function ServiceModal({ type, open, onClose }) {
               {s.fields.includes("time") && <select value={form.time} onChange={(e) => setForm({...form, time: e.target.value})} className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white/70 text-sm focus:outline-none focus:border-primary-500/30 transition-all appearance-none"><option value="">Preferred Time</option><option>9:00 AM - 11:00 AM</option><option>11:00 AM - 1:00 PM</option><option>1:00 PM - 3:00 PM</option><option>3:00 PM - 5:00 PM</option><option>5:00 PM - 7:00 PM</option></select>}
               {s.fields.includes("message") && <textarea placeholder="Questions or Notes (optional)" value={form.message} onChange={(e) => setForm({...form, message: e.target.value})} rows={3} className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white text-sm placeholder-white/30 focus:outline-none focus:border-primary-500/30 transition-all resize-none" />}
               <button onClick={handleSubmit} className="w-full py-3.5 rounded-xl font-semibold text-sm text-white transition-all"
-                style={{ background: type === "consultation" ? "linear-gradient(135deg, #8b5cf6, #7c3aed)" : type === "eligibility" ? "linear-gradient(135deg, #22c55e, #16a34a)" : "linear-gradient(135deg, #4287f5, #2563eb)", boxShadow: "0 0 20px rgba(66,135,245,0.3)" }}>
+                style={{ background: type === "consultation" ? "linear-gradient(135deg, #6366f1, #4f46e5)" : type === "eligibility" ? "linear-gradient(135deg, #22c55e, #16a34a)" : "linear-gradient(135deg, #22d3ee, #6366f1)", boxShadow: "0 0 20px rgba(34,211,238,0.3)" }}>
                 {s.submitLabel}
               </button>
               <p className="text-center text-white/30 text-[11px]">✓ No credit card required · ✓ Instant results · ✓ 10,000+ students served</p>
@@ -122,7 +122,7 @@ function ServiceModal({ type, open, onClose }) {
 }
 
 function ServiceCard({ type, data, index, onActivate }) {
-  const colors = { report: { from: "#4287f5", to: "#2563eb", glow: "rgba(66,135,245,0.3)", border: "linear-gradient(135deg, #4287f5, #06b6d4)" }, consultation: { from: "#8b5cf6", to: "#7c3aed", glow: "rgba(139,92,246,0.3)", border: "linear-gradient(135deg, #8b5cf6, #ec4899)" }, eligibility: { from: "#22c55e", to: "#16a34a", glow: "rgba(34,197,94,0.3)", border: "linear-gradient(135deg, #22c55e, #15803d)" } };
+  const colors = { report: { from: "#22d3ee", to: "#6366f1", glow: "rgba(34,211,238,0.3)", border: "linear-gradient(135deg, #22d3ee, #6366f1)" }, consultation: { from: "#6366f1", to: "#4f46e5", glow: "rgba(99,102,241,0.3)", border: "linear-gradient(135deg, #6366f1, #8b5cf6)" }, eligibility: { from: "#22c55e", to: "#16a34a", glow: "rgba(34,197,94,0.3)", border: "linear-gradient(135deg, #22c55e, #15803d)" } };
   const c = colors[type];
   return (
     <motion.div
@@ -188,7 +188,7 @@ export default function LivePage() {
         "Scholarship opportunities matched to you",
       ],
       preview: [
-        { label: "Best Country", value: "Canada", color: "#4287f5" },
+        { label: "Best Country", value: "Canada", color: "#22d3ee" },
         { label: "Visa Chances", value: "92%", color: "#22c55e" },
         { label: "Est. Cost (1 Year)", value: "$25,000 - $35,000", color: "#f59e0b" },
         { label: "Top University", value: "University of Toronto", color: "#8b5cf6" },
@@ -229,7 +229,7 @@ export default function LivePage() {
       ],
       preview: [
         { label: "Eligibility Score", value: "85%", color: "#22c55e" },
-        { label: "Matching Universities", value: "5", color: "#4287f5" },
+        { label: "Matching Universities", value: "5", color: "#22d3ee" },
         { label: "Visa Probability", value: "High", color: "#22c55e" },
         { label: "Scholarship Matches", value: "3", color: "#f59e0b" },
       ],
@@ -262,7 +262,7 @@ export default function LivePage() {
             </span>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white leading-[0.95] mb-5 max-w-4xl mx-auto">
               Your Future Abroad{" "}
-              <span className="bg-gradient-to-r from-[#b0c4ff] via-[#4287f5] to-[#8b5cf6] bg-clip-text text-transparent">Starts Here</span>
+              <span className="bg-gradient-to-r from-[#b0c4ff] via-[#22d3ee] to-[#6366f1] bg-clip-text text-transparent">Starts Here</span>
             </h1>
             <p className="text-lg md:text-xl text-white/50 max-w-2xl mx-auto mb-4 leading-relaxed">
               Unlock your study abroad journey with expert guidance & personalized plans
@@ -387,7 +387,7 @@ export default function LivePage() {
               <motion.div key={step.step} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ delay: i * 0.12, duration: 0.5 }}
                 className="relative text-center p-6 md:p-8 rounded-[20px]" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
-                <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: "linear-gradient(135deg, rgba(66,135,245,0.15), rgba(139,92,246,0.15))", border: "1px solid rgba(66,135,245,0.2)" }}>
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: "linear-gradient(135deg, rgba(34,211,238,0.15), rgba(99,102,241,0.15))", border: "1px solid rgba(34,211,238,0.2)" }}>
                   <span className="text-primary-300 text-lg font-bold">{step.step}</span>
                 </div>
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.08)" }}>
@@ -502,7 +502,7 @@ export default function LivePage() {
             <p className="text-sm text-primary-300/60 mb-8">⏱️ Limited slots available this month</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button onClick={() => setActiveModal("report")} className="px-8 py-4 rounded-xl font-semibold text-sm text-white transition-all duration-300 hover:scale-[1.03]"
-                style={{ background: "linear-gradient(135deg, #4287f5, #2563eb)", boxShadow: "0 0 30px rgba(66,135,245,0.3)" }}>
+                style={{ background: "linear-gradient(135deg, #22d3ee, #6366f1)", boxShadow: "0 0 30px rgba(34,211,238,0.3)" }}>
                 <span className="flex items-center gap-2">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                   Get My Free Report Now

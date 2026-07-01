@@ -18,7 +18,7 @@ const trustFeatures = [
 ];
 
 const testimonials = [
-  { name: "Ananya Gupta", role: "MS Computer Science, MIT", rating: 5, text: "The Parashars made my dream of studying at MIT a reality. Their counselors guided me through every step — from SOP to visa interview." },
+  { name: "Ananya Gupta", role: "MS Computer Science, MIT", rating: 5, text: "ABC Visas made my dream of studying at MIT a reality. Their counselors guided me through every step — from SOP to visa interview." },
   { name: "Rahul Verma", role: "MBA, University of Toronto", rating: 5, text: "I was confused about which country to choose. They helped me find the perfect program that fit my profile and budget." },
   { name: "Priya Sharma", role: "BSc Nursing, University of Malta", rating: 5, text: "The visa process was so smooth. My counselor held my hand through the entire application. Grateful forever!" },
 ];
@@ -86,16 +86,16 @@ export default function ContactPage() {
     <div className="min-h-screen bg-surface-950 pt-20">
       <style>{`
         .hero-gradient-bg {
-          background: radial-gradient(ellipse at 20% 50%, rgba(37,99,235,0.2) 0%, transparent 50%),
-                      radial-gradient(ellipse at 80% 20%, rgba(59,130,246,0.15) 0%, transparent 50%),
-                      radial-gradient(ellipse at 50% 80%, rgba(139,92,246,0.15) 0%, transparent 50%),
-                      linear-gradient(180deg, #020617 0%, #0f172a 50%, #020617 100%);
+          background: radial-gradient(ellipse at 20% 50%, rgba(34,211,238,0.2) 0%, transparent 50%),
+                      radial-gradient(ellipse at 80% 20%, rgba(34,211,238,0.15) 0%, transparent 50%),
+                      radial-gradient(ellipse at 50% 80%, rgba(99,102,241,0.15) 0%, transparent 50%),
+                      linear-gradient(180deg, #0B0F19 0%, #0f172a 50%, #0B0F19 100%);
         }
         @keyframes blob1 { 0%,100% { transform: translate(0,0) scale(1); } 25% { transform: translate(80px,-60px) scale(1.1); } 50% { transform: translate(-40px,40px) scale(0.9); } 75% { transform: translate(60px,80px) scale(1.05); } }
         @keyframes blob2 { 0%,100% { transform: translate(0,0) scale(1); } 25% { transform: translate(-60px,80px) scale(1.15); } 50% { transform: translate(80px,-30px) scale(0.85); } 75% { transform: translate(-40px,-60px) scale(1); } }
         @keyframes blob3 { 0%,100% { transform: translate(0,0) scale(1); } 33% { transform: translate(50px,50px) scale(1.1); } 66% { transform: translate(-70px,-30px) scale(0.9); } }
-        @keyframes glowPulse { 0%,100% { box-shadow: 0 0 20px rgba(37,99,235,0.3), 0 0 60px rgba(37,99,235,0.1); } 50% { box-shadow: 0 0 30px rgba(37,99,235,0.5), 0 0 80px rgba(37,99,235,0.2); } }
-        @keyframes titleGlow { 0%,100% { filter: drop-shadow(0 0 8px rgba(37,99,235,0.2)) drop-shadow(0 0 20px rgba(99,102,241,0.1)); } 50% { filter: drop-shadow(0 0 16px rgba(37,99,235,0.4)) drop-shadow(0 0 40px rgba(99,102,241,0.2)); } }
+        @keyframes glowPulse { 0%,100% { box-shadow: 0 0 20px rgba(34,211,238,0.3), 0 0 60px rgba(34,211,238,0.1); } 50% { box-shadow: 0 0 30px rgba(34,211,238,0.5), 0 0 80px rgba(34,211,238,0.2); } }
+        @keyframes titleGlow { 0%,100% { filter: drop-shadow(0 0 8px rgba(34,211,238,0.2)) drop-shadow(0 0 20px rgba(99,102,241,0.1)); } 50% { filter: drop-shadow(0 0 16px rgba(34,211,238,0.4)) drop-shadow(0 0 40px rgba(99,102,241,0.2)); } }
         @keyframes pulseRing { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(1.4); opacity: 0; } }
         @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
         .glow-btn:hover { animation: glowPulse 1.5s ease-in-out infinite; }
@@ -127,7 +127,7 @@ export default function ContactPage() {
         <div
           className="absolute inset-0 pointer-events-none transition-opacity duration-300"
           style={{
-            background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(37,99,235,0.08) 0%, transparent 60%)`,
+            background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(34,211,238,0.08) 0%, transparent 60%)`,
           }}
         />
 
@@ -229,7 +229,7 @@ export default function ContactPage() {
                 backdropFilter: "blur(20px)",
                 WebkitBackdropFilter: "blur(20px)",
                 border: "1px solid rgba(255,255,255,0.08)",
-                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06), 0 0 60px rgba(37,99,235,0.06)",
+                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06), 0 0 60px rgba(34,211,238,0.06)",
               }}
             >
               {!submitted && (
@@ -302,7 +302,7 @@ export default function ContactPage() {
                             </div>
                             <div>
                               <label className="block text-sm font-medium text-white/60 mb-2">Phone Number</label>
-                              <input type="tel" name="phone" value={form.phone} onChange={update} required placeholder="+91 98765 43210" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-white/20 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500/40 transition-all" />
+                              <input type="tel" name="phone" value={form.phone} onChange={update} required placeholder="+1 (555) 000-0000" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-white/20 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500/40 transition-all" />
                             </div>
                           </div>
                         )}
@@ -471,7 +471,7 @@ export default function ContactPage() {
                 <h3 className="text-lg font-display font-bold text-white mb-2">{f.title}</h3>
                 <p className="text-white/40 text-sm leading-relaxed">{f.desc}</p>
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{
-                  background: "radial-gradient(600px circle at 50% 50%, rgba(37,99,235,0.06) 0%, transparent 60%)",
+                  background: "radial-gradient(600px circle at 50% 50%, rgba(34,211,238,0.06) 0%, transparent 60%)",
                 }} />
               </motion.div>
             ))}
@@ -492,9 +492,9 @@ export default function ContactPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>, label: "Phone", value: "+91 9220552177", action: "tel:+919220552177" },
-              { icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>, label: "Email", value: "admin@irainternationals.com", action: "mailto:admin@irainternationals.com" },
-              { icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>, label: "Location", value: "Gurugram, Haryana, India", action: "#" },
+              { icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>, label: "Phone", value: "+1 (555) 000-0000", action: "tel:+15550000000" },
+              { icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>, label: "Email", value: "contact@example.com", action: "mailto:contact@example.com" },
+              { icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>, label: "Location", value: "123 Business Avenue, New York, NY 10001", action: "#" },
             ].map((item, i) => (
               <motion.a
                 key={item.label}
@@ -517,7 +517,7 @@ export default function ContactPage() {
                 <p className="text-white/40 text-xs font-medium uppercase tracking-wider mb-2">{item.label}</p>
                 <p className="text-white font-medium text-lg">{item.value}</p>
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{
-                  background: "radial-gradient(600px circle at 50% 50%, rgba(37,99,235,0.06) 0%, transparent 60%)",
+                  background: "radial-gradient(600px circle at 50% 50%, rgba(34,211,238,0.06) 0%, transparent 60%)",
                 }} />
               </motion.a>
             ))}
@@ -527,7 +527,7 @@ export default function ContactPage() {
 
       {/* ===== 5. WHATSAPP FLOATING BUTTON ===== */}
       <motion.a
-        href="https://wa.me/919220552177?text=Hi%20THE%20PARASHARS!%20I'd%20like%20to%20know%20more%20about%20studying%20abroad."
+        href="https://wa.me/15550000000?text=Hi%2C%20I'd%20like%20to%20know%20more%20about%20studying%20abroad."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 z-50 flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold px-6 py-4 rounded-2xl shadow-2xl shadow-green-500/30 hover:shadow-green-500/50 transition-all"
@@ -682,7 +682,7 @@ export default function ContactPage() {
               </span>
             </h2>
             <p className="text-lg text-white/40 max-w-xl mx-auto mb-10">
-              Join 10,000+ successful students who achieved their study abroad dreams with THE PARASHARS.
+              Join 10,000+ successful students who achieved their study abroad dreams with ABC Visas.
             </p>
             <motion.a
               href="#form"

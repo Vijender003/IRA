@@ -42,7 +42,7 @@ export default function WhatsApp() {
                 </div>
               </div>
               <a
-                href="https://wa.me/919220552177?text=Hi%2C%20I%20want%20to%20study%20abroad.%20Please%20guide%20me."
+                href="https://wa.me/15550000000?text=Hi%2C%20I%20want%20to%20study%20abroad.%20Please%20guide%20me."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-semibold text-center py-2.5 rounded-xl transition-all"
@@ -56,7 +56,7 @@ export default function WhatsApp() {
 
       {/* Floating button */}
       <motion.a
-        href="https://wa.me/919220552177?text=Hi%2C%20I%20want%20to%20study%20abroad.%20Please%20guide%20me."
+        href="https://wa.me/15550000000?text=Hi%2C%20I%20want%20to%20study%20abroad.%20Please%20guide%20me."
         target="_blank"
         rel="noopener noreferrer"
         initial={{ scale: 0, opacity: 0 }}

@@ -109,11 +109,11 @@ export default function MapComponent({ markers = [], center, zoom = 3, countrySl
       className: "",
       html: `<div style="
         width: 28px; height: 28px;
-        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        background: linear-gradient(135deg, #22D3EE, #6366F1);
         border: 2px solid rgba(255,255,255,0.2);
         border-radius: 50%;
         display: flex; align-items: center; justify-content: center;
-        box-shadow: 0 4px 12px rgba(37,99,235,0.4);
+        box-shadow: 0 4px 12px rgba(34,211,238,0.4);
         font-size: 12px;
       "><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>`,
       iconSize: [28, 28],

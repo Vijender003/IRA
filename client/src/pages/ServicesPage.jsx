@@ -215,7 +215,7 @@ export default function ServicesPage() {
   }, []);
 
   return (
-    <div className="min-h-screen pt-28 pb-20">
+    <div className="min-h-screen pt-20 pb-20">
       {/* HERO */}
       <section className="relative overflow-hidden pb-16 md:pb-24">
         <div className="absolute inset-0 bg-gradient-to-b from-primary-950/30 via-surface-950 to-surface-950" />
@@ -431,7 +431,7 @@ export default function ServicesPage() {
                   </svg>
                 ),
                 label: "Phone",
-                value: "+1 (555) 123-4567",
+                value: "+1 (555) 000-0000",
               },
               {
                 icon: (
@@ -440,7 +440,7 @@ export default function ServicesPage() {
                   </svg>
                 ),
                 label: "Email",
-                value: "info@irainternational.com",
+                value: "contact@example.com",
               },
               {
                 icon: (

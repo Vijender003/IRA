@@ -14,13 +14,17 @@ export default function Footer() {
       <div className="relative z-10 container-custom px-4 md:px-8 py-16 md:py-20">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-10 mb-16">
           <div className="col-span-2">
-            <Link to="/" className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <Link to="/" className="flex items-center gap-4 mb-5 group">
+              <div className="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-primary-400 via-accent-500 to-accent-600 flex items-center justify-center shadow-lg shadow-primary-400/30 ring-1 ring-white/10 group-hover:ring-white/20 transition-all">
+                <span className="text-white font-display font-bold text-sm tracking-tight">A</span>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-white/10 to-transparent opacity-50" />
               </div>
-              <div><span className="text-lg font-display font-bold text-white">THE PARASHARS</span><span className="text-lg font-display font-light text-white/50 ml-1">consulting & services</span></div>
+              <div className="flex flex-col">
+                <span className="text-base font-display font-bold text-white tracking-[0.15em] uppercase leading-none">ABC Visas</span>
+                <span className="text-[10px] font-sans font-medium text-white/40 tracking-[0.2em] uppercase mt-0.5">consulting & services</span>
+              </div>
             </Link>
-            <p className="text-white/30 text-sm leading-relaxed max-w-xs mb-6">Building global futures through education, immigration, and business opportunities.</p>
+            <p className="text-white/30 text-sm leading-relaxed max-w-xs mb-6">Expert visa and immigration consulting — guiding you every step of the way with integrity and excellence.</p>
           </div>
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
@@ -34,8 +38,8 @@ export default function Footer() {
           ))}
         </div>
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/20 text-sm">&copy; {new Date().getFullYear()} THE PARASHARS consulting and services. All rights reserved.</p>
-          <p className="text-white/20 text-sm">Future Without Borders</p>
+          <p className="text-white/20 text-sm">&copy; {new Date().getFullYear()} ABC Visas and consulting services. All rights reserved.</p>
+          <p className="text-white/20 text-sm">Trusted Expertise, Global Reach</p>
         </div>
       </div>
     </footer>

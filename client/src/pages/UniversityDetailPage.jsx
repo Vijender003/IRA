@@ -63,7 +63,7 @@ function HeroSection({ uni }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-white leading-[0.9] mb-4"
-            style={{ filter: "drop-shadow(0 0 20px rgba(66,135,245,0.3))" }}
+            style={{ filter: "drop-shadow(0 0 20px rgba(34,211,238,0.3))" }}
           >
             {uni.name}
           </motion.h1>
@@ -196,7 +196,7 @@ function AboutSection({ uni }) {
             <p className="text-white/70 text-lg leading-relaxed mb-6">{uni.about}</p>
           </div>
           {uni.mission && (
-            <div className="mt-8 p-6 rounded-[16px]" style={{ background: "rgba(66,135,245,0.05)", border: "1px solid rgba(66,135,245,0.12)" }}>
+            <div className="mt-8 p-6 rounded-[16px]" style={{ background: "rgba(34,211,238,0.05)", border: "1px solid rgba(34,211,238,0.12)" }}>
               <p className="text-xs text-primary-300 uppercase tracking-[0.15em] mb-2 font-medium">Mission</p>
               <p className="text-white/60 italic leading-relaxed">{uni.mission}</p>
             </div>
@@ -484,7 +484,7 @@ function AdmissionsSection({ uni }) {
               >
                 <div
                   className="absolute left-3 md:left-4 w-7 h-7 rounded-full flex items-center justify-center text-sm"
-                  style={{ background: "rgba(66,135,245,0.15)", border: "1px solid rgba(66,135,245,0.3)" }}
+                  style={{ background: "rgba(34,211,238,0.15)", border: "1px solid rgba(34,211,238,0.3)" }}
                 >
                   <span className="text-primary-300 text-xs font-bold">{step.step}</span>
                 </div>
@@ -553,14 +553,14 @@ function ScholarshipSection({ uni }) {
               transition={{ delay: i * 0.08, duration: 0.5 }}
               className="rounded-[16px] p-5 md:p-6"
               style={{
-                background: "linear-gradient(135deg, rgba(66,135,245,0.06) 0%, rgba(139,92,246,0.06) 100%)",
+                background: "linear-gradient(135deg, rgba(34,211,238,0.06) 0%, rgba(139,92,246,0.06) 100%)",
                 border: "1px solid rgba(255,255,255,0.08)",
               }}
             >
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-white font-semibold text-base md:text-lg">{s.name}</h3>
                 <span className="text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider font-medium"
-                  style={{ background: s.type === "Merit-Based" ? "rgba(66,135,245,0.15)" : "rgba(139,92,246,0.15)", color: s.type === "Merit-Based" ? "#5990ff" : "#a78bfa" }}>
+                  style={{ background: s.type === "Merit-Based" ? "rgba(34,211,238,0.15)" : "rgba(139,92,246,0.15)", color: s.type === "Merit-Based" ? "#5990ff" : "#a78bfa" }}>
                   {s.type}
                 </span>
               </div>

@@ -248,7 +248,7 @@ export default function LeadFunnel({ open, onClose, source = "direct" }) {
                 </div>
                 <p className="text-xs text-white/30 mb-4">Want to talk to an expert right now?</p>
                 <a
-                  href="https://wa.me/919220552177?text=Hi%2C%20I%20just%20got%20my%20free%20study%20plan%20and%20want%20to%20discuss%20my%20options."
+                  href="https://wa.me/15550000000?text=Hi%2C%20I%20just%20got%20my%20free%20study%20plan%20and%20want%20to%20discuss%20my%20options."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white text-sm font-semibold py-3.5 rounded-xl inline-flex items-center justify-center gap-2 transition-all mb-3"

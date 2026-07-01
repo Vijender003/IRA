@@ -41,8 +41,8 @@ export default function TrustLogos() {
           className="text-center mb-16 md:mb-20"
         >
           <h2
-            className="text-2xl md:text-3xl lg:text-4xl font-display font-bold uppercase tracking-[2px] bg-gradient-to-r from-[#b0c4ff] to-white bg-clip-text text-transparent"
-            style={{ filter: "drop-shadow(0 0 2px rgba(66,135,245,0.5))" }}
+            className="text-2xl md:text-3xl lg:text-4xl font-display font-bold uppercase tracking-[2px] bg-gradient-to-r from-[#22d3ee] to-white bg-clip-text text-transparent"
+            style={{ filter: "drop-shadow(0 0 2px rgba(34,211,238,0.5))" }}
           >
             Partnered with Top Global Universities
           </h2>
@@ -66,7 +66,7 @@ export default function TrustLogos() {
                 className="group relative h-[200px] md:h-[240px] lg:h-[280px] rounded-[16px] cursor-pointer overflow-hidden"
               >
                 <div className="absolute inset-0 rounded-[16px] p-[1.5px] opacity-0 group-hover:opacity-100 transition-opacity duration-[400ms] pointer-events-none z-10">
-                  <div className="w-full h-full rounded-[15px] bg-gradient-to-r from-[#4287f5] via-[#8b5cf6] to-[#4287f5] bg-[length:200%_100%] animate-[borderShift_3s_linear_infinite]" />
+                  <div className="w-full h-full rounded-[15px] bg-gradient-to-r from-[#22d3ee] via-[#6366f1] to-[#22d3ee] bg-[length:200%_100%] animate-[borderShift_3s_linear_infinite]" />
                 </div>
 
                 <div
@@ -87,7 +87,7 @@ export default function TrustLogos() {
                 </div>
 
                 <div
-                  className="relative w-full h-full flex flex-col justify-end rounded-[16px] p-4 md:p-5 transition-all duration-[400ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] transform group-hover:scale-[1.03] group-hover:-translate-y-[3px] group-hover:shadow-[0_10px_30px_rgba(0,0,0,0.3),0_0_30px_4px_rgba(66,135,245,0.6)]"
+                  className="relative w-full h-full flex flex-col justify-end rounded-[16px] p-4 md:p-5 transition-all duration-[400ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] transform group-hover:scale-[1.03] group-hover:-translate-y-[3px] group-hover:shadow-[0_10px_30px_rgba(0,0,0,0.3),0_0_30px_4px_rgba(34,211,238,0.6)]"
                 >
                   <span
                     className="text-[10px] uppercase tracking-[0.15em] font-semibold text-primary-300 mb-1.5"

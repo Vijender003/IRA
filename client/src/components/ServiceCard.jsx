@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import TiltCard from "./TiltCard";
 
 const icons = {
   study: (
@@ -36,7 +37,8 @@ export default function ServiceCard({ service, index = 0, onClick }) {
         onClick={() => onClick?.(service.id)}
         className="w-full text-left group cursor-pointer"
       >
-        <div className="glass-card rounded-3xl p-8 md:p-10 h-full relative overflow-hidden hover:scale-[1.02] transition-all duration-500">
+        <TiltCard intensity={5} className="w-full">
+          <div className="glass-card rounded-3xl p-8 md:p-10 h-full relative overflow-hidden hover:scale-[1.02] transition-all duration-500">
           <div className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-br ${service.color} opacity-5 rounded-full blur-3xl group-hover:opacity-10 transition-opacity duration-500`} />
           <div className="relative z-10">
             <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-white mb-6 shadow-lg ${service.glow} group-hover:scale-110 group-hover:shadow-xl transition-all duration-300`}>
@@ -61,7 +63,8 @@ export default function ServiceCard({ service, index = 0, onClick }) {
               </svg>
             </span>
           </div>
-        </div>
+          </div>
+        </TiltCard>
       </button>
     </motion.div>
   );
