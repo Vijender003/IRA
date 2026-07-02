@@ -31,7 +31,7 @@ export default function TrustLogos() {
         }
       `}</style>
 
-      <div className="absolute inset-0 bg-[#0a0f2c]" />
+      <div className="absolute inset-0 bg-[#0a0908]" />
       <div className="relative z-10 container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -41,8 +41,8 @@ export default function TrustLogos() {
           className="text-center mb-16 md:mb-20"
         >
           <h2
-            className="text-2xl md:text-3xl lg:text-4xl font-display font-bold uppercase tracking-[2px] bg-gradient-to-r from-[#22d3ee] to-white bg-clip-text text-transparent"
-            style={{ filter: "drop-shadow(0 0 2px rgba(34,211,238,0.5))" }}
+            className="text-2xl md:text-3xl lg:text-4xl font-display font-bold uppercase tracking-[2px] bg-gradient-to-r from-[#0F6A6B] to-white bg-clip-text text-transparent"
+            style={{ filter: "drop-shadow(0 0 2px rgba(15,106,107,0.5))" }}
           >
             Partnered with Top Global Universities
           </h2>
@@ -66,7 +66,7 @@ export default function TrustLogos() {
                 className="group relative h-[200px] md:h-[240px] lg:h-[280px] rounded-[16px] cursor-pointer overflow-hidden"
               >
                 <div className="absolute inset-0 rounded-[16px] p-[1.5px] opacity-0 group-hover:opacity-100 transition-opacity duration-[400ms] pointer-events-none z-10">
-                  <div className="w-full h-full rounded-[15px] bg-gradient-to-r from-[#22d3ee] via-[#6366f1] to-[#22d3ee] bg-[length:200%_100%] animate-[borderShift_3s_linear_infinite]" />
+                  <div className="w-full h-full rounded-[15px] bg-gradient-to-r from-[#0F6A6B] via-[#D58A6A] to-[#0F6A6B] bg-[length:200%_100%] animate-[borderShift_3s_linear_infinite]" />
                 </div>
 
                 <div
@@ -83,14 +83,14 @@ export default function TrustLogos() {
                     alt={p.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f2c] via-[#0a0f2c]/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0908] via-[#0a0908]/40 to-transparent" />
                 </div>
 
                 <div
-                  className="relative w-full h-full flex flex-col justify-end rounded-[16px] p-4 md:p-5 transition-all duration-[400ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] transform group-hover:scale-[1.03] group-hover:-translate-y-[3px] group-hover:shadow-[0_10px_30px_rgba(0,0,0,0.3),0_0_30px_4px_rgba(34,211,238,0.6)]"
+                  className="relative w-full h-full flex flex-col justify-end rounded-[16px] p-4 md:p-5 transition-all duration-[400ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] transform group-hover:scale-[1.03] group-hover:-translate-y-[3px] group-hover:shadow-[0_10px_30px_rgba(0,0,0,0.3),0_0_30px_4px_rgba(15,106,107,0.6)]"
                 >
                   <span
-                    className="text-[10px] uppercase tracking-[0.15em] font-semibold text-primary-300 mb-1.5"
+                    className="text-[10px] uppercase tracking-[0.15em] font-semibold text-primary-400 mb-1.5"
                   >
                     {p.tag}
                   </span>
@@ -105,8 +105,8 @@ export default function TrustLogos() {
                     <span className="text-white/50 text-xs">{p.location}</span>
                   </div>
                   <div className="mt-2.5 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-1 group-hover:translate-y-0">
-                    <span className="text-[11px] text-primary-300 font-medium">View Details</span>
-                    <svg className="w-3.5 h-3.5 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span className="text-[11px] text-primary-400 font-medium">View Details</span>
+                    <svg className="w-3.5 h-3.5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </div>

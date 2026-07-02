@@ -11,7 +11,7 @@ function SlotCounter() {
     return () => clearInterval(timer);
   }, []);
   return slots > 0 ? (
-    <span className="text-accent-400 font-bold">{slots} slots left</span>
+    <span className="text-coral font-bold">{slots} slots left</span>
   ) : (
     <span className="text-red-400 font-bold">Fully booked this month</span>
   );
@@ -20,30 +20,30 @@ function SlotCounter() {
 export default function OfferSection() {
   return (
     <section className="section-padding relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-950/50 via-surface-950 to-accent-950/30" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,211,238,0.08),transparent_70%)]" />
-      <div className="absolute top-0 left-1/3 w-72 h-72 bg-primary-400/20 rounded-full blur-[100px] animate-pulse-soft" />
-      <div className="absolute bottom-0 right-1/3 w-72 h-72 bg-accent-500/15 rounded-full blur-[100px] animate-pulse-soft animate-delay-2000" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-950/50 via-surface-950 to-coral-dark/30" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(15,106,107,0.08),transparent_70%)]" />
+      <div className="absolute top-0 left-1/3 w-72 h-72 bg-primary-500/20 rounded-full blur-[100px] animate-pulse-soft" />
+      <div className="absolute bottom-0 right-1/3 w-72 h-72 bg-coral/15 rounded-full blur-[100px] animate-pulse-soft animate-delay-2000" />
 
       <div className="relative z-10 container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-strong rounded-3xl p-10 md:p-16 text-center max-w-4xl mx-auto border-2 border-primary-400/20 relative overflow-hidden"
+          className="glass-strong rounded-3xl p-10 md:p-16 text-center max-w-4xl mx-auto border-2 border-primary-500/20 relative overflow-hidden"
         >
           {/* Shimmer line */}
-          <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary-400 to-transparent animate-[shimmer_3s_ease-in-out_infinite]" />
+          <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary-500 to-transparent animate-[shimmer_3s_ease-in-out_infinite]" />
 
           <div className="relative z-10">
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 bg-accent-500/10 border border-accent-500/20 rounded-full px-5 py-2 mb-8"
+              className="inline-flex items-center gap-2 bg-coral/10 border border-coral/20 rounded-full px-5 py-2 mb-8"
             >
-              <span className="w-2 h-2 bg-accent-400 rounded-full animate-pulse" />
-              <span className="text-sm text-accent-400 font-semibold">Limited Time Offer</span>
+              <span className="w-2 h-2 bg-coral rounded-full animate-pulse" />
+              <span className="text-sm text-coral font-semibold">Limited Time Offer</span>
             </motion.div>
 
             {/* Urgency badge */}

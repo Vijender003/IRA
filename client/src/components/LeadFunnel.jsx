@@ -77,7 +77,7 @@ export default function LeadFunnel({ open, onClose, source = "direct" }) {
             onClick={(e) => e.stopPropagation()}
             className="glass-strong rounded-3xl p-8 md:p-10 max-w-lg w-full text-center relative overflow-hidden"
           >
-            <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary-400 to-transparent" />
+            <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary-500 to-transparent" />
 
             <button onClick={() => { onClose(); reset(); }} className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/40 hover:text-white/70 transition-colors">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,14 +91,14 @@ export default function LeadFunnel({ open, onClose, source = "direct" }) {
                 <div className="mb-8">
                   <div className="flex justify-between mb-2">
                     {stepLabels.map((label, i) => (
-                      <span key={label} className={`text-[10px] font-medium transition-colors duration-300 ${i + 1 <= step ? "text-primary-400" : "text-white/20"}`}>
+                      <span key={label} className={`text-[10px] font-medium transition-colors duration-300 ${i + 1 <= step ? "text-primary-500" : "text-white/20"}`}>
                         {label}
                       </span>
                     ))}
                   </div>
                   <div className="h-1 bg-white/5 rounded-full overflow-hidden">
                     <motion.div
-                      className="h-full bg-gradient-to-r from-primary-500 to-primary-400 rounded-full"
+                      className="h-full bg-gradient-to-r from-primary-500 to-primary-500 rounded-full"
                       initial={{ width: "33%" }}
                       animate={{ width: `${(step / 3) * 100}%` }}
                       transition={{ duration: 0.4, ease: "easeOut" }}
@@ -106,7 +106,7 @@ export default function LeadFunnel({ open, onClose, source = "direct" }) {
                   </div>
                 </div>
 
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center mx-auto mb-5">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-500 to-coral flex items-center justify-center mx-auto mb-5">
                   <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -199,7 +199,7 @@ export default function LeadFunnel({ open, onClose, source = "direct" }) {
                         type="button"
                         onClick={handleSubmit}
                         disabled={submitting || !canProceed()}
-                        className="bg-gradient-to-r from-accent-500 to-emerald-500 text-white font-semibold px-6 py-3 rounded-xl disabled:opacity-30 disabled:cursor-not-allowed transition-all text-sm flex items-center gap-2"
+                        className="bg-gradient-to-r from-coral to-emerald-500 text-white font-semibold px-6 py-3 rounded-xl disabled:opacity-30 disabled:cursor-not-allowed transition-all text-sm flex items-center gap-2"
                         whileHover={canProceed() ? { scale: 1.02 } : {}}
                         whileTap={canProceed() ? { scale: 0.98 } : {}}
                       >
@@ -229,7 +229,7 @@ export default function LeadFunnel({ open, onClose, source = "direct" }) {
               </>
             ) : (
               <>
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-500 to-emerald-500 flex items-center justify-center mx-auto mb-5">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-coral to-emerald-500 flex items-center justify-center mx-auto mb-5">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -239,7 +239,7 @@ export default function LeadFunnel({ open, onClose, source = "direct" }) {
                 <div className="grid grid-cols-2 gap-2 mb-6 text-left">
                   {["Best Country Match", "Visa Chances Analysis", "Estimated Total Cost", "Top University Picks"].map((item, i) => (
                     <div key={i} className="flex items-center gap-2 bg-white/5 rounded-lg px-3 py-2">
-                      <svg className="w-3 h-3 text-accent-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-3 h-3 text-coral flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                       <span className="text-xs text-white/60">{item}</span>

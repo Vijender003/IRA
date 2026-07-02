@@ -83,7 +83,7 @@ export default function DestinationsPage() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-accent-400 text-sm font-semibold tracking-widest uppercase mb-4">
+          <span className="inline-block text-coral text-sm font-semibold tracking-widest uppercase mb-4">
             Discover Your Path
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white leading-tight mb-4">
@@ -125,7 +125,7 @@ export default function DestinationsPage() {
                 <h2 className="text-2xl md:text-3xl font-display font-bold text-white">Featured Destinations</h2>
                 <p className="text-white/30 text-sm mt-1">Most popular choices among students</p>
               </div>
-                <Link to="/destinations" className="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-primary-400 hover:text-primary-300 transition-colors">
+                <Link to="/destinations" className="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-primary-500 hover:text-primary-400 transition-colors">
                 Apply Now
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
@@ -154,7 +154,7 @@ export default function DestinationsPage() {
                             ))}
                           </div>
                           <h3 className="text-2xl font-display font-bold text-white mb-1">{c.name}</h3>
-                          <p className="text-primary-300 text-sm font-medium mb-1">{c.tagline}</p>
+                          <p className="text-primary-400 text-sm font-medium mb-1">{c.tagline}</p>
                           <p className="text-white/30 text-xs mb-3">{c.universityCount || 0} Universities</p>
                           <div className="flex items-center gap-2 text-sm font-semibold text-white opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-3 group-hover:translate-y-0">
                             Explore {c.name}
@@ -192,7 +192,7 @@ export default function DestinationsPage() {
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">No countries match your filters</h3>
               <p className="text-white/40 text-sm mb-4">Try adjusting your search criteria</p>
-              <button onClick={() => setFilters({ budget: "", level: "", region: "", course: "" })} className="text-sm font-semibold text-primary-400 hover:text-primary-300 transition-colors">
+              <button onClick={() => setFilters({ budget: "", level: "", region: "", course: "" })} className="text-sm font-semibold text-primary-500 hover:text-primary-400 transition-colors">
                 Clear Filters
               </button>
             </div>
@@ -253,7 +253,7 @@ export default function DestinationsPage() {
                 transition={{ delay: i * 0.1, duration: 0.5 }}
                 className="glass-card rounded-2xl p-8 text-center"
               >
-                <div className="w-12 h-12 rounded-xl bg-accent-500/10 border border-accent-500/20 flex items-center justify-center mx-auto mb-4 text-accent-400">
+                <div className="w-12 h-12 rounded-xl bg-coral/10 border border-coral/20 flex items-center justify-center mx-auto mb-4 text-coral">
                   {item.icon}
                 </div>
                 <div className="text-3xl font-display font-black text-white mb-1">{item.value}</div>

@@ -61,7 +61,7 @@ export default function Login() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: "spring", stiffness: 200, delay: 0.1 }}
-            className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center mx-auto mb-5 shadow-2xl shadow-primary-500/25"
+            className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-coral flex items-center justify-center mx-auto mb-5 shadow-2xl shadow-primary-500/25"
           >
             <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
@@ -78,7 +78,7 @@ export default function Login() {
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
             border: "1px solid rgba(255,255,255,0.08)",
-            boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06), 0 0 60px rgba(34,211,238,0.06)",
+            boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06), 0 0 60px rgba(15,106,107,0.06)",
           }}
         >
           <form onSubmit={handleSubmit} className="space-y-5">
@@ -112,7 +112,7 @@ export default function Login() {
             </div>
 
             <div className="flex items-center justify-end">
-              <button type="button" className="text-xs text-primary-400 hover:text-primary-300 transition-colors">
+              <button type="button" className="text-xs text-primary-500 hover:text-primary-400 transition-colors">
                 Forgot password?
               </button>
             </div>
@@ -137,7 +137,7 @@ export default function Login() {
           <div className="mt-6 pt-6 border-t border-white/5 text-center">
             <p className="text-white/40 text-sm">
               Don&apos;t have an account?{" "}
-              <Link to="/register" className="text-primary-400 hover:text-primary-300 font-medium transition-colors">
+              <Link to="/register" className="text-primary-500 hover:text-primary-400 font-medium transition-colors">
                 Create Account
               </Link>
             </p>

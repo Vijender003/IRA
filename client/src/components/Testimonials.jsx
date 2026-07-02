@@ -13,7 +13,7 @@ export default function Testimonials() {
       <div className="absolute inset-0 bg-gradient-to-b from-surface-950 via-surface-900/20 to-surface-950" />
       <div className="relative z-10 container-custom">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-20">
-          <span className="inline-block text-accent-400 text-sm font-semibold tracking-widest uppercase mb-4">Success Stories</span>
+          <span className="inline-block text-coral text-sm font-semibold tracking-widest uppercase mb-4">Success Stories</span>
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">What Our <span className="text-gradient">Students Say</span></h2>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -27,13 +27,13 @@ export default function Testimonials() {
               <p className="text-white/50 text-sm leading-relaxed mb-6">"{t.text}"</p>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-bold text-sm">{t.name[0]}</div>
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-coral flex items-center justify-center text-white font-bold text-sm">{t.name[0]}</div>
                   <div>
                     <p className="text-white font-semibold text-sm">{t.name}</p>
                     <p className="text-white/30 text-xs">{t.role}</p>
                   </div>
                 </div>
-                <span className="text-xs bg-accent-500/10 border border-accent-500/20 text-accent-400 px-3 py-1 rounded-full">{t.destination}</span>
+                <span className="text-xs bg-coral/10 border border-coral/20 text-coral px-3 py-1 rounded-full">{t.destination}</span>
               </div>
             </motion.div>
           ))}

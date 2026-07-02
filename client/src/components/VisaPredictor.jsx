@@ -25,8 +25,8 @@ export default function VisaPredictor() {
   const percentage = Math.min(Math.round((score / maxScore) * 100), 99);
 
   const getLevel = () => {
-    if (percentage >= 85) return { label: "High Chance", color: "text-accent-400", bg: "bg-accent-500/10", border: "border-accent-500/20" };
-    if (percentage >= 65) return { label: "Good Chance", color: "text-primary-400", bg: "bg-primary-500/10", border: "border-primary-500/20" };
+    if (percentage >= 85) return { label: "High Chance", color: "text-coral", bg: "bg-coral/10", border: "border-coral/20" };
+    if (percentage >= 65) return { label: "Good Chance", color: "text-primary-500", bg: "bg-primary-500/10", border: "border-primary-500/20" };
     if (percentage >= 45) return { label: "Moderate", color: "text-amber-400", bg: "bg-amber-500/10", border: "border-amber-500/20" };
     return { label: "Needs Work", color: "text-red-400", bg: "bg-red-500/10", border: "border-red-500/20" };
   };
@@ -132,7 +132,7 @@ export default function VisaPredictor() {
                           <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="8" />
                           <circle
                             cx="60" cy="60" r="52" fill="none"
-                            stroke={percentage >= 85 ? "#22c55e" : percentage >= 65 ? "#22d3ee" : percentage >= 45 ? "#f59e0b" : "#ef4444"}
+                            stroke={percentage >= 85 ? "#22c55e" : percentage >= 65 ? "#0F6A6B" : percentage >= 45 ? "#f59e0b" : "#ef4444"}
                             strokeWidth="8"
                             strokeLinecap="round"
                             strokeDasharray={`${2 * Math.PI * 52}`}
@@ -154,16 +154,16 @@ export default function VisaPredictor() {
                     {/* Factors */}
                     <div className="space-y-2 text-sm">
                       <div className="flex items-center gap-2">
-                        <div className={`w-2 h-2 rounded-full ${visaRate >= 80 ? "bg-accent-400" : "bg-amber-400"}`} />
+                        <div className={`w-2 h-2 rounded-full ${visaRate >= 80 ? "bg-coral" : "bg-amber-400"}`} />
                         <span className="text-white/50">Country visa rate: <span className="text-white">{country.visaRate}</span></span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <div className={`w-2 h-2 rounded-full ${ieltsOk ? "bg-accent-400" : "bg-red-400"}`} />
-                        <span className="text-white/50">IELTS: <span className={`${ieltsOk ? "text-accent-400" : "text-red-400"}`}>{ielts} (need {requiredIelts})</span></span>
+                        <div className={`w-2 h-2 rounded-full ${ieltsOk ? "bg-coral" : "bg-red-400"}`} />
+                        <span className="text-white/50">IELTS: <span className={`${ieltsOk ? "text-coral" : "text-red-400"}`}>{ielts} (need {requiredIelts})</span></span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <div className={`w-2 h-2 rounded-full ${fundsOk ? "bg-accent-400" : "bg-red-400"}`} />
-                        <span className="text-white/50">Funds: <span className={fundsOk ? "text-accent-400" : "text-red-400"}>{fundsOk ? "Sufficient" : "Not shown"}</span></span>
+                        <div className={`w-2 h-2 rounded-full ${fundsOk ? "bg-coral" : "bg-red-400"}`} />
+                        <span className="text-white/50">Funds: <span className={fundsOk ? "text-coral" : "text-red-400"}>{fundsOk ? "Sufficient" : "Not shown"}</span></span>
                       </div>
                     </div>
                   </div>

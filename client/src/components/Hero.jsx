@@ -15,19 +15,19 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Base dark background */}
-      <div className="absolute inset-0" style={{ background: "radial-gradient(circle at 20% 20%, #0F172A, #0B0F19)" }} />
+      <div className="absolute inset-0" style={{ background: "radial-gradient(circle at 20% 20%, #131210, #0a0908)" }} />
 
       {/* Animated cyan glow blob */}
-      <div className="absolute top-[5%] left-[15%] w-[700px] h-[700px] rounded-full opacity-20 blur-[200px] animate-cyan-pulse bg-primary-400" />
-      <div className="absolute top-[15%] right-[10%] w-[500px] h-[500px] rounded-full opacity-10 blur-[160px] animate-float-slow bg-accent-500" />
-      <div className="absolute bottom-[5%] left-[30%] w-[600px] h-[600px] rounded-full opacity-10 blur-[180px] animate-float-slower bg-secondary-500" />
+      <div className="absolute top-[5%] left-[15%] w-[700px] h-[700px] rounded-full opacity-20 blur-[200px] animate-cyan-pulse bg-primary-500" />
+      <div className="absolute top-[15%] right-[10%] w-[500px] h-[500px] rounded-full opacity-10 blur-[160px] animate-float-slow bg-coral" />
+      <div className="absolute bottom-[5%] left-[30%] w-[600px] h-[600px] rounded-full opacity-10 blur-[180px] animate-float-slower bg-nude" />
 
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-surface-950/30 via-transparent to-surface-950/80" />
       <div className="absolute inset-0 bg-gradient-to-t from-surface-950 via-surface-950/30 to-transparent" />
 
       {/* Grid pattern */}
-      <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2322D3EE' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} />
+      <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230F6A6B' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} />
 
       {/* Floating animated bubbles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -54,9 +54,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 bg-white/5 border border-primary-400/10 rounded-full px-5 py-2 mb-8 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 bg-white/5 border border-primary-500/10 rounded-full px-5 py-2 mb-8 backdrop-blur-sm"
           >
-            <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,211,238,0.6)]" />
+            <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(15,106,107,0.6)]" />
             <span className="text-sm text-white/70 font-medium">Trusted by 10,000+ Students Worldwide</span>
           </motion.div>
 
@@ -67,7 +67,7 @@ export default function Hero() {
             className="text-5xl md:text-7xl lg:text-8xl font-display font-black leading-[0.92] mb-8 tracking-tight"
           >
             <span className="text-white">Your Dream University<br /></span>
-            <span className="bg-gradient-to-r from-primary-400 via-cyan-300 to-accent-400 bg-clip-text text-transparent" style={{ textShadow: "0 0 40px rgba(34, 211, 238, 0.5)" }}>
+            <span className="bg-gradient-to-r from-primary-500 via-primary-400 to-coral bg-clip-text text-transparent" style={{ textShadow: "0 0 40px rgba(15, 106, 107, 0.5)" }}>
               Awaits. We Make It Happen.
             </span>
           </motion.h1>
@@ -90,14 +90,14 @@ export default function Hero() {
           >
             <button
               onClick={() => setShowFunnel(true)}
-              className="btn-primary-glow text-base px-10 py-5 rounded-2xl inline-flex items-center gap-2 shadow-2xl hover:shadow-[0_0_60px_rgba(34,211,238,0.4)]"
+              className="btn-primary-glow text-base px-10 py-5 rounded-2xl inline-flex items-center gap-2 shadow-2xl hover:shadow-[0_0_60px_rgba(15,106,107,0.4)]"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               Start Your Journey
             </button>
-            <Link to="/universities/mit" className="inline-flex items-center gap-3 text-white/60 text-base font-semibold px-10 py-5 rounded-2xl border border-white/10 hover:border-primary-400/30 hover:text-white hover:bg-white/[0.02] transition-all duration-300">
+            <Link to="/universities/mit" className="inline-flex items-center gap-3 text-white/60 text-base font-semibold px-10 py-5 rounded-2xl border border-white/10 hover:border-primary-500/30 hover:text-white hover:bg-white/[0.02] transition-all duration-300">
               View Success Stories
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -124,8 +124,8 @@ export default function Hero() {
                 transition={{ delay: 0.7 + i * 0.12 }}
                 className="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/[0.02] border border-white/[0.06] backdrop-blur-sm"
               >
-                <div className="w-10 h-10 rounded-lg bg-primary-400/10 border border-primary-400/20 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 rounded-lg bg-primary-500/10 border border-primary-500/20 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={badge.icon} />
                   </svg>
                 </div>

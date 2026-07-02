@@ -191,8 +191,8 @@ export default function AIAdvisor() {
               ) : (
                 <div>
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 rounded-2xl bg-accent-500/10 border border-accent-500/20 flex items-center justify-center">
-                      <svg className="w-6 h-6 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-12 h-12 rounded-2xl bg-coral/10 border border-coral/20 flex items-center justify-center">
+                      <svg className="w-6 h-6 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
@@ -218,7 +218,7 @@ export default function AIAdvisor() {
                         <div className="flex items-center gap-4">
                           <span className="text-2xl">{r.country.flag}</span>
                           <div className="flex-1 min-w-0">
-                            <p className="text-sm font-bold text-white group-hover:text-primary-300 transition-colors">{r.country.name}</p>
+                            <p className="text-sm font-bold text-white group-hover:text-primary-400 transition-colors">{r.country.name}</p>
                             <p className="text-[10px] text-white/30">{r.country.fees} · {r.country.visaRate} visa rate</p>
                           </div>
                           <div className="text-right">

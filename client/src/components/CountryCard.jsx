@@ -36,7 +36,7 @@ export default function CountryCard({ country, index = 0 }) {
             <p className="text-white/40 text-xs mb-3 line-clamp-1">{country.tagline}</p>
             <div className="flex flex-wrap gap-1.5 mb-4">
               {country.highlights?.slice(0, 3).map((h, j) => (
-                <span key={j} className="text-[10px] font-medium bg-primary-500/10 border border-primary-500/20 text-primary-300 px-2 py-0.5 rounded-md">
+                <span key={j} className="text-[10px] font-medium bg-primary-500/10 border border-primary-500/20 text-primary-400 px-2 py-0.5 rounded-md">
                   {h}
                 </span>
               ))}
@@ -45,7 +45,7 @@ export default function CountryCard({ country, index = 0 }) {
               <div className="text-xs text-white/30">
                 Avg. {country.fees}
               </div>
-              <span className="text-xs font-semibold text-primary-400 group-hover:text-primary-300 transition-colors">
+              <span className="text-xs font-semibold text-primary-400 group-hover:text-primary-400 transition-colors">
                 Explore →
               </span>
             </div>

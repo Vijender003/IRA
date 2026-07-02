@@ -111,7 +111,7 @@ function WhyCard({ reason, index }) {
       transition={{ delay: index * 0.1, duration: 0.5 }}
       className="glass-card rounded-2xl p-8 text-center hover:scale-[1.02] transition-all duration-500"
     >
-      <div className="w-12 h-12 rounded-xl bg-primary-500/10 border border-primary-500/20 flex items-center justify-center mx-auto mb-5 text-primary-400">
+      <div className="w-12 h-12 rounded-xl bg-primary-500/10 border border-primary-500/20 flex items-center justify-center mx-auto mb-5 text-primary-500">
         {whyIcons[reason.icon]}
       </div>
       <h3 className="text-lg font-display font-bold text-white mb-2">{reason.title}</h3>
@@ -185,7 +185,7 @@ function ServiceDetail({ service, isOpen, onClose }) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.benefits.map((b, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/[0.04]">
-                    <svg className="w-5 h-5 text-accent-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-5 h-5 text-coral flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     <span className="text-white/60 text-sm">{b}</span>
@@ -220,7 +220,7 @@ export default function ServicesPage() {
       <section className="relative overflow-hidden pb-16 md:pb-24">
         <div className="absolute inset-0 bg-gradient-to-b from-primary-950/30 via-surface-950 to-surface-950" />
         <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-accent-500/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-coral/5 rounded-full blur-[100px]" />
         <div className="relative z-10 container-custom px-4 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -228,7 +228,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="max-w-4xl mx-auto text-center"
           >
-            <span className="inline-block text-accent-400 text-sm font-semibold tracking-widest uppercase mb-6">
+            <span className="inline-block text-coral text-sm font-semibold tracking-widest uppercase mb-6">
               What We Offer
             </span>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-white leading-tight mb-6">
@@ -274,7 +274,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="inline-block text-accent-400 text-sm font-semibold tracking-widest uppercase mb-4">
+            <span className="inline-block text-coral text-sm font-semibold tracking-widest uppercase mb-4">
               Our Core Services
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4">
@@ -309,7 +309,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="inline-block text-accent-400 text-sm font-semibold tracking-widest uppercase mb-4">
+            <span className="inline-block text-coral text-sm font-semibold tracking-widest uppercase mb-4">
               How It Works
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4">
@@ -321,7 +321,7 @@ export default function ServicesPage() {
           </motion.div>
 
           <div className="relative">
-            <div className="absolute left-[39px] top-0 bottom-0 w-px bg-gradient-to-b from-primary-500/40 via-accent-500/40 to-primary-500/40 hidden md:block" />
+            <div className="absolute left-[39px] top-0 bottom-0 w-px bg-gradient-to-b from-primary-500/40 via-coral/40 to-primary-500/40 hidden md:block" />
             <div className="space-y-8 md:space-y-0 md:grid md:grid-cols-4 md:gap-6">
               {processSteps.map((step, i) => (
                 <motion.div
@@ -334,7 +334,7 @@ export default function ServicesPage() {
                 >
                   <div className="flex md:flex-col items-center md:items-center gap-5 md:gap-4">
                     <div className="relative z-10">
-                      <div className="w-[78px] h-[78px] rounded-2xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white text-2xl font-display font-bold shadow-xl shadow-primary-500/20">
+                      <div className="w-[78px] h-[78px] rounded-2xl bg-gradient-to-br from-primary-500 to-coral flex items-center justify-center text-white text-2xl font-display font-bold shadow-xl shadow-primary-500/20">
                         {step.number}
                       </div>
                     </div>
@@ -357,7 +357,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="inline-block text-accent-400 text-sm font-semibold tracking-widest uppercase mb-4">
+            <span className="inline-block text-coral text-sm font-semibold tracking-widest uppercase mb-4">
               Why Choose Us
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4">
@@ -383,7 +383,7 @@ export default function ServicesPage() {
             className="glass-strong rounded-3xl p-10 md:p-16 text-center relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-60 h-60 bg-primary-500/10 rounded-full blur-[100px]" />
-            <div className="absolute bottom-0 left-0 w-40 h-40 bg-accent-500/10 rounded-full blur-[80px]" />
+            <div className="absolute bottom-0 left-0 w-40 h-40 bg-coral/10 rounded-full blur-[80px]" />
             <div className="relative z-10">
               <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4 leading-tight">
                 Ready to Start Your <span className="text-gradient">Global Journey?</span>
@@ -411,7 +411,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="inline-block text-accent-400 text-sm font-semibold tracking-widest uppercase mb-4">
+            <span className="inline-block text-coral text-sm font-semibold tracking-widest uppercase mb-4">
               Get In Touch
             </span>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
@@ -461,7 +461,7 @@ export default function ServicesPage() {
                 transition={{ delay: i * 0.1, duration: 0.5 }}
                 className="glass-card rounded-2xl p-8 text-center"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary-500/10 border border-primary-500/20 flex items-center justify-center mx-auto mb-4 text-primary-400">
+                <div className="w-12 h-12 rounded-xl bg-primary-500/10 border border-primary-500/20 flex items-center justify-center mx-auto mb-4 text-primary-500">
                   {item.icon}
                 </div>
                 <h3 className="text-sm font-medium text-white/40 mb-1">{item.label}</h3>

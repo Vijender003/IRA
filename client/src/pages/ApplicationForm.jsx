@@ -72,8 +72,8 @@ export default function ApplicationForm() {
     return (
       <div className="min-h-screen flex items-center justify-center px-4">
         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="glass-card rounded-3xl p-12 text-center max-w-md w-full">
-          <div className="w-20 h-20 rounded-full bg-accent-500/20 flex items-center justify-center mx-auto mb-6">
-            <svg className="w-10 h-10 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="w-20 h-20 rounded-full bg-coral/20 flex items-center justify-center mx-auto mb-6">
+            <svg className="w-10 h-10 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
@@ -175,7 +175,7 @@ export default function ApplicationForm() {
 
           {!isAuthenticated && (
             <p className="text-white/30 text-sm text-center">
-              <Link to="/login" className="text-primary-400 hover:text-primary-300">Sign in</Link> to track your application status
+              <Link to="/login" className="text-primary-500 hover:text-primary-400">Sign in</Link> to track your application status
             </p>
           )}
 

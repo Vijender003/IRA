@@ -42,7 +42,7 @@ function HeroSection({ uni }) {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${uni.image})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f2c]/20 via-[#0a0f2c]/50 to-[#0a0f2c]/95" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0908]/20 via-[#0a0908]/50 to-[#0a0908]/95" />
       {uni.logo && (
         <div className="absolute top-8 left-8 z-10">
           <img src={uni.logo} alt={uni.name} className="h-16 w-auto opacity-90" />
@@ -54,7 +54,7 @@ function HeroSection({ uni }) {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-sm text-primary-300 font-medium tracking-[0.15em] uppercase mb-4"
+            className="text-sm text-primary-400 font-medium tracking-[0.15em] uppercase mb-4"
           >
             {uni.rankingLabel}
           </motion.p>
@@ -63,7 +63,7 @@ function HeroSection({ uni }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-white leading-[0.9] mb-4"
-            style={{ filter: "drop-shadow(0 0 20px rgba(34,211,238,0.3))" }}
+            style={{ filter: "drop-shadow(0 0 20px rgba(15,106,107,0.3))" }}
           >
             {uni.name}
           </motion.h1>
@@ -162,7 +162,7 @@ function StatsBar({ uni }) {
               }}
             >
               <div className="w-8 h-8 rounded-lg bg-primary-500/10 border border-primary-500/20 flex items-center justify-center mx-auto mb-2">
-                <svg className="w-4 h-4 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={stat.icon} />
                 </svg>
               </div>
@@ -196,8 +196,8 @@ function AboutSection({ uni }) {
             <p className="text-white/70 text-lg leading-relaxed mb-6">{uni.about}</p>
           </div>
           {uni.mission && (
-            <div className="mt-8 p-6 rounded-[16px]" style={{ background: "rgba(34,211,238,0.05)", border: "1px solid rgba(34,211,238,0.12)" }}>
-              <p className="text-xs text-primary-300 uppercase tracking-[0.15em] mb-2 font-medium">Mission</p>
+            <div className="mt-8 p-6 rounded-[16px]" style={{ background: "rgba(15,106,107,0.05)", border: "1px solid rgba(15,106,107,0.12)" }}>
+              <p className="text-xs text-primary-400 uppercase tracking-[0.15em] mb-2 font-medium">Mission</p>
               <p className="text-white/60 italic leading-relaxed">{uni.mission}</p>
             </div>
           )}
@@ -274,7 +274,7 @@ function ProgramCard({ program, index }) {
         {program.careers && (
           <div className="flex flex-wrap gap-2">
             {program.careers.slice(0, 2).map((c) => (
-              <span key={c} className="text-[11px] text-primary-300/70 flex items-center gap-1">
+              <span key={c} className="text-[11px] text-primary-400/70 flex items-center gap-1">
                 <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
@@ -292,7 +292,7 @@ function ProgramCard({ program, index }) {
             className="mt-4 pt-4 border-t border-white/5"
           >
             <p className="text-white/50 text-sm leading-relaxed">{program.description}</p>
-            <button className="mt-3 text-sm text-primary-400 hover:text-primary-300 font-medium transition-colors">
+            <button className="mt-3 text-sm text-primary-500 hover:text-primary-400 font-medium transition-colors">
               Apply for this program →
             </button>
           </motion.div>
@@ -305,7 +305,7 @@ function ProgramCard({ program, index }) {
 function ProgramsSection({ uni }) {
   return (
     <section className="section-padding relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f2c] via-[#0d1235] to-[#0a0f2c]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0908] via-[#131210] to-[#0a0908]" />
       <div className="relative z-10 container-custom px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -314,7 +314,7 @@ function ProgramsSection({ uni }) {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <p className="text-xs text-primary-300/80 tracking-[0.2em] uppercase mb-3 font-medium">Academic Programs</p>
+          <p className="text-xs text-primary-400/80 tracking-[0.2em] uppercase mb-3 font-medium">Academic Programs</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
             What You Can <span className="bg-gradient-to-r from-[#b0c4ff] to-white bg-clip-text text-transparent">Study</span>
           </h2>
@@ -357,7 +357,7 @@ function FacilitiesSection({ uni }) {
           viewport={{ once: true }}
           className="text-center mb-12 md:mb-16"
         >
-          <p className="text-xs text-primary-300/80 tracking-[0.2em] uppercase mb-3 font-medium">Campus & Facilities</p>
+          <p className="text-xs text-primary-400/80 tracking-[0.2em] uppercase mb-3 font-medium">Campus & Facilities</p>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
             World-Class <span className="bg-gradient-to-r from-[#b0c4ff] to-white bg-clip-text text-transparent">Facilities</span>
           </h2>
@@ -381,9 +381,9 @@ function FacilitiesSection({ uni }) {
                   loading="lazy"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f2c]/90 via-[#0a0f2c]/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0908]/90 via-[#0a0908]/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
-                <h3 className="text-white font-semibold text-lg mb-1 group-hover:text-primary-300 transition-colors">{facility.name}</h3>
+                <h3 className="text-white font-semibold text-lg mb-1 group-hover:text-primary-400 transition-colors">{facility.name}</h3>
                 <p className="text-white/50 text-sm leading-relaxed">{facility.description}</p>
               </div>
             </motion.div>
@@ -397,7 +397,7 @@ function FacilitiesSection({ uni }) {
 function TestimonialsSection({ uni }) {
   return (
     <section className="section-padding relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f2c] via-[#0d1235] to-[#0a0f2c]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0908] via-[#131210] to-[#0a0908]" />
       <div className="relative z-10 container-custom px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -405,7 +405,7 @@ function TestimonialsSection({ uni }) {
           viewport={{ once: true }}
           className="text-center mb-12 md:mb-16"
         >
-          <p className="text-xs text-primary-300/80 tracking-[0.2em] uppercase mb-3 font-medium">Student Voices</p>
+          <p className="text-xs text-primary-400/80 tracking-[0.2em] uppercase mb-3 font-medium">Student Voices</p>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
             What Students <span className="bg-gradient-to-r from-[#b0c4ff] to-white bg-clip-text text-transparent">Say</span>
           </h2>
@@ -465,7 +465,7 @@ function AdmissionsSection({ uni }) {
           viewport={{ once: true }}
           className="text-center mb-12 md:mb-16"
         >
-          <p className="text-xs text-primary-300/80 tracking-[0.2em] uppercase mb-3 font-medium">Admissions</p>
+          <p className="text-xs text-primary-400/80 tracking-[0.2em] uppercase mb-3 font-medium">Admissions</p>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
             Your Journey <span className="bg-gradient-to-r from-[#b0c4ff] to-white bg-clip-text text-transparent">Starts Here</span>
           </h2>
@@ -484,9 +484,9 @@ function AdmissionsSection({ uni }) {
               >
                 <div
                   className="absolute left-3 md:left-4 w-7 h-7 rounded-full flex items-center justify-center text-sm"
-                  style={{ background: "rgba(34,211,238,0.15)", border: "1px solid rgba(34,211,238,0.3)" }}
+                  style={{ background: "rgba(15,106,107,0.15)", border: "1px solid rgba(15,106,107,0.3)" }}
                 >
-                  <span className="text-primary-300 text-xs font-bold">{step.step}</span>
+                  <span className="text-primary-400 text-xs font-bold">{step.step}</span>
                 </div>
                 <div
                   className="rounded-[16px] p-5 md:p-6 group hover:scale-[1.01] transition-all duration-300"
@@ -500,7 +500,7 @@ function AdmissionsSection({ uni }) {
                     <span className="text-xl">{step.icon}</span>
                     <div>
                       <h3 className="text-white font-semibold text-lg">{step.title}</h3>
-                      <p className="text-primary-300/60 text-xs font-medium">{step.duration}</p>
+                      <p className="text-primary-400/60 text-xs font-medium">{step.duration}</p>
                     </div>
                   </div>
                   <p className="text-white/50 text-sm leading-relaxed mb-3">{step.description}</p>
@@ -508,7 +508,7 @@ function AdmissionsSection({ uni }) {
                     <ul className="space-y-1">
                       {step.details.map((d) => (
                         <li key={d} className="text-white/40 text-xs flex items-center gap-2">
-                          <svg className="w-3 h-3 text-primary-400/60 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <svg className="w-3 h-3 text-primary-500/60 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
                           {d}
@@ -530,7 +530,7 @@ function ScholarshipSection({ uni }) {
   if (!uni.scholarships || uni.scholarships.length === 0) return null;
   return (
     <section className="section-padding relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f2c] via-[#0d1235] to-[#0a0f2c]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0908] via-[#131210] to-[#0a0908]" />
       <div className="relative z-10 container-custom px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -538,7 +538,7 @@ function ScholarshipSection({ uni }) {
           viewport={{ once: true }}
           className="text-center mb-12 md:mb-16"
         >
-          <p className="text-xs text-primary-300/80 tracking-[0.2em] uppercase mb-3 font-medium">Financial Support</p>
+          <p className="text-xs text-primary-400/80 tracking-[0.2em] uppercase mb-3 font-medium">Financial Support</p>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
             Scholarships & <span className="bg-gradient-to-r from-[#b0c4ff] to-white bg-clip-text text-transparent">Financial Aid</span>
           </h2>
@@ -553,14 +553,14 @@ function ScholarshipSection({ uni }) {
               transition={{ delay: i * 0.08, duration: 0.5 }}
               className="rounded-[16px] p-5 md:p-6"
               style={{
-                background: "linear-gradient(135deg, rgba(34,211,238,0.06) 0%, rgba(139,92,246,0.06) 100%)",
+                background: "linear-gradient(135deg, rgba(15,106,107,0.06) 0%, rgba(213,138,106,0.06) 100%)",
                 border: "1px solid rgba(255,255,255,0.08)",
               }}
             >
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-white font-semibold text-base md:text-lg">{s.name}</h3>
                 <span className="text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider font-medium"
-                  style={{ background: s.type === "Merit-Based" ? "rgba(34,211,238,0.15)" : "rgba(139,92,246,0.15)", color: s.type === "Merit-Based" ? "#5990ff" : "#a78bfa" }}>
+                  style={{ background: s.type === "Merit-Based" ? "rgba(15,106,107,0.15)" : "rgba(213,138,106,0.15)", color: s.type === "Merit-Based" ? "#5990ff" : "#a78bfa" }}>
                   {s.type}
                 </span>
               </div>
@@ -582,7 +582,7 @@ function ScholarshipSection({ uni }) {
                   <p className="text-white/50 text-xs">{s.deadline}</p>
                 </div>
               </div>
-              <button className="text-sm text-primary-400 hover:text-primary-300 font-medium transition-colors inline-flex items-center gap-1">
+              <button className="text-sm text-primary-500 hover:text-primary-400 font-medium transition-colors inline-flex items-center gap-1">
                 Apply for Scholarship
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -608,7 +608,7 @@ function CareerSection({ uni }) {
           viewport={{ once: true }}
           className="text-center mb-12 md:mb-16"
         >
-          <p className="text-xs text-primary-300/80 tracking-[0.2em] uppercase mb-3 font-medium">Outcomes</p>
+          <p className="text-xs text-primary-400/80 tracking-[0.2em] uppercase mb-3 font-medium">Outcomes</p>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
             Your Career <span className="bg-gradient-to-r from-[#b0c4ff] to-white bg-clip-text text-transparent">Future</span>
           </h2>
@@ -621,7 +621,7 @@ function CareerSection({ uni }) {
             className="rounded-[16px] p-6 text-center"
             style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)" }}
           >
-            <p className="text-3xl md:text-4xl font-bold text-primary-300 font-display"><CountUp end={c.employmentRate} suffix="%" /></p>
+            <p className="text-3xl md:text-4xl font-bold text-primary-400 font-display"><CountUp end={c.employmentRate} suffix="%" /></p>
             <p className="text-white/40 text-sm mt-1">Employment Rate</p>
           </motion.div>
           <motion.div
@@ -671,7 +671,7 @@ function CareerSection({ uni }) {
                 <div>
                   <p className="text-white font-semibold text-sm">{story.name}</p>
                   <p className="text-white/60 text-xs">{story.program}</p>
-                  <p className="text-primary-300/60 text-xs mt-1">{story.path}</p>
+                  <p className="text-primary-400/60 text-xs mt-1">{story.path}</p>
                 </div>
               </motion.div>
             ))}
@@ -695,7 +695,7 @@ function ContactSection({ uni }) {
   };
   return (
     <section className="section-padding relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f2c] via-[#0d1235] to-[#0a0f2c]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0908] via-[#131210] to-[#0a0908]" />
       <div className="relative z-10 container-custom px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -718,13 +718,13 @@ function ContactSection({ uni }) {
             {uni.contact.email && (
               <div className="flex items-center gap-4 p-4 rounded-[16px]" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.06)" }}>
                 <div className="w-12 h-12 rounded-xl bg-primary-500/10 border border-primary-500/20 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <div>
                   <p className="text-[10px] text-white/30 uppercase tracking-wider">Email</p>
-                  <a href={`mailto:${uni.contact.email}`} className="text-primary-300 hover:text-primary-200 transition-colors text-sm">{uni.contact.email}</a>
+                  <a href={`mailto:${uni.contact.email}`} className="text-primary-400 hover:text-primary-400 transition-colors text-sm">{uni.contact.email}</a>
                 </div>
               </div>
             )}
@@ -832,9 +832,9 @@ function RelatedSection({ slug }) {
                   <img src={u.image} alt={u.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
                 </div>
                 <div className="p-4">
-                  <p className="text-white font-semibold text-sm group-hover:text-primary-300 transition-colors">{u.name}</p>
+                  <p className="text-white font-semibold text-sm group-hover:text-primary-400 transition-colors">{u.name}</p>
                   <p className="text-white/30 text-xs mt-1">{u.city}, {u.country}</p>
-                  <p className="text-primary-300/60 text-[11px] mt-1">Ranking: #{u.ranking}</p>
+                  <p className="text-primary-400/60 text-[11px] mt-1">Ranking: #{u.ranking}</p>
                 </div>
               </motion.div>
             </Link>
@@ -851,7 +851,7 @@ export default function UniversityDetailPage() {
 
   if (!uni) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#0a0f2c]">
+      <div className="min-h-screen flex items-center justify-center bg-[#0a0908]">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">University Not Found</h1>
           <p className="text-white/50 mb-8">The university you're looking for doesn't exist.</p>
@@ -862,7 +862,7 @@ export default function UniversityDetailPage() {
   }
 
   return (
-    <div className="bg-[#0a0f2c] min-h-screen">
+    <div className="bg-[#0a0908] min-h-screen">
       <HeroSection uni={uni} />
       <StatsBar uni={uni} />
       <AboutSection uni={uni} />

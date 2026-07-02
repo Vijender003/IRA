@@ -86,16 +86,16 @@ export default function ContactPage() {
     <div className="min-h-screen bg-surface-950 pt-20">
       <style>{`
         .hero-gradient-bg {
-          background: radial-gradient(ellipse at 20% 50%, rgba(34,211,238,0.2) 0%, transparent 50%),
-                      radial-gradient(ellipse at 80% 20%, rgba(34,211,238,0.15) 0%, transparent 50%),
-                      radial-gradient(ellipse at 50% 80%, rgba(99,102,241,0.15) 0%, transparent 50%),
-                      linear-gradient(180deg, #0B0F19 0%, #0f172a 50%, #0B0F19 100%);
+          background: radial-gradient(ellipse at 20% 50%, rgba(15,106,107,0.2) 0%, transparent 50%),
+                      radial-gradient(ellipse at 80% 20%, rgba(15,106,107,0.15) 0%, transparent 50%),
+                      radial-gradient(ellipse at 50% 80%, rgba(213,138,106,0.15) 0%, transparent 50%),
+                      linear-gradient(180deg, #0a0908 0%, #131210 50%, #0a0908 100%);
         }
         @keyframes blob1 { 0%,100% { transform: translate(0,0) scale(1); } 25% { transform: translate(80px,-60px) scale(1.1); } 50% { transform: translate(-40px,40px) scale(0.9); } 75% { transform: translate(60px,80px) scale(1.05); } }
         @keyframes blob2 { 0%,100% { transform: translate(0,0) scale(1); } 25% { transform: translate(-60px,80px) scale(1.15); } 50% { transform: translate(80px,-30px) scale(0.85); } 75% { transform: translate(-40px,-60px) scale(1); } }
         @keyframes blob3 { 0%,100% { transform: translate(0,0) scale(1); } 33% { transform: translate(50px,50px) scale(1.1); } 66% { transform: translate(-70px,-30px) scale(0.9); } }
-        @keyframes glowPulse { 0%,100% { box-shadow: 0 0 20px rgba(34,211,238,0.3), 0 0 60px rgba(34,211,238,0.1); } 50% { box-shadow: 0 0 30px rgba(34,211,238,0.5), 0 0 80px rgba(34,211,238,0.2); } }
-        @keyframes titleGlow { 0%,100% { filter: drop-shadow(0 0 8px rgba(34,211,238,0.2)) drop-shadow(0 0 20px rgba(99,102,241,0.1)); } 50% { filter: drop-shadow(0 0 16px rgba(34,211,238,0.4)) drop-shadow(0 0 40px rgba(99,102,241,0.2)); } }
+        @keyframes glowPulse { 0%,100% { box-shadow: 0 0 20px rgba(15,106,107,0.3), 0 0 60px rgba(15,106,107,0.1); } 50% { box-shadow: 0 0 30px rgba(15,106,107,0.5), 0 0 80px rgba(15,106,107,0.2); } }
+        @keyframes titleGlow { 0%,100% { filter: drop-shadow(0 0 8px rgba(15,106,107,0.2)) drop-shadow(0 0 20px rgba(213,138,106,0.1)); } 50% { filter: drop-shadow(0 0 16px rgba(15,106,107,0.4)) drop-shadow(0 0 40px rgba(213,138,106,0.2)); } }
         @keyframes pulseRing { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(1.4); opacity: 0; } }
         @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
         .glow-btn:hover { animation: glowPulse 1.5s ease-in-out infinite; }
@@ -113,7 +113,7 @@ export default function ContactPage() {
           style={{ left: "15%", top: "20%" }}
         />
         <motion.div
-          className="absolute w-[400px] h-[400px] rounded-full bg-accent-500/10 blur-[120px] pointer-events-none"
+          className="absolute w-[400px] h-[400px] rounded-full bg-coral/10 blur-[120px] pointer-events-none"
           animate={{ x: [0, -60, 80, -40, 0], y: [0, 80, -60, 40, 0] }}
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
           style={{ right: "20%", bottom: "30%" }}
@@ -127,7 +127,7 @@ export default function ContactPage() {
         <div
           className="absolute inset-0 pointer-events-none transition-opacity duration-300"
           style={{
-            background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(34,211,238,0.08) 0%, transparent 60%)`,
+            background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(15,106,107,0.08) 0%, transparent 60%)`,
           }}
         />
 
@@ -135,7 +135,7 @@ export default function ContactPage() {
           <div className="max-w-4xl mx-auto text-center">
             <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}>
               <motion.span
-                className="inline-block text-primary-400 text-sm font-semibold tracking-[0.2em] uppercase mb-6 bg-primary-500/10 border border-primary-500/20 rounded-full px-5 py-2"
+                className="inline-block text-primary-500 text-sm font-semibold tracking-[0.2em] uppercase mb-6 bg-primary-500/10 border border-primary-500/20 rounded-full px-5 py-2"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
@@ -146,7 +146,7 @@ export default function ContactPage() {
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-8 leading-[1.1] title-glow">
                 Ready to Study at a
                 <br />
-                <span className="bg-gradient-to-r from-primary-400 via-accent-400 to-violet-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary-500 via-coral to-violet-400 bg-clip-text text-transparent">
                   World-Class University?
                 </span>
               </h1>
@@ -184,10 +184,10 @@ export default function ContactPage() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2 }}
             >
-              <span className="flex items-center gap-2"><svg className="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>10,000+ Students Guided</span>
-              <span className="flex items-center gap-2"><svg className="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>98% Visa Success Rate</span>
-              <span className="flex items-center gap-2"><svg className="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>500+ University Partners</span>
-              <span className="flex items-center gap-2"><svg className="w-4 h-4 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>Free Expert Guidance</span>
+              <span className="flex items-center gap-2"><svg className="w-4 h-4 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>10,000+ Students Guided</span>
+              <span className="flex items-center gap-2"><svg className="w-4 h-4 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>98% Visa Success Rate</span>
+              <span className="flex items-center gap-2"><svg className="w-4 h-4 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>500+ University Partners</span>
+              <span className="flex items-center gap-2"><svg className="w-4 h-4 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>Free Expert Guidance</span>
             </motion.div>
           </div>
         </div>
@@ -208,7 +208,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-surface-950 via-surface-900/30 to-surface-950" />
         <div className="relative z-10 container-custom px-4 md:px-8">
           <motion.div className="text-center mb-16" {...fadeUp}>
-            <span className="inline-block text-primary-400 text-sm font-semibold tracking-widest uppercase mb-4">Start Your Journey</span>
+            <span className="inline-block text-primary-500 text-sm font-semibold tracking-widest uppercase mb-4">Start Your Journey</span>
             <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-4">
               Get Your Free <span className="text-gradient">Study Plan</span>
             </h2>
@@ -229,21 +229,21 @@ export default function ContactPage() {
                 backdropFilter: "blur(20px)",
                 WebkitBackdropFilter: "blur(20px)",
                 border: "1px solid rgba(255,255,255,0.08)",
-                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06), 0 0 60px rgba(34,211,238,0.06)",
+                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06), 0 0 60px rgba(15,106,107,0.06)",
               }}
             >
               {!submitted && (
                 <div className="mb-10">
                   <div className="flex justify-between mb-3">
                     {stepLabels.map((label, i) => (
-                      <span key={label} className={`text-xs font-medium transition-colors duration-300 ${i <= step ? "text-primary-400" : "text-white/20"}`}>
+                      <span key={label} className={`text-xs font-medium transition-colors duration-300 ${i <= step ? "text-primary-500" : "text-white/20"}`}>
                         {label}
                       </span>
                     ))}
                   </div>
                   <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
                     <motion.div
-                      className="h-full bg-gradient-to-r from-primary-500 to-primary-400 rounded-full"
+                      className="h-full bg-gradient-to-r from-primary-500 to-primary-500 rounded-full"
                       initial={{ width: "0%" }}
                       animate={{ width: `${((step + 1) / 3) * 100}%` }}
                       transition={{ duration: 0.4, ease: "easeOut" }}
@@ -262,7 +262,7 @@ export default function ContactPage() {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                    className="w-20 h-20 rounded-full bg-gradient-to-br from-accent-400 to-accent-500 flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-accent-500/30"
+                    className="w-20 h-20 rounded-full bg-gradient-to-br from-coral to-coral-dark flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-coral/30"
                   >
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
                   </motion.div>
@@ -271,7 +271,7 @@ export default function ContactPage() {
                   <p className="text-white/30">Our expert counselors will review your profile and contact you within 24 hours with a personalized study plan.</p>
                   <motion.button
                     onClick={() => { setSubmitted(false); setStep(0); setForm({ name: "", email: "", phone: "", country: "", program: "", level: "", budget: "", intake: "", message: "" }); }}
-                    className="mt-8 text-sm text-primary-400 hover:text-primary-300 transition-colors underline underline-offset-4"
+                    className="mt-8 text-sm text-primary-500 hover:text-primary-400 transition-colors underline underline-offset-4"
                     whileHover={{ scale: 1.02 }}
                   >
                     Submit Another Inquiry
@@ -418,7 +418,7 @@ export default function ContactPage() {
                         <motion.button
                           type="submit"
                           disabled={loading || !canProceed()}
-                          className="bg-gradient-to-r from-accent-500 to-emerald-500 text-white font-semibold px-8 py-3.5 rounded-xl disabled:opacity-30 disabled:cursor-not-allowed transition-all text-sm flex items-center gap-2"
+                          className="bg-gradient-to-r from-coral to-emerald-500 text-white font-semibold px-8 py-3.5 rounded-xl disabled:opacity-30 disabled:cursor-not-allowed transition-all text-sm flex items-center gap-2"
                           whileHover={canProceed() ? { scale: 1.02 } : {}}
                           whileTap={canProceed() ? { scale: 0.98 } : {}}
                         >
@@ -443,7 +443,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-surface-950" />
         <div className="relative z-10 container-custom px-4 md:px-8">
           <motion.div className="text-center mb-16" {...fadeUp}>
-            <span className="inline-block text-primary-400 text-sm font-semibold tracking-widest uppercase mb-4">Why Choose Us</span>
+            <span className="inline-block text-primary-500 text-sm font-semibold tracking-widest uppercase mb-4">Why Choose Us</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
               Your Success Is Our <span className="text-gradient">Mission</span>
             </h2>
@@ -465,13 +465,13 @@ export default function ContactPage() {
                   backdropFilter: "blur(12px)",
                 }}
               >
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-500/20 to-accent-500/20 border border-primary-500/10 flex items-center justify-center text-primary-400 mb-5 group-hover:shadow-lg group-hover:shadow-primary-500/10 transition-all duration-500">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-500/20 to-coral/20 border border-primary-500/10 flex items-center justify-center text-primary-500 mb-5 group-hover:shadow-lg group-hover:shadow-primary-500/10 transition-all duration-500">
                   {f.icon}
                 </div>
                 <h3 className="text-lg font-display font-bold text-white mb-2">{f.title}</h3>
                 <p className="text-white/40 text-sm leading-relaxed">{f.desc}</p>
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{
-                  background: "radial-gradient(600px circle at 50% 50%, rgba(34,211,238,0.06) 0%, transparent 60%)",
+                  background: "radial-gradient(600px circle at 50% 50%, rgba(15,106,107,0.06) 0%, transparent 60%)",
                 }} />
               </motion.div>
             ))}
@@ -484,7 +484,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-surface-950 via-surface-900/20 to-surface-950" />
         <div className="relative z-10 container-custom px-4 md:px-8">
           <motion.div className="text-center mb-16" {...fadeUp}>
-            <span className="inline-block text-primary-400 text-sm font-semibold tracking-widest uppercase mb-4">Get In Touch</span>
+            <span className="inline-block text-primary-500 text-sm font-semibold tracking-widest uppercase mb-4">Get In Touch</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
               Other Ways to <span className="text-gradient">Reach Us</span>
             </h2>
@@ -511,13 +511,13 @@ export default function ContactPage() {
                   backdropFilter: "blur(12px)",
                 }}
               >
-                <div className="w-16 h-16 rounded-2xl bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-primary-400 mb-5 group-hover:shadow-lg transition-all duration-500">
+                <div className="w-16 h-16 rounded-2xl bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-primary-500 mb-5 group-hover:shadow-lg transition-all duration-500">
                   {item.icon}
                 </div>
                 <p className="text-white/40 text-xs font-medium uppercase tracking-wider mb-2">{item.label}</p>
                 <p className="text-white font-medium text-lg">{item.value}</p>
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{
-                  background: "radial-gradient(600px circle at 50% 50%, rgba(34,211,238,0.06) 0%, transparent 60%)",
+                  background: "radial-gradient(600px circle at 50% 50%, rgba(15,106,107,0.06) 0%, transparent 60%)",
                 }} />
               </motion.a>
             ))}
@@ -549,7 +549,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-surface-950" />
         <div className="relative z-10 container-custom px-4 md:px-8">
           <motion.div className="text-center mb-16" {...fadeUp}>
-            <span className="inline-block text-primary-400 text-sm font-semibold tracking-widest uppercase mb-4">Book a Call</span>
+            <span className="inline-block text-primary-500 text-sm font-semibold tracking-widest uppercase mb-4">Book a Call</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
               Schedule Free <span className="text-gradient">Counseling</span>
             </h2>
@@ -576,8 +576,8 @@ export default function ContactPage() {
                 animate={{ y: [0, -3, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               >
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary-500/20 to-accent-500/20 border border-primary-500/10 flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-10 h-10 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary-500/20 to-coral/20 border border-primary-500/10 flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-10 h-10 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                 </div>
               </motion.div>
 
@@ -619,7 +619,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-surface-950 via-surface-900/20 to-surface-950" />
         <div className="relative z-10 container-custom px-4 md:px-8">
           <motion.div className="text-center mb-16" {...fadeUp}>
-            <span className="inline-block text-primary-400 text-sm font-semibold tracking-widest uppercase mb-4">Success Stories</span>
+            <span className="inline-block text-primary-500 text-sm font-semibold tracking-widest uppercase mb-4">Success Stories</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
               What Our Students <span className="text-gradient">Say</span>
             </h2>
@@ -648,7 +648,7 @@ export default function ContactPage() {
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed mb-6">&ldquo;{t.text}&rdquo;</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white text-sm font-bold">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-coral flex items-center justify-center text-white text-sm font-bold">
                     {t.name.split(" ").map((n) => n[0]).join("")}
                   </div>
                   <div>
@@ -677,7 +677,7 @@ export default function ContactPage() {
             <h2 className="text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-[1.1] title-glow">
               Your Dream University
               <br />
-              <span className="bg-gradient-to-r from-primary-400 via-accent-400 to-violet-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary-500 via-coral to-violet-400 bg-clip-text text-transparent">
                 Awaits You.
               </span>
             </h2>

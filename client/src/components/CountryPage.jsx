@@ -35,7 +35,7 @@ const itemVariants = {
 function SectionHeading({ children }) {
   return (
     <div className="flex items-center gap-3 mb-8">
-      <div className="w-1 h-8 bg-gradient-to-b from-primary-500 to-accent-500 rounded-full" />
+      <div className="w-1 h-8 bg-gradient-to-b from-primary-500 to-coral rounded-full" />
       <h2 className="text-2xl md:text-3xl font-display font-bold text-white">{children}</h2>
     </div>
   );
@@ -122,7 +122,7 @@ export default function CountryPage() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-white mb-4 leading-tight">
               {country.name}
             </h1>
-            <p className="text-xl md:text-2xl text-primary-300 font-medium mb-8">{country.tagline}</p>
+            <p className="text-xl md:text-2xl text-primary-400 font-medium mb-8">{country.tagline}</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/apply" className="btn-primary text-base px-8 py-4 inline-flex items-center gap-2">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -192,7 +192,7 @@ export default function CountryPage() {
                         transition={{ delay: i * 0.04 }}
                         className="glass-card rounded-xl p-4 text-center group cursor-default"
                       >
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500/20 to-accent-500/20 border border-primary-500/10 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500/20 to-coral/20 border border-primary-500/10 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
                           <svg className="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5zm0 7l-9-5 9-5 9 5-9 5z" />
                           </svg>
@@ -252,7 +252,7 @@ export default function CountryPage() {
                         <div className="flex flex-col items-center">
                           <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${
                             i === 0 ? "from-primary-500 to-blue-600" :
-                            i === extras.visaProcess.length - 1 ? "from-accent-500 to-emerald-600" :
+                            i === extras.visaProcess.length - 1 ? "from-coral to-emerald-600" :
                             "from-primary-500/50 to-primary-600/50"
                           } flex items-center justify-center text-white text-sm font-bold flex-shrink-0`}>
                             {step.step}
@@ -281,7 +281,7 @@ export default function CountryPage() {
                         <p className="text-xs text-white/30 uppercase tracking-wider mb-3">Top Industries</p>
                         <div className="flex flex-wrap gap-2">
                           {extras.jobMarket.topIndustries.map((ind, i) => (
-                            <span key={i} className="text-xs font-medium bg-primary-500/10 border border-primary-500/20 text-primary-300 px-3 py-1.5 rounded-lg">
+                            <span key={i} className="text-xs font-medium bg-primary-500/10 border border-primary-500/20 text-primary-400 px-3 py-1.5 rounded-lg">
                               {ind}
                             </span>
                           ))}
@@ -297,7 +297,7 @@ export default function CountryPage() {
                       <p className="text-xs text-white/30 uppercase tracking-wider mb-3">In-Demand Roles</p>
                       <div className="flex flex-wrap gap-2">
                         {extras.jobMarket.demandRoles.map((role, i) => (
-                          <span key={i} className="text-xs font-medium bg-accent-500/10 border border-accent-500/20 text-accent-400 px-3 py-1.5 rounded-lg">
+                          <span key={i} className="text-xs font-medium bg-coral/10 border border-coral/20 text-coral px-3 py-1.5 rounded-lg">
                             {role}
                           </span>
                         ))}
@@ -329,7 +329,7 @@ export default function CountryPage() {
                     <p className="text-white/50 text-sm leading-relaxed mb-4">{extras.prChances.description}</p>
                     <div className="bg-white/5 rounded-xl p-4">
                       <p className="text-[10px] text-white/20 uppercase tracking-wider mb-1">Pathway</p>
-                      <p className="text-sm text-primary-300 font-medium">{extras.prChances.pathway}</p>
+                      <p className="text-sm text-primary-400 font-medium">{extras.prChances.pathway}</p>
                     </div>
                   </div>
                 </div>
@@ -457,8 +457,8 @@ export default function CountryPage() {
               className="glass-card rounded-2xl p-8"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-accent-500/10 border border-accent-500/20 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 rounded-xl bg-coral/10 border border-coral/20 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -474,7 +474,7 @@ export default function CountryPage() {
                     transition={{ delay: i * 0.05 }}
                     className="flex items-start gap-3"
                   >
-                    <svg className="w-4 h-4 text-accent-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-coral flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                     <span className="text-white/60 text-sm">{pro}</span>

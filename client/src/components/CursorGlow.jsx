@@ -45,7 +45,7 @@ export default function CursorGlow() {
         ref={glowRef}
         className="fixed top-0 left-0 w-[300px] h-[300px] rounded-full pointer-events-none z-[9999] mix-blend-screen"
         style={{
-          background: "radial-gradient(circle, rgba(34,211,238,0.08) 0%, rgba(99,102,241,0.04) 40%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(15,106,107,0.08) 0%, rgba(213,138,106,0.04) 40%, transparent 70%)",
           transform: "translate(-150px, -150px)",
           willChange: "transform",
         }}
@@ -54,10 +54,10 @@ export default function CursorGlow() {
         ref={trailRef}
         className="fixed top-0 left-0 w-4 h-4 rounded-full pointer-events-none z-[9999]"
         style={{
-          background: "radial-gradient(circle, rgba(34,211,238,0.3), rgba(99,102,241,0.15) 60%, transparent)",
+          background: "radial-gradient(circle, rgba(15,106,107,0.3), rgba(213,138,106,0.15) 60%, transparent)",
           transform: "translate(-8px, -8px)",
           willChange: "transform",
-          boxShadow: "0 0 12px rgba(34,211,238,0.2)",
+          boxShadow: "0 0 12px rgba(15,106,107,0.2)",
         }}
       />
     </>

@@ -54,7 +54,7 @@ export default function Register() {
       `}</style>
       <div className="absolute inset-0 bg-surface-950" />
       <div className="absolute w-[500px] h-[500px] rounded-full bg-primary-500/10 blur-[120px] animate-[blob1_20s_ease-in-out_infinite]" style={{ left: "10%", top: "10%" }} />
-      <div className="absolute w-[400px] h-[400px] rounded-full bg-accent-500/10 blur-[100px] animate-[blob2_25s_ease-in-out_infinite_2s]" style={{ right: "10%", bottom: "10%" }} />
+      <div className="absolute w-[400px] h-[400px] rounded-full bg-coral/10 blur-[100px] animate-[blob2_25s_ease-in-out_infinite_2s]" style={{ right: "10%", bottom: "10%" }} />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -66,7 +66,7 @@ export default function Register() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: "spring", stiffness: 200, delay: 0.1 }}
-            className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center mx-auto mb-5 shadow-2xl shadow-primary-500/25"
+            className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-coral flex items-center justify-center mx-auto mb-5 shadow-2xl shadow-primary-500/25"
           >
             <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
@@ -83,7 +83,7 @@ export default function Register() {
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
             border: "1px solid rgba(255,255,255,0.08)",
-            boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06), 0 0 60px rgba(34,211,238,0.06)",
+            boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06), 0 0 60px rgba(15,106,107,0.06)",
           }}
         >
           <form onSubmit={handleSubmit} className="space-y-5">
@@ -165,7 +165,7 @@ export default function Register() {
           <div className="mt-6 pt-6 border-t border-white/5">
             <p className="text-white/40 text-sm text-center">
               Already have an account?{" "}
-              <Link to="/login" className="text-primary-400 hover:text-primary-300 font-medium transition-colors">
+              <Link to="/login" className="text-primary-500 hover:text-primary-400 font-medium transition-colors">
                 Sign In
               </Link>
             </p>

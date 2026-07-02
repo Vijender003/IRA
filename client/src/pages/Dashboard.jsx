@@ -7,8 +7,8 @@ import toast from "react-hot-toast";
 
 const statusColors = {
   pending: { bg: "bg-amber-500/10", border: "border-amber-500/20", text: "text-amber-400" },
-  reviewing: { bg: "bg-primary-500/10", border: "border-primary-500/20", text: "text-primary-400" },
-  approved: { bg: "bg-accent-500/10", border: "border-accent-500/20", text: "text-accent-400" },
+  reviewing: { bg: "bg-primary-500/10", border: "border-primary-500/20", text: "text-primary-500" },
+  approved: { bg: "bg-coral/10", border: "border-coral/20", text: "text-coral" },
   rejected: { bg: "bg-red-500/10", border: "border-red-500/20", text: "text-red-400" },
 };
 

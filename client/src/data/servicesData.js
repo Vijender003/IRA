@@ -38,8 +38,8 @@ const servicesData = [
     description:
       "Our immigration experts guide you through every step of the residency and citizenship process. Whether you're seeking permanent residency, family migration, or long-term relocation, we provide tailored solutions for your global mobility goals.",
     icon: "immigration",
-    color: "from-accent-500 to-accent-600",
-    glow: "shadow-accent-500/20",
+    color: "from-coral to-coral-dark",
+    glow: "shadow-coral/20",
     features: [
       "Permanent Residency",
       "Long-term Relocation",

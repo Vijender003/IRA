@@ -4,7 +4,7 @@ import countriesData from "../data/countryData";
 
 const defaultCountries = [
   { name: "Georgia", slug: "georgia", avgCost: "$3K–$8K/yr", costOfLiving: "$400–$700/mo", visaSuccess: "98%", jobs: "Medium", color: "from-primary-500 to-primary-600" },
-  { name: "Singapore", slug: "singapore", avgCost: "$15K–$35K/yr", costOfLiving: "$1.2K–$2K/mo", visaSuccess: "85%", jobs: "High", color: "from-accent-500 to-accent-600" },
+  { name: "Singapore", slug: "singapore", avgCost: "$15K–$35K/yr", costOfLiving: "$1.2K–$2K/mo", visaSuccess: "85%", jobs: "High", color: "from-coral to-coral-dark" },
   { name: "Russia", slug: "russia", avgCost: "$2K–$7K/yr", costOfLiving: "$500–$900/mo", visaSuccess: "90%", jobs: "Medium", color: "from-violet-500 to-violet-600" },
   { name: "Malta", slug: "malta", avgCost: "$8K–$18K/yr", costOfLiving: "$800–$1.4K/mo", visaSuccess: "92%", jobs: "Growing", color: "from-amber-500 to-amber-600" },
 ];
@@ -65,7 +65,7 @@ export default function CompareTable({ countries = defaultCountries }) {
                     <span className="text-sm text-white/60">{c.costOfLiving}</span>
                   </div>
                   <div className="text-center">
-                    <span className="text-sm font-semibold text-accent-400">{c.visaSuccess}</span>
+                    <span className="text-sm font-semibold text-coral">{c.visaSuccess}</span>
                   </div>
                   <div className="text-center flex items-center justify-center gap-2">
                     <span className="text-sm text-white/60">{c.jobs}</span>

@@ -12,7 +12,7 @@ const stories = [
     after: "Got Canada PR pathway after MBA",
     text: "I had almost given up on my Canada dream after two rejections. THE PARASHARS turned it around completely. From a strong SOP to interview prep, they were with me at every step.",
     icon: "🇨🇦",
-    color: "from-accent-500/20 to-accent-500/5",
+    color: "from-coral/20 to-coral/5",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
   },
   {
@@ -67,7 +67,7 @@ export default function SocialProof() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <span className="inline-block text-accent-400 text-sm font-semibold tracking-widest uppercase mb-4">Real Student Stories</span>
+          <span className="inline-block text-coral text-sm font-semibold tracking-widest uppercase mb-4">Real Student Stories</span>
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">Success Stories That <span className="text-gradient">Inspire Us</span></h2>
           <p className="text-white/40 max-w-2xl mx-auto text-lg leading-relaxed">Real results from real students who trusted us with their dreams.</p>
         </motion.div>
@@ -98,11 +98,11 @@ export default function SocialProof() {
                 </div>
 
                 {/* Visa approval badge */}
-                <div className="inline-flex items-center gap-1.5 bg-accent-500/10 border border-accent-500/20 rounded-full px-3 py-1 mb-3">
-                  <svg className="w-3 h-3 text-accent-400" fill="currentColor" viewBox="0 0 20 20">
+                <div className="inline-flex items-center gap-1.5 bg-coral/10 border border-coral/20 rounded-full px-3 py-1 mb-3">
+                  <svg className="w-3 h-3 text-coral" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-xs font-medium text-accent-400">{story.result}</span>
+                  <span className="text-xs font-medium text-coral">{story.result}</span>
                 </div>
 
                 {/* Before/After */}
@@ -111,9 +111,9 @@ export default function SocialProof() {
                     <p className="text-[10px] text-red-400/60 uppercase tracking-wider mb-0.5">Before</p>
                     <p className="text-xs text-white/50">{story.before}</p>
                   </div>
-                  <div className="bg-accent-500/5 border border-accent-500/10 rounded-xl p-3">
-                    <p className="text-[10px] text-accent-400/60 uppercase tracking-wider mb-0.5">After</p>
-                    <p className="text-xs text-accent-400 font-medium">{story.after}</p>
+                  <div className="bg-coral/5 border border-coral/10 rounded-xl p-3">
+                    <p className="text-[10px] text-coral/60 uppercase tracking-wider mb-0.5">After</p>
+                    <p className="text-xs text-coral font-medium">{story.after}</p>
                   </div>
                 </div>
 

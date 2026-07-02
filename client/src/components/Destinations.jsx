@@ -36,9 +36,9 @@ const cardVariants = {
 
 const getVisaRating = (rate) => {
   const num = parseInt(rate);
-  if (!num) return { label: "Good", color: "text-accent-400", bars: 3 };
-  if (num >= 90) return { label: "Excellent", color: "text-accent-400", bars: 5 };
-  if (num >= 80) return { label: "Great", color: "text-primary-400", bars: 4 };
+  if (!num) return { label: "Good", color: "text-coral", bars: 3 };
+  if (num >= 90) return { label: "Excellent", color: "text-coral", bars: 5 };
+  if (num >= 80) return { label: "Great", color: "text-primary-500", bars: 4 };
   if (num >= 70) return { label: "Good", color: "text-amber-400", bars: 3 };
   return { label: "Fair", color: "text-orange-400", bars: 2 };
 };
@@ -54,7 +54,7 @@ export default function Destinations() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <span className="inline-block text-accent-400 text-sm font-semibold tracking-widest uppercase mb-4">
+          <span className="inline-block text-coral text-sm font-semibold tracking-widest uppercase mb-4">
             Popular Destinations
           </span>
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
@@ -111,7 +111,7 @@ export default function Destinations() {
                     {/* Content */}
                     <div className="p-5 flex flex-col flex-1">
                       <div className="flex items-center justify-between mb-1">
-                        <h3 className="text-lg font-display font-bold text-white group-hover:text-primary-300 transition-colors">
+                        <h3 className="text-lg font-display font-bold text-white group-hover:text-primary-400 transition-colors">
                           {country.name}
                         </h3>
                         <span className={`text-xs font-bold ${visaInfo.color}`}>{country.visaRate}</span>
@@ -137,7 +137,7 @@ export default function Destinations() {
                         {country.highlights?.slice(0, 3).map((h, j) => (
                           <span
                             key={j}
-                            className="text-[10px] font-medium bg-primary-400/10 border border-primary-400/20 text-primary-300 px-2 py-0.5 rounded-md"
+                            className="text-[10px] font-medium bg-primary-500/10 border border-primary-500/20 text-primary-400 px-2 py-0.5 rounded-md"
                           >
                             {h}
                           </span>
@@ -147,7 +147,7 @@ export default function Destinations() {
                       {/* CTA */}
                       <div className="mt-auto flex items-center justify-between pt-3 border-t border-white/5">
                         <span className="text-[10px] text-white/20">{country.universities?.length || 0} Universities</span>
-                        <span className="text-xs font-semibold text-primary-400 group-hover:text-primary-300 transition-colors inline-flex items-center gap-1">
+                        <span className="text-xs font-semibold text-primary-500 group-hover:text-primary-400 transition-colors inline-flex items-center gap-1">
                           Explore
                           <svg className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

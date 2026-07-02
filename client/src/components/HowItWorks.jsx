@@ -13,7 +13,7 @@ const steps = [
     title: "Profile Evaluation",
     description: "We assess your academic background, work experience, and preferences to find the best-fit universities and courses for you.",
     icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4",
-    color: "from-accent-500 to-emerald-600",
+    color: "from-coral to-emerald-600",
   },
   {
     step: 3,
@@ -63,7 +63,7 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <span className="inline-block text-accent-400 text-sm font-semibold tracking-widest uppercase mb-4">
+          <span className="inline-block text-coral text-sm font-semibold tracking-widest uppercase mb-4">
             The Process
           </span>
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
@@ -82,7 +82,7 @@ export default function HowItWorks() {
           className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6"
         >
           {/* Vertical connector line for mobile */}
-          <div className="absolute top-0 left-6 bottom-0 w-px bg-gradient-to-b from-primary-500/30 via-accent-500/20 to-transparent lg:hidden" />
+          <div className="absolute top-0 left-6 bottom-0 w-px bg-gradient-to-b from-primary-500/30 via-coral/20 to-transparent lg:hidden" />
 
           {steps.map((step, i) => (
             <motion.div key={i} variants={cardVariants} className="relative">

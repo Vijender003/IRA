@@ -34,7 +34,7 @@ export default function TrustStats() {
       <div className="absolute inset-0 bg-gradient-to-b from-surface-950 via-surface-900/50 to-surface-950" />
       <div className="relative z-10 container-custom px-4 md:px-8">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-          <span className="inline-block text-accent-400 text-sm font-semibold tracking-widest uppercase mb-4">Trusted Worldwide</span>
+          <span className="inline-block text-coral text-sm font-semibold tracking-widest uppercase mb-4">Trusted Worldwide</span>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-white">Numbers That Speak</h2>
         </motion.div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">

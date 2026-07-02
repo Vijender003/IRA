@@ -6,7 +6,7 @@ export default function UrgencyBar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5 }}
-      className="relative z-50 bg-gradient-to-r from-primary-600/20 via-accent-600/20 to-primary-600/20 border-y border-white/5 overflow-hidden"
+      className="relative z-50 bg-gradient-to-r from-primary-600/20 via-coral-dark/20 to-primary-600/20 border-y border-white/5 overflow-hidden"
     >
       <div className="container-custom px-4 md:px-8 py-3 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 text-center">
         <div className="flex items-center gap-2">

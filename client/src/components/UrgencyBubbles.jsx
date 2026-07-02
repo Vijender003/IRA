@@ -14,8 +14,8 @@ const bubbles = [
   },
   {
     text: "High Visa Success Rate",
-    color: "border-accent-500/20 bg-accent-500/10 text-accent-400",
-    dot: "bg-accent-400",
+    color: "border-coral/20 bg-coral/10 text-coral",
+    dot: "bg-coral",
     position: "top-[18%] right-[5%] lg:top-[16%] lg:right-[8%]",
     floatX: [0, -6, 0, 8, 0],
     floatY: [0, 5, 0, -6, 0],

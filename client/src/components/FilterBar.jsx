@@ -59,7 +59,7 @@ export default function FilterBar({ filters, onFilterChange, total }) {
           {hasActive && (
             <button
               onClick={clearFilters}
-              className="text-xs text-primary-400 hover:text-primary-300 transition-colors"
+              className="text-xs text-primary-400 hover:text-primary-400 transition-colors"
             >
               Clear all
             </button>
